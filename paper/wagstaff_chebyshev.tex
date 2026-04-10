@@ -2268,20 +2268,19 @@ collapses the higher-conductor character onto the joint cells of
 
 A repository accompanies this paper, containing:
 \begin{enumerate}
-\item BLS primality certificates and self-contained
-verification scripts for \(W_{2617}\), \(W_{10501}\), and
-\(W_{12391}\), including timestamped computation logs and
-APR-CL primality proofs for all factors exceeding 82 digits
+\item BLS primality certificates (JSON) for \(W_{2617}\),
+\(W_{10501}\), and \(W_{12391}\), recording every cyclotomic
+factor, BLS witness, and primality method
 (Theorems~\ref{thm:W2617}--\ref{thm:W12391});
-\item factorization files for \(U_{4d}\) (\(d \leq 81\)) and
-\(N_d\) (\(d \leq 43\)) with verification logs
-(Theorems~\ref{thm:NCT-81},~\ref{thm:pell-exclusion});
-\item the primitive-divisor survey outputs for \(q \leq 1000\) (\S8.3);
 \item inert factor data for the 15{,}587{,}021 pairs \((p, r)\) with
 \(G_r > 43\) (the non-trivially-closed subset of the 684{,}965{,}381
 inert factors with \(r < 10^{12}\), \(p < 5 \times 10^{11}\);
 \S8.5), recording \(p\), \(r\), \(\operatorname{ord}_r(2)\),
-\(G_r\), and the Condition~(II) outcome; and
+\(G_r\), and the Condition~(II) outcome;
+\item scripts to reproduce the BLS proofs, the inert-factor
+survey, the primitive-divisor survey (\S8.3), and the
+factorizations of \(U_{4d}\) and \(N_d\)
+(Theorems~\ref{thm:NCT-81},~\ref{thm:pell-exclusion}); and
 \item code for the Chebyshev primality test (\S8.6).
 \end{enumerate}
 
