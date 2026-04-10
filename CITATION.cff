@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the paper."
+title: "Chebyshev primality criteria for Wagstaff numbers"
+authors:
+  - family-names: "Dolotov"
+    given-names: "Alexey"
+version: "6.7"
+date-released: "2026-04-10"
+license: MIT
+repository-code: "https://github.com/dolonet/wagstaff-chebyshev"
+abstract: >
+  Computational survey code and data for the paper "Chebyshev primality
+  criteria for Wagstaff numbers". The paper proves that every known
+  Wagstaff prime satisfies an explicit Chebyshev-style Condition (II),
+  conjectures the converse for composite Wagstaff numbers, and proves
+  that conjecture unconditionally in ~98% of cases over a computational
+  survey of 684,965,381 inert prime factors (r < 10^12, p < 5*10^11).
+preferred-citation:
+  type: article
+  title: "Chebyshev primality criteria for Wagstaff numbers"
+  authors:
+    - family-names: "Dolotov"
+      given-names: "Alexey"
+  year: 2026
+  journal: "arXiv preprint"
+  notes: "arXiv ID will be added once the preprint is assigned"
