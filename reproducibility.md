@@ -154,20 +154,122 @@ The resulting `full_rerun/clean/inert_factors.csv` should be
 byte-identical to the Zenodo download (the SHA-256 hash is pinned in
 `data/SHA256SUMS`).
 
-## Step 6 — BLS primality proof
+## Step 6 — BLS primality proofs
 
-To re-verify that `W_12391` is prime by BLS N-1 (the current ceiling of
-this approach):
+The paper proves three Wagstaff primes via BLS N-1 (§3.6--3.8).
+Dedicated scripts reproduce each proof and write JSON certificates
+to `data/`:
+
+```sh
+python3 scripts/bls_n_minus_1_w2617.py     # W_2617,  §3.6, ~5 s
+python3 scripts/bls_n_minus_1_w10501.py    # W_10501, §3.7, ~5 min
+python3 scripts/bls_n_minus_1_w12391.py    # W_12391, §3.8, ~70 s (with gmpy2)
+```
+
+Pre-computed certificates are shipped in `data/bls_certificate_w*.json`.
+
+The original generic driver `scripts/primality_bls.py` also reproduces
+the W_12391 proof:
 
 ```sh
 python3 scripts/primality_bls.py
 ```
 
-Runtime: ≈70 seconds on a modern CPU with `gmpy2`, several minutes
-without. The script writes a certificate file
-`bls_certificate_w12391.json` and a detailed log alongside itself.
+## Step 7 — NCT and Pell exclusion verification
 
-## Step 7 — rebuild the paper PDF
+Verify the No Compatible Triples theorem (d ≤ 81, §5.6) and the Pell
+exclusion result (d ≤ 43, §6.3):
+
+```sh
+python3 scripts/nct_verify.py
+```
+
+Runtime: ≈1 minute. Requires `sympy`. Expected output ends with:
+
+```
+ALL CHECKS PASSED. No compatible triple exists for d <= 81.
+Pell exclusion verified for all admissible d <= 43.
+```
+
+## Step 8 — split factor census and R3 verification
+
+Reproduce the 185-factor split census and verify Conjecture R3 at
+every known split factor (§8.2):
+
+```sh
+python3 scripts/split_factor_census.py
+```
+
+Runtime: ~5 minutes. Requires `sympy`. Expected output ends with:
+
+```
+R3 verified: 185/185
+```
+
+The case breakdown should be: Case A: 1, Case B: 6, Case 4U: 46,
+Case C: 132 (43 d-inadmissible + 89 general d>200).
+
+## Step 9 — primitive divisor survey
+
+Reproduce the primitive divisor survey for small Class III primes (§8.3):
+
+```sh
+python3 scripts/primitive_divisor_survey.py 200
+```
+
+Runtime: ~3 seconds. Expected: 10 primitive divisors among q <= 200,
+exactly one qth-power case (q=43, r=14449).
+
+## Step 10 — NCT extended verification
+
+Search for compatible triples at parity-unblocked d in [83, 200] (§8.4):
+
+```sh
+python3 scripts/nct_extended_verify.py 1e8
+```
+
+Runtime: ~6 seconds at r < 10^8. Expected: 0 compatible triples.
+The paper's full computation used r < 10^11; this script scales to that
+range with more time.
+
+## Step 11 — auxiliary verifications
+
+These scripts verify specific claims from individual paper sections:
+
+```sh
+# BLS ceiling analysis (§3.5): which W_p admit BLS proofs
+python3 scripts/bls_ceiling.py
+
+# Verify Theorem 3.2 for all 20 known Wagstaff primes (§3.4)
+python3 scripts/wagstaff_verify_all.py
+
+# Parity obstruction analysis (§5.5): which d are blocked
+python3 scripts/nct_parity_obstruction.py
+
+# Class III Wieferich check (§6.2): v_q(2^m+1)=1 for all q<5000
+python3 scripts/class_iii_wieferich.py
+
+# Secondary-factor closures for d=57, d=67 (§8.8)
+python3 scripts/secondary_closure.py
+
+# 869-factor inert census (§8.5)
+python3 scripts/small_factor_census.py
+```
+
+## Step 12 — Chebyshev test smoke-check
+
+Run the standalone Chebyshev probable-prime test (§8.6) on the three
+BLS-proved exponents as a sanity check:
+
+```sh
+python3 scripts/chebyshev_test.py 2617
+python3 scripts/chebyshev_test.py 10501
+python3 scripts/chebyshev_test.py 12391
+```
+
+Each should print `PROBABLE PRIME (Chebyshev test passed)`.
+
+## Step 13 — rebuild the paper PDF
 
 ```sh
 cd paper/
@@ -185,8 +287,14 @@ produces `wagstaff_chebyshev.pdf`.
 | Verify sample (step 3) | 1 core | 50 MB | — |
 | Re-run one segment (step 4) | 32 cores | 1 GB | tens of MB |
 | Full survey (step 5) | 128 cores | 64 GB | 840 MB |
-| BLS proof (step 6) | 1 core | 500 MB | — |
-| Paper build (step 7) | 1 core | — | — |
+| BLS proofs (step 6) | 1 core | 500 MB | — |
+| NCT verification (step 7) | 1 core | 100 MB | — |
+| Split census (step 8) | 1 core | 200 MB | — |
+| Primitive divisors (step 9) | 1 core | 100 MB | — |
+| NCT extended (step 10) | 1 core | 100 MB | — |
+| Auxiliary (step 11) | 1 core | 200 MB | — |
+| Chebyshev test (step 12) | 1 core | 50 MB | — |
+| Paper build (step 13) | 1 core | — | — |
 
 ## Provenance
 

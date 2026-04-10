@@ -10,13 +10,16 @@ is hosted on Zenodo (see below).
 |---|---|
 | `sample_1000.csv` | First 1000 rows of the canonical clean CSV. Smoke test for `scripts/verify_sample.py`. |
 | `SHA256SUMS` | SHA-256 hashes of `inert_factors.csv` (full) and `sample_1000.csv`. |
+| `bls_certificate_w2617.json` | BLS N-1 primality certificate for W_{2617} (§3.6). |
+| `bls_certificate_w10501.json` | BLS N-1 primality certificate for W_{10501} (§3.7). |
+| `bls_certificate_w12391.json` | BLS N-1 primality certificate for W_{12391} (§3.8). |
 
 ## The full dataset
 
 The full clean CSV is **`inert_factors.csv`**, 802 MB, 15 587 021 rows.
 It is distributed separately via Zenodo:
 
-> **Zenodo DOI:** *(pending upload — see the paper for the final citation)*
+> **Zenodo DOI:** [10.5281/zenodo.19496206](https://doi.org/10.5281/zenodo.19496206)
 
 Verify the download with:
 

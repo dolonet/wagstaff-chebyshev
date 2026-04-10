@@ -6,6 +6,9 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage[margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
 \usepackage{url}
 \usepackage{hyperref}
 
@@ -27,7 +30,7 @@
 \newcommand{\Nm}{\operatorname{N}}
 
 \title{Chebyshev primality criteria for Wagstaff numbers}
-\author{Alexey Dolotov\thanks{Email: \texttt{alexey@dolotov.com}}}
+\author{Alexey Dolotov\thanks{Email: \texttt{science@dolotov.com}}}
 \date{}
 
 \begin{document}
@@ -35,7 +38,7 @@
 \maketitle
 
 \begin{abstract}
-The Chebyshev base \(\omega_3 = 3 + 2\sqrt{2}\) and the identity \(W_p + 1 = 4W_{p-2}\) yield an unconditional \(N+1\) primality criterion for the Wagstaff numbers \(W_p = (2^p + 1)/3\) (Theorem~\ref{thm:criterion}); combined with a companion \(N-1\) criterion (Theorem~\ref{thm:combined}) and the Brillhart--Lehmer--Selfridge framework, this gives self-contained primality proofs of \(W_{2617}\), \(W_{10501}\), and \(W_{12391}\), independent of the ECPP proofs in the literature. For the sufficiency of the single Chebyshev congruence \(\omega_3^{(W_p+1)/2} \equiv -1 \pmod{W_p}\) on a hypothetical composite \(W_p\) (Conjecture~\ref{conj:sufficiency}), we show that Condition (I) holds automatically (Theorem~\ref{thm:cond-I}), exclude \(r \equiv 5, 7 \pmod{8}\) (Lemma~\ref{lem:mod-8-exclusion}), and reduce the split branch \(r \equiv 1 \pmod{8}\) to the nonexistence of compatible Pell triples (NCT), proved for all rank parameters \(d \leq 81\) (Theorem~\ref{thm:NCT-81}) --- covering every one of the 185 known split factors. For the inert branch we prove that \(r \equiv 3 \pmod{8}\) cannot pass Condition (II) whenever the order parameter satisfies \(d \leq 43\) (Theorem~\ref{thm:pell-exclusion}).
+The Chebyshev base \(\omega_3 = 3 + 2\sqrt{2}\) and the identity \(W_p + 1 = 4W_{p-2}\) yield an unconditional \(N+1\) primality criterion for the Wagstaff numbers \(W_p = (2^p + 1)/3\); combined with a companion \(N-1\) criterion and the Brillhart--Lehmer--Selfridge framework, this gives self-contained primality proofs of \(W_{2617}\), \(W_{10501}\), and \(W_{12391}\), independent of the ECPP proofs in the literature. For the sufficiency of the single Chebyshev congruence \(\omega_3^{(W_p+1)/2} \equiv -1 \pmod{W_p}\) on a hypothetical composite \(W_p\), we show that Condition~(I) holds automatically, exclude prime factors \(r \equiv 5, 7 \pmod{8}\), and reduce the split branch \(r \equiv 1 \pmod{8}\) to the nonexistence of compatible Pell triples (NCT), proved for all rank parameters \(d \leq 81\); Conjecture~R3 is verified computationally at all 185 known split factors. For the inert branch we prove that \(r \equiv 3 \pmod{8}\) cannot pass Condition~(II) whenever the order parameter satisfies \(d \leq 43\).
 
 \end{abstract}
 
@@ -58,8 +61,10 @@ relied on general-purpose methods such as elliptic curve primality proving (ECPP
 Chebyshev/Lucas-type tests remained conjectural on the sufficiency
 side.
 
-The paper delivers two distinct results, summarised in \S\S1.1
-and 1.2 below.
+The paper delivers two distinct results, summarised in \S\S1.1--1.2
+below. Sections~2--3 are self-contained and establish~(A);
+Sections~4--7 develop~(B); Section~8 presents the computational
+verification.
 
 \textbf{(A) Three unconditional primality proofs.} We prove
 \(W_{2617}\), \(W_{10501}\), and \(W_{12391}\) prime by
@@ -134,8 +139,9 @@ branch by branch, by the residue class of the prime factors
   Conjecture~\ref{conj:R3} is a Pell-rank divisibility statement; via
   Proposition~\ref{prop:rank-equivalence}, Conjecture~\ref{conj:R3} is equivalent to the nonexistence of
   compatible triples (NCT), which is proved for all rank
-  parameters \(d \leq 81\) (Theorem~\ref{thm:NCT-81}). This covers every
-  one of the 185 known split factors.
+  parameters \(d \leq 81\) (Theorem~\ref{thm:NCT-81}).
+  Conjecture~\ref{conj:R3} is verified computationally at all 185
+  known split factors (\S8.2).
 \item \(r \equiv 3 \pmod{8}\): \textbf{order parameter \(d \leq 43\) proved
   impossible} (Theorem~\ref{thm:pell-exclusion}). Among 869 structurally analysed
   inert factors, 845 of 869 satisfy \(G_r \le 43\) and are closed
@@ -161,23 +167,25 @@ separately.
 The status of each component, in summary:
 
 \begin{center}
-\begin{tabular}{p{6.2cm}p{5cm}l}
+\small
+\begin{tabular}{@{}p{5.5cm}p{4.8cm}l@{}}
 \hline
 Component & Status & Reference \\
 \hline
 BLS proof of \(W_{2617}\), \(W_{10501}\), \(W_{12391}\) & Unconditional & Thm~\ref{thm:W2617}--\ref{thm:W12391} \\
-Condition (I) holds at every prime divisor of \(W_p\) & Unconditional & Thm~\ref{thm:cond-I} \\
-\(r \equiv 5, 7 \pmod{8}\) cannot divide \(W_p\) & Unconditional & Lem~\ref{lem:mod-8-exclusion} \\
-\(r \equiv 1\): Conjecture~\ref{conj:R3} implies failure of Condition (II) & Unconditional & Thm~\ref{thm:R3-conditional} \\
-\(r \equiv 1\), \(d \leq 81\) (covers all 185 known split factors) & Unconditional & Thm~\ref{thm:NCT-81} \\
-\(r \equiv 1\), \(83 \leq d \leq 200\) & Computational\footnotemark & \S8.4 \\
-\(r \equiv 3\), \(G_r \leq 43\) cannot pass Condition (II) & Unconditional & Cor~\ref{cor:small-Gr} \\
-\(r \equiv 3\), \(G_r > 43\) (general inert) & Density zero for natural subclass (unconditional); open pointwise & Proposition~\ref{prop:density-zero} \\
-Conjecture~\ref{conj:sufficiency} (full sufficiency of Condition (II)) & Open & \S9 \\
+Cond.\ (I) at every \(r \mid W_p\) & Unconditional & Thm~\ref{thm:cond-I} \\
+\(r \equiv 5, 7\) excluded & Unconditional & Lem~\ref{lem:mod-8-exclusion} \\
+\(r \equiv 1\): Conj.~\ref{conj:R3} \(\Rightarrow\) failure & Unconditional & Thm~\ref{thm:R3-conditional} \\
+\(r \equiv 1\), NCT for \(d \leq 81\) & Unconditional & Thm~\ref{thm:NCT-81} \\
+\(r \equiv 1\), NCT for \(83 \leq d \leq 200\) & Computational$^*$ & \S8.4 \\
+\(r \equiv 1\), Conj.~\ref{conj:R3} (all 185 known) & Computational$^*$ & \S8.2 \\
+\(r \equiv 3\), \(G_r \leq 43\) & Unconditional & Cor~\ref{cor:small-Gr} \\
+\(r \equiv 3\), \(G_r > 43\) & Natural subclass density zero (uncond.); pointwise open & Prop~\ref{prop:density-zero} \\
+Full Conj.~\ref{conj:sufficiency} & Open & \S9 \\
 \hline
+\multicolumn{3}{@{}l}{\small $^*$Exhaustive finite search, deterministic and reproducible from the supplementary scripts.}\\
 \end{tabular}
 \end{center}
-\footnotetext{``Computational'' here means an exhaustive finite search, fully deterministic and reproducible from the supplementary scripts; it is not a heuristic or probabilistic verification.}
 
 All scripts, factorization files, BLS certificates, and verification
 logs referenced in this paper are available in the supplementary
@@ -195,21 +203,24 @@ The unconditional gap consists of two structurally independent problems:
   \(r \equiv 1 \pmod 8\), Conjecture~\ref{conj:R3} says
   \(p \mid \operatorname{ord}_r(1+\sqrt 2)\). It is known to hold
   in three explicit cases (Cases A, B, and \(4U_p^2 \equiv 1\); see
-  \S5.2), and in general it is equivalent (Proposition~\ref{prop:rank-equivalence}) to the
+  \S5.3), and in general it is equivalent (Proposition~\ref{prop:rank-equivalence}) to the
   nonexistence of compatible Pell triples (NCT), which we prove for
-  all \(d \leq 81\) (Theorem~\ref{thm:NCT-81}) --- covering every one of the 185
-  known split factors --- and verify computationally for the 11
-  parity-unblocked values \(d \in [83, 200]\) (\S8.4). The asymptotic
-  gap (large \(d\)) is open.
+  all \(d \leq 81\) (Theorem~\ref{thm:NCT-81}) and verify computationally
+  for the 11 parity-unblocked values \(d \in [83, 200]\) (\S8.4).
+  All 185 known split factors satisfy Conjecture~\ref{conj:R3}: 29\%
+  by Cases A/B/\(4U\), 23\% by rank-parity exclusion
+  (Proposition~\ref{prop:rank-equivalence}), and the remaining 48\% by
+  direct computation.
+  The asymptotic gap (large \(d\)) is open.
 \item \textbf{Order-parameter bound for inert factors:} for
   \(r \equiv 3 \pmod{8}\), Pell-sequence exclusion rules out all
   order parameters \(d \leq 43\) (Theorem~\ref{thm:pell-exclusion}); a universal lower
   bound on \(d\) growing with \(p\) would close this branch.
-  Proposition~\ref{prop:density-zero} shows unconditionally that a natural subclass
-  of the surviving configurations has natural density zero;
-  a pointwise closure of the full residual set appears to require
-  structural input beyond the Chebotarev density theorem
-  (\S9, Problem 2).
+  Proposition~\ref{prop:density-zero} shows unconditionally that the pure Class~III
+  subclass of the surviving configurations has natural density zero;
+  the full residual set is slightly larger, and its pointwise closure
+  appears to require structural input beyond the Chebotarev density
+  theorem (\S9, Problem 2).
 \end{enumerate}
 
 Both problems lie in the regime of unconditional lower bounds on
@@ -394,7 +405,12 @@ dividing any \(W_p\), irrespective of Condition~(II). Lemma~\ref{lem:v2-classifi
 is the complementary local statement controlling the 2-adic
 valuation of \(\operatorname{ord}_r(\omega_3)\) at the surviving
 factor classes --- exact at inert factors (\(r \equiv 3\)) and
-bounded in the split case (\(r \equiv 1\)). It is invoked in \S6.1
+bounded in the split case (\(r \equiv 1\)).
+The asymmetry is intrinsic: in the inert case, Frobenius forces
+\(\alpha^{r+1} = -1\), which determines \(v_2(\operatorname{ord}(\alpha))\)
+exactly; in the split case, \(\alpha\) lies in \(\mathbb{F}_r^{\times}\)
+and its order may occupy any divisor of \(r-1\).
+The lemma is invoked in \S6.1
 to establish the form \(\operatorname{ord}(\omega_3) = 4g\) (with
 \(g\) odd) at inert factors.
 \end{remark}
@@ -562,8 +578,10 @@ so \(r = \lfloor\sqrt{N}\rfloor\) and \(d = r + 1\).
 Write \(N = r \cdot s\) with \(s \geq r\). From
 \((r+1) \mid (rs + 1)\) and \(r \equiv -1 \pmod{r+1}\):
 \(s \equiv 1 \pmod{r+1}\).
-Since \(s \geq r\), the first candidate is \(s = r + 2\)
-(larger values give \(N > (r+1)^2 > N\)). So
+Since \(s \geq r\), the smallest candidate is \(s = r + 2\);
+the next, \(s = 2r+3\), gives
+\(N = r(2r+3) = 2r^2 + 3r > r^2 + 2r + 1 = (r+1)^2\),
+contradicting \(r = \lfloor\sqrt{N}\rfloor\). So
 \[
 N = r(r+2), \qquad N + 1 = (r+1)^2.
 \]
@@ -594,6 +612,7 @@ to \(W_p\).
 
 
 \begin{proof}
+\(3W_p - 12W_{p-2} = (2^p+1) - 4(2^{p-2}+1) = -3\), so
 \(W_p - 4W_{p-2} = -1\).\end{proof}
 
 
@@ -660,6 +679,19 @@ large cofactors --- and the version numbers used to produce the
 certificates \texttt{bls\_certificate\_w*.json} are documented in \S8.7.
 The conjecture analysis of \S\S5--6 does not depend on these proofs.
 
+\begin{center}
+\small
+\begin{tabular}{lccccc}
+\hline
+ & Digits & \(p-1\) divisors & Primes in \(F\) & \(F > N^{1/3}\) margin & Time \\
+\hline
+\(W_{2617}\) & 788 & 16 & 22 & 15 bits & \(<1\) s \\
+\(W_{10501}\) & 3161 & 48 & 103 & 1086 bits & 387 s \\
+\(W_{12391}\) & 3730 & 32 & 61 & 953 bits & 67 s \\
+\hline
+\end{tabular}
+\end{center}
+
 \begin{theorem}\label{thm:W2617}
 The Wagstaff number \(W_{2617}\) is prime.
 \end{theorem}
@@ -680,6 +712,7 @@ satisfies \(a^{N-1} \equiv 1\) and
 perfect square, excluding the two-factor case.
 Condition (II) is also verified:
 \(\omega_3^{(N+1)/2} \equiv -1 \pmod{N}\).
+The complete factor list is in \texttt{bls\_certificate\_w2617.json}.
 \end{proof}
 
 \subsection{BLS proof of \(W_{10501}\)}
@@ -719,7 +752,7 @@ Set \(N = W_{12391}\), a 3730-digit number. We apply the BLS
 \(N-1\) criterion \cite{ref3} (Remark~\ref{rem:bls-general}).
 The exponent \(p - 1 = 12390 = 2 \cdot 3 \cdot 5 \cdot 7 \cdot 59\)
 has 32 divisors. Of the 32 cyclotomic factors \(\Phi_d(2)\),
-28 are factored (19 by direct computation, 1 itself prime, and 7
+27 are factored (19 by direct computation, 1 itself prime, and 7
 from the Cunningham tables \cite{ref4} and FactorDB),
 contributing 61 distinct prime factors (the largest a 371-digit
 cofactor of \(\Phi_{2065}(2)\)) whose product \(F\) exceeds
@@ -762,7 +795,9 @@ By Lemma~\ref{lem:ord-2}, \(\operatorname{ord}_r(2) = 2p\). We show
 \((W_p - 1)/2 = (2^{p-1} - 1)/3\), and
 \((W_p - 1)/(2p) = (2^{p-1} - 1)/(3p)\).
 This is an integer (\(p \mid 2^{p-1}-1\) by Fermat, \(3 \mid 2^{p-1}-1\)
-since \(p\) is odd) and is odd (numerator and denominator are both odd).
+since \(p\) is odd) and is odd (the denominator \(3p\) is odd;
+the numerator \(2^{p-1}-1\) is odd since \(p \geq 5\) gives
+\(2^{p-1} \equiv 0 \pmod{2}\)).
 Therefore \(2^{(W_p-1)/2} = (2^p)^{(W_p-1)/(2p)} \equiv (-1)^{\text{odd}}
 = -1\).\end{proof}
 
@@ -812,7 +847,7 @@ branches:
 Branch & Factors & Status \\
 \hline
 \textbf{Split} & \(r \equiv 1 \pmod{8}\) & Reduced to NCT (\S5) \\
-\textbf{Inert} & \(r \equiv 3 \pmod{8}\) & \(d \leq 43\) proved; residual subclass density zero (\S6.6) \\
+\textbf{Inert} & \(r \equiv 3 \pmod{8}\) & \(d \leq 43\) proved; pure Class~III subclass density zero (\S6.6) \\
 \hline
 \end{tabular}
 \end{center}
@@ -826,12 +861,12 @@ Branch & Factors & Status \\
 For \(r \equiv 1 \pmod{8}\) with \(r \mid W_p\), the algebra
 \(\mathbb{Z}[\sqrt{2}]/(r)\) splits and the descent of Condition (II)
 yields an odd parameter \(d\) with \(\operatorname{ord}(\omega_3) = 4d\)
-and \(d \mid W_{p-2}\). After the descent of \S5.1 and the explicit
-Cases A, B, and \(4U_p^2 \equiv 1\) of \S5.2, \S\S5.3--5.5 identify
+and \(d \mid W_{p-2}\). After the descent of \S5.2 and the explicit
+Cases A, B, and \(4U_p^2 \equiv 1\) of \S5.3, \S\S5.4--5.6 identify
 \(d\) with the Pell rank \(\rho(r)/4\) (Proposition~\ref{prop:rank-equivalence}), convert
 Conjecture~\ref{conj:R3} to the nonexistence of compatible triples (NCT),
-and prove NCT for \(d \leq 81\) (Theorem~\ref{thm:NCT-81}) --- covering every
-one of the 185 known split Wagstaff factors.
+and prove NCT for \(d \leq 81\) (Theorem~\ref{thm:NCT-81}).
+Conjecture~\ref{conj:R3} is verified at all 185 known split factors (\S8.2).
 
 \subsection{Notation}
 
@@ -937,8 +972,17 @@ Since \(\Phi_{2p}(x) = (x^p + 1)/(x+1)\) for prime \(p\):
 \omega_3^p + 1 = U_p(4U_p + V_p\sqrt{2}).
 \]
 The claim \((4U_p + V_p\sqrt{2})/(4+2\sqrt{2}) = \alpha^{p-1}\)
-follows from the Pell recurrences \(V_p = V_{p-1} + 4U_{p-1}\) and
-\(4U_p = 4U_{p-1} + 2V_{p-1}\).\end{proof}
+follows by induction: write \(\alpha = 1+\sqrt{2}\) and
+\(f_n = (4U_n + V_n\sqrt{2})/(4+2\sqrt{2})\). The
+Pell recurrences \(U_{n+1} = 2U_n + U_{n-1}\),
+\(V_{n+1} = 2V_n + V_{n-1}\) give
+\(4U_{n+1} + V_{n+1}\sqrt{2}
+= 2(4U_n + V_n\sqrt{2}) + (4U_{n-1}+V_{n-1}\sqrt{2})\),
+so \(f_{n+1} = 2 f_n + f_{n-1}\). Since
+\(\alpha^2 = 2\alpha + 1\), the powers \(\alpha^{n-1}\) satisfy
+the same recurrence; the initial values
+\(f_0 = (\sqrt{2}-1) = \alpha^{-1}\) and
+\(f_1 = 1 = \alpha^0\) match, completing the induction.\end{proof}
 
 
 \begin{theorem}[Case A]\label{thm:case-A}
@@ -1063,7 +1107,7 @@ So \(\rho(r) = 4d\) and \(r\) is a primitive divisor of \(U_{4d}\).
 Since \(p\) is odd, this holds iff \(p \mid d\), iff
 \(p \mid 4d = \rho(r)\).
 \end{proof}
-\begin{definition}
+\begin{definition}[Compatible triple]\label{def:compatible-triple}
 A \emph{compatible triple} \((d, r, p)\) consists of:
 \begin{itemize}
 \item an odd integer \(d > 1\);
@@ -1147,7 +1191,7 @@ satisfies \(v_2(\operatorname{ord}_q(2)) = 1\); otherwise
 \(q \mid W_{p-2}\) is impossible (if \(\operatorname{ord}_q(2)\) is
 odd, no half-order \(m_q\) exists; if
 \(4 \mid \operatorname{ord}_q(2)\), then \(m_q\) is even but
-\(p - 2\) is odd). This parity obstruction eliminates 80.6\% of odd
+\(p - 2\) is odd). This parity obstruction eliminates 80\% of odd
 \(d \leq 500\); within \([1, 81]\) it leaves 12 values.
 
 For \(d = 1, 3\): \(U_4 = 12\) and \(U_{12} = 13860\) have no prime
@@ -1155,19 +1199,44 @@ factor \(\equiv 1 \pmod{8}\), so no split \(r\) exists. For the
 remaining 10 values \(d \in \{9, 11, 19, 27, 33, 43, 57, 59,
 67, 81\}\): \(U_{4d}\) is completely factored (the largest,
 \(U_{324}\), has 124 digits). Every primitive prime divisor
-\(r \equiv 1 \pmod{8}\) is checked: in all cases,
+\(r \equiv 1 \pmod{8}\) of \(U_{4d}\) is checked (18 such primes
+across the 10 values of \(d\); the largest is
+\(r = 306{,}416{,}447{,}870{,}523{,}097\) for \(d = 59\)): in all cases,
 \(\operatorname{ord}_r(2)\) is either odd or
 \(\operatorname{ord}_r(2)/2\) is composite, so no compatible triple
-exists. Complete factorizations are in the supplementary
+exists. The data for each admissible \(d\):
+
+\begin{center}
+\small
+\begin{tabular}{rrl}
+\hline
+\(d\) & \(\#\{r \equiv 1\,(8) \text{ prim.}\}\) & Obstruction \\
+\hline
+9 & 1 & \(\operatorname{ord}_{73}(2) = 9\) (odd) \\
+11 & 1 & \(\operatorname{ord}_{89}(2) = 11\) (odd) \\
+19 & 2 & odd or composite \(\operatorname{ord}/2\) \\
+27 & 2 & composite \(\operatorname{ord}/2\) \\
+33 & 1 & \(\operatorname{ord}_{16633}(2) = 2079\) (odd) \\
+43 & 2 & composite \(\operatorname{ord}/2\) \\
+57 & 2 & odd or composite \(\operatorname{ord}/2\) \\
+59 & 2 & odd or composite \(\operatorname{ord}/2\) \\
+67 & 3 & composite \(\operatorname{ord}/2\) \\
+81 & 2 & composite \(\operatorname{ord}/2\) \\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent Complete factorizations of each \(U_{4d}\) are in the supplementary
 repository.
 \end{proof}
-Combined with Theorems~\ref{thm:case-A}--\ref{thm:case-4U}, this proves Conjecture~\ref{conj:R3}
-unconditionally for every one of the 185 known split Wagstaff
-factors: Cases A, B, and the \(4U_p^2 \equiv 1\) subcase account
-for 35\% of instances (Theorems~\ref{thm:case-A}, \ref{thm:case-B}, \ref{thm:case-4U}), and all remaining
-general Case C instances have rank parameter \(d \leq 81\) and
-are therefore handled by Theorem~\ref{thm:NCT-81}. See \S8.2 for the full
-distribution by proof method.
+Combined with Theorems~\ref{thm:case-A}--\ref{thm:case-4U},
+the three explicit cases and Theorem~\ref{thm:NCT-81} provide an
+unconditional proof whenever the rank parameter \(d\) is admissible
+(odd) and \(d \leq 81\). Among the 185 known split factors,
+Cases A, B, and \(4U_p^2 \equiv 1\) cover 29\%
+(Theorems~\ref{thm:case-A}--\ref{thm:case-4U}); most remaining
+Case C factors have \(d > 200\) and are covered by
+computational R3 verification (\S8.2).
 
 \begin{proposition}[{$q$-th power necessity}]\label{prop:qth-power}
 In any compatible
@@ -1350,12 +1419,38 @@ comparison is valid. Note: \(V_{4d}\) is even, so \((V_{4d}+2)/2\)
 is an integer.)\end{proof}
 
 
-\begin{definition}
+\begin{definition}[Pell exclusion number]\label{def:pell-exclusion-number}
 For odd \(d \geq 1\), define the \emph{Pell exclusion number}
 \[
 N_d = \gcd\!\left(\frac{V_{4d}+2}{2},\; U_{4d}\right).
 \]
 \end{definition}
+
+
+\begin{proposition}[Closed form for $N_d$]\label{prop:Nd-closed-form}
+For odd \(d \geq 1\),
+\[
+N_d \;=\; V_{2d} \;=\; V_d^{\,2} + 2.
+\]
+\end{proposition}
+
+\begin{proof}
+Three standard Pell identities:
+(i)~\(V_{4d} = V_{2d}^{\,2} - 2(-1)^{2d} = V_{2d}^{\,2} - 2\), so
+\(V_{4d} + 2 = V_{2d}^{\,2}\);
+(ii)~\(U_{4d} = U_{2d}\, V_{2d}\);
+(iii)~\((V_{2d}/2)^2 - 2\,U_{2d}^{\,2} = (-1)^{2d} = 1\), so
+\(\gcd(V_{2d}/2,\, U_{2d}) = 1\).
+Since \(V_{2d}\) is even (write \(V_{2d} = 2k\)),
+\(N_d = \gcd(2k^2,\; 2k\,U_{2d}) = 2k\cdot\gcd(k, U_{2d}) = 2k = V_{2d}\).
+Finally, \(V_{2d} = V_d^{\,2} - 2(-1)^d = V_d^{\,2} + 2\) since \(d\) is odd.
+\end{proof}
+
+\begin{remark}\label{rem:Nd-norm}
+Since \(N_d = V_d^{\,2} + 2 = \operatorname{N}_{\mathbb{Z}[\sqrt{-2}]}(V_d + \sqrt{-2})\),
+every prime \(r \equiv 3 \pmod{8}\) dividing \(N_d\) splits in
+\(\mathbb{Z}[\sqrt{-2}]\) (because \((-2/r) = 1\) for such \(r\)).
+\end{remark}
 
 
 \begin{theorem}[{Pell-sequence exclusion for $d \leq 43$}]\label{thm:pell-exclusion}
@@ -1368,21 +1463,20 @@ dividing a composite \(W_p\) can have
 
 
 \begin{proof}
-By Theorem~\ref{thm:pell-divisibility}, such \(r\) would divide \(N_d\).
+By Theorem~\ref{thm:pell-divisibility}, such \(r\) would divide
+\(N_d = V_{2d}\) (Proposition~\ref{prop:Nd-closed-form}).
 
-For \(d = 1\): \(V_4 = 34\), \(U_4 = 12\).
-\(N_1 = \gcd(18, 12) = 6 = 2 \cdot 3\). The only prime
+For \(d = 1\): \(N_1 = V_1^2 + 2 = 6 = 2 \cdot 3\). The only prime
 \(\equiv 3 \pmod{8}\) is 3. Since \(\gcd(W_p, 3) = 1\) for
 \(p \geq 5\): no valid \(r\) exists.
 
-For \(d = 3\): \(V_{12} = 39202\), \(U_{12} = 13860\).
-\(N_3 = \gcd(19602, 13860) = 198 = 2 \cdot 3^2 \cdot 11\). Primes
+For \(d = 3\): \(N_3 = V_3^2 + 2 = 14^2 + 2 = 198 = 2 \cdot 3^2 \cdot 11\). Primes
 \(\equiv 3 \pmod{8}\): 3 and 11. We have \(3 \nmid W_p\). For
 \(r = 11\): \(\operatorname{ord}_{11}(2) = 10\), giving \(p = 5\),
 but \(W_5 = 11\) is prime. So 11 does not divide any composite \(W_p\).
 
-For \(d \in \{9, 11, 19, 27, 33, 43\}\): \(N_d\) is computed and
-completely factored (the largest, \(N_{43}\), has 55 digits). Each
+For \(d \in \{9, 11, 19, 27, 33, 43\}\): \(N_d = V_d^2 + 2\) is
+completely factored (the largest, \(N_{43}\), has 33 digits). Each
 prime factor \(r \equiv 3 \pmod{8}\) with \(r > 11\) is checked:
 either \(\operatorname{ord}_r(2)\) has \(v_2 \neq 1\) (so
 \(r \nmid W_p\) for any prime \(p\)), or
@@ -1486,8 +1580,8 @@ and the odd part \(g\) is not constrained by the norm argument alone
 (Remark~\ref{rem:frobenius-norm}). The generalized LTE (Theorem~\ref{thm:generalized-LTE}) controls \(q\)-adic
 valuations of \(W_{p-2}\) for primes \(q \in A\), and the
 Pell-sequence exclusion constrains the \emph{factor} \(r\) rather than
-the \emph{configuration}, succeeding for all \(g \leq 43\) because the
-numbers \(N_d\) are small enough to factor completely. Beyond
+the \emph{configuration}, succeeding for all \(g \leq 43\) because
+\(N_d = V_d^2 + 2\) (Proposition~\ref{prop:Nd-closed-form}) is small enough to factor completely at those \(d\). Beyond
 \(d = 43\), sporadic large prime factors of \(N_d\) survive all
 local checks. However, the surviving configurations are negligible
 in density:
@@ -1547,6 +1641,22 @@ has every prime factor in \(A\), not that all of \((r+1)/4\) does).
 Even for this subclass, the density-zero bound is not an \emph{eventual}
 (pointwise) closure: the exceptional set, though thin, is infinite.
 
+\begin{remark}[Naive model for the inert branch]\label{rem:inert-heuristic}
+For comparison, the split branch (\S8.8, footnote) admits a naive
+independence model with expected failure count
+\(E = \sum 1/p \approx 0.76\), so that zero failures among
+\({\sim}14.8 \times 10^6\) split factors is consistent with, but
+not strong evidence for, Conjecture~\ref{conj:R3}. For the inert
+branch, no analogous convergent model exists: the sum of
+local-pass probabilities over the tested inert factors diverges,
+because the algebraic obstructions (parity, Pell exclusion) that
+block most configurations are not captured by a uniform random
+model. The 684{,}965{,}381 zero-failure count reflects the
+algebraic structure of \S\S5--6 rather than a small Poisson
+expectation; the structure is proved to suffice for \(d \leq 43\)
+but remains open beyond.
+\end{remark}
+
 A naive GRH/Chebotarev density argument in the style of Hooley
 \cite{ref10} and Heath-Brown \cite{ref9} does \emph{not} supply the missing closure
 for the full residual set either: the relevant Hooley-type density
@@ -1573,7 +1683,8 @@ Let \(W_p\) be composite and suppose Condition (II) holds.
 For each prime factor \(r \mid W_p\):
 
 \begin{center}
-\begin{tabular}{lll}
+\small
+\begin{tabular}{@{}p{3.8cm}p{6.2cm}l@{}}
 \hline
 Factor class & Status & Reference \\
 \hline
@@ -1583,13 +1694,13 @@ Factor class & Status & Reference \\
 \(r \equiv 1\), \(4U_p^2 \equiv 1\) & Blocked & Theorem~\ref{thm:case-4U} \\
 \(r \equiv 1\), general Case C & Proved for \(d \leq 81\); verified for \(83 \leq d \leq 200\); open & Theorem~\ref{thm:NCT-81}, \S8.4 \\
 \(r \equiv 3\), \(G_r \leq 43\) & Blocked & Corollary~\ref{cor:small-Gr} \\
-\(r \equiv 3\), \(G_r > 43\) & Density zero for natural subclass (unconditional); pointwise open & Proposition~\ref{prop:density-zero} \\
+\(r \equiv 3\), \(G_r > 43\) & Natural subclass density zero (unconditional); pointwise open & Proposition~\ref{prop:density-zero} \\
 \hline
 \end{tabular}
 \end{center}
 
 
-The two open problems are NCT for general \(d\) (\S5.5) and the
+The two open problems are NCT for general \(d\) (\S5.6) and the
 universal order-parameter bound for inert factors (\S6.4). Both
 require unconditional lower bounds on multiplicative orders, but
 are structurally independent: NCT is a finite local verification
@@ -1648,22 +1759,25 @@ satisfy Conjecture~\ref{conj:R3}. The distribution by proof method:
 \hline
 Configuration & Fraction & Reference \\
 \hline
-Case A (\(r \mid U_p\)) & 0\% & Theorem~\ref{thm:case-A} \\
-Case B (\(r \mid V_p\)) & 6\% & Theorem~\ref{thm:case-B} \\
-Case C, \(4U_p^2 \equiv 1\) & 29\% & Theorem~\ref{thm:case-4U} \\
-Case C, general (\(d \leq 81\)) & 65\% & Theorem~\ref{thm:NCT-81} \\
+Case A (\(r \mid U_p\)) & 1\% (1) & Theorem~\ref{thm:case-A} \\
+Case B (\(r \mid V_p\)) & 3\% (6) & Theorem~\ref{thm:case-B} \\
+Case C, \(4U_p^2 \equiv 1\) & 25\% (46) & Theorem~\ref{thm:case-4U} \\
+Case C, \(d\) inadmissible & 23\% (43) & Prop~\ref{prop:rank-equivalence} \\
+Case C, general (\(d > 200\)) & 48\% (89) & R3 verified \\
 \hline
 \end{tabular}
 \end{center}
 
 
-No Case A instance occurs among the 185 surveyed factors. Case A
-(\(r \mid U_p\)) is algebraically the most natural way for Conjecture~\ref{conj:R3} to
-hold --- \(p \mid \rho(r)\) implies \(p \mid \operatorname{ord}_r(\alpha)\)
-directly --- but it does not appear empirically in the Wagstaff
-setting and may in fact be impossible there; we include it as a
-complete-coverage proof case rather than as a witnessed
-configuration.
+Exactly one Case A instance occurs (\(p = 3361\), \(r = 53777\)).
+For the 43 ``\(d\) inadmissible'' factors, either
+\(4 \nmid \operatorname{ord}_r(\omega_3)\) or
+\(\operatorname{ord}_r(\omega_3)/4\) is even; in either case
+Proposition~\ref{prop:rank-equivalence} shows Condition~(II) cannot hold.
+The remaining 89 Case C factors all have odd
+\(d = \operatorname{ord}_r(\omega_3)/4 > 200\); for these,
+Conjecture~\ref{conj:R3} is verified by direct computation of
+\(\operatorname{ord}_r(1+s)\).
 
 \subsection{Primitive divisor survey}
 
@@ -1684,7 +1798,8 @@ the natural strengthening in Remark~\ref{rem:qpro-false} fails. Since
 No compatible triple \((d, r, p)\) exists for any odd
 \(d \leq 81\); this is the unconditional Theorem~\ref{thm:NCT-81}. For the
 parity-unblocked range \(83 \leq d \leq 200\) --- the 11 values
-\(d \in \{83, 99, 107, 121, 129, 131, 139, 163, 171, 177, 179\}\)
+\(d \in \{83, 99, 107, 121, 129, 131,\)
+\(139, 163, 171, 177, 179\}\)
 surviving the parity obstruction of Theorem~\ref{thm:NCT-81} --- an independent
 sieve-based verification was carried out on a 128-core machine.
 For each such \(d\), all primes \(r = 8dk + 1\) with \(r < 10^{11}\)
@@ -1739,7 +1854,8 @@ factor \(q \notin A\) (equivalently, \(q \nmid W_{p-2}\)), preventing
 
 The 11 distinct \(G_r\) values observed are
 \(\{1, 3, 9, 11, 19, 57, 129, 177, 321, 2217, 2451\}\); in particular,
-all prime factors of observed \(G_r\) lie in \(\{3, 11, 19, 43\}\),
+all prime factors of observed \(G_r\) lie in
+\(\{3, 11, 19, 43, 59, 107, 739\}\), each of which is Class III,
 consistent with the structure of \(A\).
 
 \textbf{Extended inert-factor survey.} A segmented sieve
@@ -1810,7 +1926,7 @@ Theorem~\ref{thm:W2617} & BLS certificate for \(W_{2617}\) & Single number \\
 Theorem~\ref{thm:W10501} & BLS certificate for \(W_{10501}\); APR-CL primality of 103 factors & Single number \\
 Theorem~\ref{thm:W12391} & BLS certificate for \(W_{12391}\); APR-CL primality of 61 factors & Single number \\
 Theorem~\ref{thm:NCT-81} & Complete factorization of \(U_{4d}\) for each admissible \(d \leq 81\); for each primitive \(r \equiv 1\,(8)\), verify \(v_2(\operatorname{ord}_r(2)) \neq 1\) or \(\operatorname{ord}_r(2)/2\) composite or \(d \nmid W_{p-2}\) & 10 values of \(d\); largest factorization: \(U_{324}\) (124 digits) \\
-Theorem~\ref{thm:pell-exclusion} & Complete factorization of \(N_d\) for each admissible \(d \leq 43\); for each prime \(r \equiv 3\,(8)\) dividing \(N_d\), verify the same three conditions & 6 values of \(d\); largest factorization: \(N_{43}\) (55 digits) \\
+Theorem~\ref{thm:pell-exclusion} & Complete factorization of \(N_d = V_d^2+2\) for each admissible \(d \leq 43\); for each prime \(r \equiv 3\,(8)\) dividing \(N_d\), verify the same three conditions & 6 values of \(d\); largest factorization: \(N_{43}\) (33 digits) \\
 \hline
 \end{tabular}
 \end{center}
@@ -1855,9 +1971,9 @@ using free, open-source software.
   gmpy2 2.1+, falling back to SymPy when gmpy2 is unavailable.
 \end{itemize}
 
-The driver scripts \texttt{bls\_n\_minus\_1\_w2617.py},
-\texttt{bls\_n\_minus\_1\_w10501.py}, and \texttt{bls\_n\_minus\_1\_w12391.py} in the
-supplementary repository emit JSON certificates
+The driver scripts
+\texttt{bls\_n\_minus\_1\_w\{2617,10501,12391\}.py}
+in the supplementary repository emit JSON certificates
 (\texttt{bls\_certificate\_w*.json}) recording every cyclotomic factor,
 prime decomposition, BLS witness, and primality method used,
 along with full execution logs.
@@ -1893,7 +2009,7 @@ witnesses cover structurally distinct mechanisms:
 \item \emph{Small-\(d\) gap at \(d = 57\).}
   \(p = 85{,}684{,}865{,}933\), \(r = 2p+1\),
   \(d = G_r = 57 = 3 \cdot 19\). This is the single-factor
-  danger configuration at \(d = 57\) identified in \S9,
+  residual configuration at \(d = 57\) identified in \S9,
   Problem 2; it is disposed of globally by the secondary-factor
   closure below.
 \end{enumerate}
@@ -1908,7 +2024,7 @@ uniformly onto the \(p\)-th roots of unity, the expected failure
 count is \(E = \sum 1/p \approx 0.76\) and
 \(\exp(-E) \approx 0.47\). The observation therefore adds no
 independent evidence for Conjecture~\ref{conj:R3} beyond the unconditional closures of
-Theorem~\ref{thm:NCT-81} and Theorem~\ref{thm:A.8}; we report it only for
+Theorem~\ref{thm:NCT-81}; we report it only for
 completeness.}) are recorded in the supplementary repository.
 
 \emph{Secondary-factor closures (\S9, Problem 2).} The dangerous
@@ -1936,9 +2052,23 @@ ruled out at secondary prime factors of the same composite \(W_p\):
 
 These two configurations are disposed of computationally at
 secondary factors; no unconditional argument is known for either
-case. Their role is narrow: they are the only two configurations
+case, and they are not counted among the unconditional results
+in the status table of \S1.2. Their role is narrow: they are the only two configurations
 the single-factor argument of \S\S5--6 currently fails to rule out,
 and the secondary-factor argument disposes of both.
+
+\begin{remark}[Single-factor versus global sufficiency]\label{rem:single-vs-global}
+In contrast to the Lucas--Lehmer test for Mersenne numbers, where the
+congruence \(s_{p-2} \equiv 0 \pmod{M_p}\) fails independently at
+each prime factor of a composite \(M_p\), the Chebyshev criterion
+for Wagstaff numbers admits local passes of Condition~(II) at
+individual factors (witnesses 1--3 above). Global failure is then
+recovered only through cross-factor arguments at secondary
+divisors of the same \(W_p\). A complete sufficiency proof
+therefore cannot proceed factor by factor; it requires a global
+argument that accounts for the interaction between distinct prime
+divisors of a composite \(W_p\).
+\end{remark}
 
 
 
@@ -1947,7 +2077,7 @@ and the secondary-factor argument disposes of both.
 \textbf{Problem 1} (NCT for general \(d\)). Prove that no compatible triple
 \((d, r, p)\) exists for any odd \(d > 1\). Proved for \(d \leq 81\)
 (Theorem~\ref{thm:NCT-81}); verified computationally through \(d = 200\) (\S8.4).
-The parity obstruction eliminates 80.6\% of \(d\); the remaining
+The parity obstruction eliminates 80\% of \(d\); the remaining
 cases require a direct compatible-triple argument (Proposition~\ref{prop:qth-power},
 Remark~\ref{rem:qpro-false}). See Remark~\ref{rem:split-gap} for the structural source of this gap.
 
@@ -1955,18 +2085,25 @@ Remark~\ref{rem:qpro-false}). See Remark~\ref{rem:split-gap} for the structural 
 \(r \equiv 3 \pmod{8}\) dividing a composite \(W_p\), prove that
 \(\operatorname{ord}_r(\omega_3)/4 \nmid W_{p-2}\). Theorem~\ref{thm:pell-exclusion}
 handles all admissible \(d \leq 43\). The bound is sharp: \(N_{57}\)
-and \(N_{67}\) each have a surviving single-factor configuration
-(\S8.8). Both are disposed of computationally at secondary factors;
-no unconditional argument is known for either. A natural subclass of
-the residual configurations has density zero (Proposition~\ref{prop:density-zero},
-unconditional), but a naive Hooley-type argument does not extend
-this to pointwise closure (\S6.6).
+yields a surviving single-factor configuration observed directly in
+the \(r \leq 10^{12}\) survey (\S8.8, witness~3), while \(N_{67}\)
+yields a configuration identified through the broader secondary-factor
+analysis (\S8.8). Both are disposed of computationally at secondary
+factors; no unconditional argument is known for either. The pure
+Class~III subclass of the residual configurations has density zero
+(Proposition~\ref{prop:density-zero}, unconditional), but the full residual set is
+slightly larger, and a naive Hooley-type argument does not extend
+the density-zero result to pointwise closure (\S6.6).
+The closed form \(N_d = V_d^2 + 2\)
+(Proposition~\ref{prop:Nd-closed-form}) exhibits \(N_d\) as a norm
+in \(\mathbb{Z}[\sqrt{-2}]\); whether the Zsygmondy theory of
+primitive divisors of such norms can yield an asymptotic
+compatible-triple exclusion for large \(d\) is an open question.
 
 \begin{remark}\label{rem:generalization}
 The structural ingredients used in \S\S5--6 --- the
 \(v_2\) classification of \(\operatorname{ord}_r(\omega_3)\)
-(Lemma~\ref{lem:v2-classification}), the Pell exclusion numbers \(N_d\) (Definition after
-Theorem~\ref{thm:pell-divisibility}), and the compatible-triple formulation of Conjecture~\ref{conj:R3}
+(Lemma~\ref{lem:v2-classification}), the Pell exclusion numbers \(N_d = V_d^2+2\) (Proposition~\ref{prop:Nd-closed-form}), and the compatible-triple formulation of Conjecture~\ref{conj:R3}
 (Proposition~\ref{prop:rank-equivalence}) --- are properties of the fixed element
 \(\omega_3 \in \mathbb{Z}[\sqrt{2}]\) and the Pell sequences. The
 Wagstaff-specific content enters through Lemma~\ref{lem:ord-2}
@@ -1991,7 +2128,7 @@ This appendix gives the first closed-form restriction on the
 quadratic-residue behaviour of \(\alpha = 1+\sqrt 2\) at split
 Wagstaff factors: a dichotomy determined by \(r \bmod 16\)
 (Theorem~\ref{thm:A.8}). The proof assembles a classical quartic-residue
-identity in the Pell representation \(r = a^2 - 2b^2\) (\SA.1,
+identity in the Pell representation \(r = a^2 - 2b^2\) (\S A.1,
 yielding Corollary~\ref{cor:A.5}), a Wagstaff-specific Octic Dichotomy
 (Theorem~\ref{thm:A.6}), and a genus formula for
 \((1+\sqrt 2 \mid r)\) (Theorem~\ref{thm:A.7}). The appendix is
@@ -2249,7 +2386,7 @@ collapses the higher-conductor character onto the joint cells of
 \bibitem{ref2} Yu. Bilu, G. Hanrot, and P. M. Voutier, \emph{Existence of primitive divisors of Lucas and Lehmer numbers} (with an appendix by M. Mignotte), J. Reine Angew. Math. \textbf{539} (2001), 75--122.
 \bibitem{ref3} J. Brillhart, D. H. Lehmer, and J. L. Selfridge, \emph{New primality criteria and factorizations of \(2^m \pm 1\)}, Math. Comp. \textbf{29} (1975), no. 130, 620--647.
 \bibitem{ref4} J. Brillhart, D. H. Lehmer, J. L. Selfridge, B. Tuckerman, and S. S. Wagstaff, Jr., \emph{Factorizations of \(b^n \pm 1\), \(b = 2, 3, 5, 6, 7, 10, 11, 12\) Up to High Powers}, 3rd ed., Contemporary Mathematics, vol. 22, American Mathematical Society, Providence, RI, 2002, with online updates at \url{https://homes.cerias.purdue.edu/~ssw/cun/}.
-\bibitem{ref5} K. S. Chua, \emph{Chebyshev polynomials and higher order Lucas--Lehmer algorithm}, preprint, 2020, arXiv:2010.02677.
+\bibitem{ref5} K. S. Chua, \emph{Chebyshev polynomials and higher order Lucas--Lehmer algorithm} [preprint], arXiv:2010.02677, 2020.
 \bibitem{ref6} H. Cohen and A. K. Lenstra, \emph{Implementation of a new primality test}, Math. Comp. \textbf{48} (1987), no. 177, 103--121. (Algorithm based on L. M. Adleman, C. Pomerance, and R. S. Rumely, \emph{On distinguishing prime numbers from composite numbers}, Ann. of Math. (2) \textbf{117} (1983), 173--206.)
 \bibitem{ref7} R. Crandall and C. Pomerance, \emph{Prime Numbers: A Computational Perspective}, 2nd ed., Springer, New York, 2005.
 \bibitem{ref8} J. Grantham, \emph{Frobenius pseudoprimes}, Math. Comp. \textbf{70} (2001), no. 234, 873--891.
@@ -2275,8 +2412,9 @@ factor, BLS witness, and primality method
 \item inert factor data for the 15{,}587{,}021 pairs \((p, r)\) with
 \(G_r > 43\) (the non-trivially-closed subset of the 684{,}965{,}381
 inert factors with \(r < 10^{12}\), \(p < 5 \times 10^{11}\);
-\S8.5), recording \(p\), \(r\), \(\operatorname{ord}_r(2)\),
-\(G_r\), and the Condition~(II) outcome;
+\S8.5), recording \(p\), \(r\), \(G_r\),
+the order parameter \(d = \operatorname{ord}_r(\omega_3)/4\),
+and the Condition~(II) obstruction type;
 \item scripts to reproduce the BLS proofs, the inert-factor
 survey, the primitive-divisor survey (\S8.3), and the
 factorizations of \(U_{4d}\) and \(N_d\)

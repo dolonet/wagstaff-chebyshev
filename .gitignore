@@ -1,0 +1,13 @@
+# TeX build artifacts
+*.aux
+*.log
+*.out
+*.pdf
+*.synctex.gz
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
