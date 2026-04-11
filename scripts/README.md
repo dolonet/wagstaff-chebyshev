@@ -48,6 +48,7 @@ except where noted below.
 | `small_factor_census.py` | Census of 869 inert factors with r < 2x10^5 | §8.5 | ~30 s | sympy |
 | `class_iii_wieferich.py` | Verify no Class III prime q < 5000 is Wieferich-at-minus-1 | §6.2 | seconds | sympy |
 | `secondary_closure.py` | Verify secondary-factor closures for d=57, d=67 | §8.8 | ~1 min | sympy |
+| `danger_triple_survey.py` | Danger-triple survey for admissible d (multi-factor reduction) | §6.7 | ~10 s @d≤57 | sympy |
 
 ## Entry points
 
@@ -107,6 +108,9 @@ python3 class_iii_wieferich.py
 
 # Secondary closure for d=57, d=67
 python3 secondary_closure.py
+
+# Danger-triple survey (d <= 57 feasible in ~10 s)
+python3 danger_triple_survey.py 57
 ```
 
 ## Dependencies

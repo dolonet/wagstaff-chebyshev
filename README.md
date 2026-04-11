@@ -11,13 +11,15 @@ The Chebyshev base `omega_3 = 3 + 2*sqrt(2)` and the identity
 for the Wagstaff numbers `W_p = (2^p + 1)/3`; combined with a companion
 `N-1` criterion and the Brillhart-Lehmer-Selfridge framework, this gives
 self-contained primality proofs of `W_2617`, `W_10501`, and `W_12391`,
-independent of the ECPP proofs in the literature. For the sufficiency of
-the single Chebyshev congruence, we reduce the split branch
-`r = 1 (mod 8)` to the nonexistence of compatible Pell triples (NCT),
-proved for all rank parameters `d <= 81`; Conjecture R3 is verified
-computationally at all 185 known split factors. For the inert branch we
-prove that `r = 3 (mod 8)` cannot pass Condition (II) whenever
-`d <= 43`.
+independent of ECPP. For the sufficiency conjecture -- whether the
+single congruence `omega_3^{(W_p+1)/2} = -1 (mod W_p)` implies
+primality -- we reduce the split branch `r = 1 (mod 8)` to the
+nonexistence of compatible Pell triples (proved for `d <= 81`) and prove
+that the inert branch `r = 3 (mod 8)` is impossible for order parameter
+`d <= 43`. A multi-factor reduction shows that any all-inert composite
+counterexample requires at least three prime factors, with no danger
+triple found beyond `d = 683` in a systematic survey of all admissible
+`d <= 1000`.
 
 ## Layout
 
@@ -26,7 +28,7 @@ prove that `r = 3 (mod 8)` cannot pass Condition (II) whenever
 ├── paper/                         LaTeX source of the paper
 │   ├── wagstaff_chebyshev.tex
 │   └── Makefile                   pdflatex targets
-├── scripts/                       Reproducibility scripts (22 Python scripts)
+├── scripts/                       Reproducibility scripts (23 Python scripts)
 │   ├── README.md                  script -> paper section map
 │   │
 │   │  Survey pipeline (§8.5)
@@ -58,7 +60,8 @@ prove that `r = 3 (mod 8)` cannot pass Condition (II) whenever
 │   │  Inert factor analysis (§6-7, §8.5, §8.8)
 │   ├── small_factor_census.py     869-factor census (r < 2x10^5)
 │   ├── class_iii_wieferich.py     Class III Wieferich check (§6.2)
-│   └── secondary_closure.py       d=57, d=67 closure (§8.8)
+│   ├── secondary_closure.py       d=57, d=67 closure (§8.8)
+│   └── danger_triple_survey.py    danger-triple survey for admissible d (§6.7)
 │
 ├── data/                          Sample data, hashes, and BLS certificates
 │   ├── README.md                  data dictionary + schema
@@ -66,7 +69,8 @@ prove that `r = 3 (mod 8)` cannot pass Condition (II) whenever
 │   ├── SHA256SUMS                 hashes of full and sample CSVs
 │   ├── bls_certificate_w2617.json
 │   ├── bls_certificate_w10501.json
-│   └── bls_certificate_w12391.json
+│   ├── bls_certificate_w12391.json
+│   └── danger_triple_data.json    V_{114}, V_{134}, V_{662} factorisations + 5 danger triples
 ├── reproducibility.md             end-to-end reproduction walkthrough
 ├── LICENSE                        MIT
 ├── CITATION.cff                   machine-readable citation

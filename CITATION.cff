@@ -4,7 +4,7 @@ title: "Chebyshev primality criteria for Wagstaff numbers"
 authors:
   - family-names: "Dolotov"
     given-names: "Alexey"
-version: "6.11"
+version: "7.4"
 date-released: "2026-04-10"
 license: MIT
 repository-code: "https://github.com/dolonet/wagstaff-chebyshev"

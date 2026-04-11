@@ -13,6 +13,7 @@ is hosted on Zenodo (see below).
 | `bls_certificate_w2617.json` | BLS N-1 primality certificate for W_{2617} (§3.6). |
 | `bls_certificate_w10501.json` | BLS N-1 primality certificate for W_{10501} (§3.7). |
 | `bls_certificate_w12391.json` | BLS N-1 primality certificate for W_{12391} (§3.8). |
+| `danger_triple_data.json` | Danger-triple enumeration: V_{114}, V_{134}, V_{662} factorisations, 79 admissible d, 5 danger triples (§6.7). |
 
 ## The full dataset
 
@@ -70,7 +71,7 @@ Exactly three rows in the full CSV have `obstruction = PASS`:
 | 10 916 765 939 | 152 834 723 147 | 38 208 680 787 | structured cofactor |
 | 85 684 865 933 | 171 369 731 867 | 57 | small-`d` gap at `d = 57` |
 
-Each row is analysed in the paper (§9.8).
+Each row is analysed in the paper (§8.8).
 
 ## How the data was generated
 

@@ -1,0 +1,79 @@
+{
+  "description": "Danger-triple enumeration for Theorem 6.3 (multi-factor reduction). Paper reference: Section 6.7.",
+  "generated": "2026-04-11",
+  "admissible_d_limit": 1000,
+  "n_admissible": 79,
+  "admissible_d": [
+    3, 9, 11, 19, 27, 33, 43, 57, 59, 67, 81, 83, 99, 107, 121,
+    129, 131, 139, 163, 171, 177, 179, 201, 209, 211, 227, 243,
+    249, 251, 267, 283, 307, 331, 339, 347, 353, 363, 379, 387,
+    393, 419, 427, 443, 451, 467, 491, 499, 507, 523, 531, 537,
+    547, 563, 571, 577, 587, 603, 619, 643, 649, 659, 683, 691,
+    699, 701, 723, 739, 747, 771, 787, 803, 811, 819, 827, 859,
+    867, 883, 907, 993
+  ],
+  "admissible_criterion": "odd d whose prime factors q all satisfy v_2(ord_q(2)) = 1 (Class III primes)",
+  "factorisations": {
+    "V_114": {
+      "d": 57,
+      "digits": 44,
+      "complete": true,
+      "factorisation": "2 * 3^2 * 11 * 227 * 379 * 683 * 19457 * 34961 * 1562713 * 20426977 * 171369731867",
+      "factors": [2, 9, 11, 227, 379, 683, 19457, 34961, 1562713, 20426977, 171369731867],
+      "primitive_inert_divisors": [
+        {"r": 227, "ord_r_2": 226, "p": 113, "p_prime": true, "danger": false, "reason": "d does not divide W_{p-2}"},
+        {"r": 683, "ord_r_2": 22, "p": 11, "p_prime": true, "danger": true, "phantom": true, "reason": "W_11 = 683 is prime"},
+        {"r": 171369731867, "ord_r_2": 171369731866, "p": 85684865933, "p_prime": true, "danger": true, "phantom": false}
+      ]
+    },
+    "V_134": {
+      "d": 67,
+      "digits": 52,
+      "complete": true,
+      "factorisation": "2 * 3 * 28409 * 210113 * 377582251 * 972449700881 * 148937135261632265803",
+      "factors": [2, 3, 28409, 210113, 377582251, 972449700881, 148937135261632265803],
+      "primitive_inert_divisors": [
+        {"r": 377582251, "ord_r_2": 25172150, "p": 12586075, "p_prime": false, "danger": false, "reason": "p composite"},
+        {"r": 148937135261632265803, "ord_r_2": 49645711753877421934, "p": 24822855876938710967, "p_prime": true, "danger": true, "phantom": false}
+      ]
+    },
+    "V_662": {
+      "d": 331,
+      "digits": 254,
+      "complete": false,
+      "cofactor_digits": 238,
+      "known_factors": [3, 6619, 43691, 4510867],
+      "primitive_inert_divisors": [
+        {"r": 6619, "ord_r_2": 6618, "p": 3309, "p_prime": false, "danger": false, "reason": "p composite"},
+        {"r": 43691, "ord_r_2": 34, "p": 17, "p_prime": true, "danger": true, "phantom": true, "reason": "W_17 = 43691 is prime"},
+        {"r": 4510867, "ord_r_2": 4510866, "p": 2255433, "p_prime": false, "danger": false, "reason": "p composite"}
+      ],
+      "note": "238-digit unfactored cofactor; same-d exclusion (at most one factor per d-value) does not depend on complete factorisation."
+    },
+    "V_1366": {
+      "d": 683,
+      "digits": 524,
+      "complete": false,
+      "known_factors": [3, 2731],
+      "primitive_inert_divisors": [
+        {"r": 2731, "ord_r_2": 26, "p": 13, "p_prime": true, "danger": true, "phantom": true, "reason": "W_13 = 2731 is prime"}
+      ],
+      "note": "Only small factors found; large cofactor unfactored."
+    }
+  },
+  "danger_triples": [
+    {"d": 57, "r": 683, "p": 11, "type": "PHANTOM", "reason": "W_11 = 683 is prime"},
+    {"d": 57, "r": 171369731867, "p": 85684865933, "type": "REAL", "reason": "W_p composite; disposed at secondary factor (Section 8.8)"},
+    {"d": 67, "r": 148937135261632265803, "p": 24822855876938710967, "type": "REAL", "reason": "W_p composite; disposed at secondary factor (Section 8.8)"},
+    {"d": 331, "r": 43691, "p": 17, "type": "PHANTOM", "reason": "W_17 = 43691 is prime"},
+    {"d": 683, "r": 2731, "p": 13, "type": "PHANTOM", "reason": "W_13 = 2731 is prime"}
+  ],
+  "summary": {
+    "total_danger_triples": 5,
+    "phantom": 3,
+    "real": 2,
+    "max_danger_d": 683,
+    "no_danger_for_d_above": 683,
+    "note": "Among 79 admissible d <= 1000, 37 have completely factored primitive parts (no hidden dangers). The remaining 42 have partially-factored cofactors, but same-d exclusion ensures the multi-factor theorem holds regardless."
+  }
+}
