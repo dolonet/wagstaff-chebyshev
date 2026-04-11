@@ -38,7 +38,7 @@
 \maketitle
 
 \begin{abstract}
-The Chebyshev base \(\omega_3 = 3 + 2\sqrt{2}\) and the identity \(W_p + 1 = 4W_{p-2}\) yield an unconditional \(N+1\) primality criterion for the Wagstaff numbers \(W_p = (2^p + 1)/3\); combined with a companion \(N-1\) criterion and the Brillhart--Lehmer--Selfridge framework, this gives self-contained primality proofs of \(W_{2617}\), \(W_{10501}\), and \(W_{12391}\), independent of ECPP. For the sufficiency conjecture --- whether the single congruence \(\omega_3^{(W_p+1)/2} \equiv -1 \pmod{W_p}\) implies primality --- we show that Condition~(I) holds automatically, exclude factors \(r \equiv 5, 7 \pmod{8}\), reduce the split branch \(r \equiv 1 \pmod{8}\) to the nonexistence of compatible Pell triples (proved for rank parameters \(d \leq 81\)), and prove that the inert branch \(r \equiv 3 \pmod{8}\) is impossible for order parameter \(d \leq 43\). A multi-factor reduction shows that any all-inert composite counterexample requires at least three prime factors, with no danger triple found beyond \(d = 683\) in a systematic survey of all admissible \(d \leq 1000\).
+The Chebyshev base \(\omega_3 = 3 + 2\sqrt{2}\) and the identity \(W_p + 1 = 4W_{p-2}\) yield an unconditional \(N+1\) primality criterion for the Wagstaff numbers \(W_p = (2^p + 1)/3\); combined with a companion \(N-1\) criterion and the Brillhart--Lehmer--Selfridge framework, this gives fully verified primality proofs of \(W_{2617}\), \(W_{10501}\), and \(W_{12391}\), independent of ECPP. For the sufficiency conjecture --- whether the single congruence \(\omega_3^{(W_p+1)/2} \equiv -1 \pmod{W_p}\) implies primality --- we show that Condition~(I) holds automatically, exclude factors \(r \equiv 5, 7 \pmod{8}\), reduce the split branch \(r \equiv 1 \pmod{8}\) to the nonexistence of compatible Pell triples (proved for rank parameters \(d \leq 81\)), and prove that the inert branch \(r \equiv 3 \pmod{8}\) is impossible for order parameter \(d \leq 43\). A multi-factor reduction shows that any all-inert composite counterexample requires at least three prime factors, with no danger triple found beyond \(d = 683\) in a systematic survey of all admissible \(d \leq 1000\).
 
 \end{abstract}
 
@@ -62,7 +62,7 @@ Chebyshev/Lucas-type tests remained conjectural on the sufficiency
 side.
 
 The paper delivers two distinct results, summarised in \S\S1.1--1.2
-below. Sections~2--3 are self-contained and establish~(A);
+below. Sections~2--3 establish the unconditional criteria and proofs~(A);
 Sections~4--7 develop~(B); Section~8 presents the computational
 verification.
 
@@ -91,7 +91,7 @@ primality criterion (Theorem~\ref{thm:criterion}), and a companion \(N-1\) condi
 via \(a = 5\) yields a combined \(N+1/N-1\) criterion when
 \(p \equiv 1 \pmod{6}\) (Theorem~\ref{thm:combined}). Combining these criteria
 with the Brillhart--Lehmer--Selfridge framework \cite{ref3}, we
-give self-contained primality proofs of
+give fully verified primality proofs of
 
 \begin{itemize}
 \item \(W_{2617}\) (788 digits, Theorem~\ref{thm:W2617}),
@@ -190,9 +190,10 @@ Full Conj.~\ref{conj:sufficiency} & Open & \S9 \\
 \end{center}
 
 All scripts, factorization files, BLS certificates, and verification
-logs referenced in this paper are available in the supplementary
-repository (see \S8.7 and ``Supplementary material'' at the end of the
-References).
+logs referenced in this paper are archived on Zenodo
+(\href{https://doi.org/10.5281/zenodo.19496206}{10.5281/zenodo.19496206});
+see \S8.7 for the software toolchain and ``Supplementary material''
+at the end of the References for the full inventory.
 
 \subsection{What remains open}
 
@@ -323,16 +324,19 @@ Since \(3W_p = 2^p + 1\): \(2^p \equiv -1 \pmod{r}\).
 Therefore \(\operatorname{ord}_r(2) \mid 2p\) but
 \(\operatorname{ord}_r(2) \nmid p\). Since \(p\) is prime,
 \(\operatorname{ord}_r(2) \in \{2, 2p\}\). If \(\operatorname{ord} = 2\):
-\(r \mid 3\), contradicting \(\gcd(W_p, 3) = 1\). So
+\(r \mid 3\), contradicting \(\gcd(W_p, 3) = 1\)
+(since \(p \geq 5\) is prime, \(p \nmid 6 = \operatorname{ord}_9(2)\),
+so \(v_3(2^p+1) = 1\) and \(3 \nmid W_p\)). So
 \(\operatorname{ord}_r(2) = 2p\), and \(2p \mid r-1\) by Fermat.\end{proof}
 
 
-\begin{lemma}\label{lem:W-mod-8}\label{lem:mod-8-exclusion}
+\begin{lemma}\label{lem:mod-8-exclusion}
 For all odd primes \(p \geq 3\):
 \textup{(i)}~\(W_p \equiv 3 \pmod{8}\);
 \textup{(ii)}~every prime factor of \(W_p\) satisfies
 \(r \equiv 1\) or \(3 \pmod{8}\);
-\textup{(iii)}~the number of prime factors \(\equiv 3\) is odd.
+\textup{(iii)}~the total multiplicity of prime factors
+\(\equiv 3\) is odd (i.e.\ \(\sum_{r \mid W_p,\; r \equiv 3\,(8)} v_r(W_p)\) is odd).
 \end{lemma}
 
 \begin{proof}
@@ -343,7 +347,12 @@ with \(v_2(2p) = 1\). For \(r \equiv 7\): \((2/r) = 1\), so
 \(\operatorname{ord}_r(2)\) divides the odd number \((r-1)/2\),
 contradicting \(v_2 = 1\). For \(r \equiv 5\):
 \(v_2(\operatorname{ord}_r(2)) = v_2(r-1) = 2 \neq 1\).
-(iii)~Immediate from \(W_p \equiv 3 \equiv 3^1 \pmod{8}\).\end{proof}
+(iii)~Write \(W_p = \prod r_i^{e_i}\). By (ii), each
+\(r_i \equiv 1\) or \(3 \pmod{8}\). Since
+\(1^e \equiv 1\) and \(3^e \equiv 3^e \pmod{8}\), the product
+is \(\equiv 3^{\sum' e_i} \pmod{8}\) where \(\sum'\) runs over
+\(r_i \equiv 3\). From \(W_p \equiv 3 \pmod{8}\): \(\sum' e_i\)
+is odd.\end{proof}
 
 \begin{lemma}[{$v_2$ classification for $\omega_3$}]\label{lem:v2-classification}
 Let \(r \geq 5\)
@@ -545,7 +554,7 @@ and \(r\) is an odd prime:
 
 \textbf{Case 2} (\(d \mid r+1\)) --- \textbf{boundary analysis.} From
 \(F \mid d \mid r+1\): \(r \geq F - 1\). Since
-\(N \equiv 3 \pmod{4}\), \(N\) is not a perfect square, so
+\(N \equiv 3 \pmod{8}\) (Lemma~\ref{lem:mod-8-exclusion}), \(N\) is not a perfect square, so
 \(\sqrt{N}\) is irrational. With \(F > \sqrt{N}\) and \(F\) an integer:
 \(F \geq \lfloor\sqrt{N}\rfloor + 1\). Combined with
 \(r \leq \lfloor\sqrt{N}\rfloor\):
@@ -565,7 +574,7 @@ contradicting \(r = \lfloor\sqrt{N}\rfloor\). So
 N = r(r+2), \qquad N + 1 = (r+1)^2.
 \]
 Since \(N + 1 = 4W_{p-2}\): \(W_{p-2} = ((r+1)/2)^2\). But
-\(W_{p-2} \equiv 3 \pmod{8}\) (Lemma~\ref{lem:W-mod-8}), and a perfect square is
+\(W_{p-2} \equiv 3 \pmod{8}\) (Lemma~\ref{lem:mod-8-exclusion}), and a perfect square is
 \(\equiv 0, 1,\) or \(4 \pmod{8}\). Contradiction.
 \end{proof}
 
@@ -712,9 +721,9 @@ The Wagstaff number \(W_{12391}\) is prime.
 \begin{proof}
 Of the 32 cyclotomic factors, 27 are factored (19 by direct
 computation, 7 from the Cunningham tables \cite{ref4} and
-FactorDB, 1 itself prime), contributing 61 primes (the largest
-a 371-digit cofactor of \(\Phi_{2065}(2)\)) verified by APR-CL
-\cite{ref6}. BLS witnesses \(a \in \{2, 3\}\) and discriminant
+public factor databases, 1 itself prime), contributing 61 primes
+(the largest a 371-digit cofactor of \(\Phi_{2065}(2)\)), each
+independently verified by APR-CL \cite{ref6}. BLS witnesses \(a \in \{2, 3\}\) and discriminant
 check complete the proof; full data in
 \texttt{bls\_certificate\_w12391.json}.
 \end{proof}
@@ -723,8 +732,8 @@ check complete the proof; full data in
 The BLS \(N-1\) approach
 requires \(p - 1\) to be sufficiently smooth so that enough
 cyclotomic factors \(\Phi_d(2)\) have known factorizations.
-Among all 36 known Wagstaff primes and probable primes with
-\(p > 2617\), the exponents \(p = 10501\) and \(p = 12391\) are
+Among all 36 known Wagstaff primes and probable primes
+(proved for \(p \leq 42737\); see \S8.1) with \(p > 2617\), the exponents \(p = 10501\) and \(p = 12391\) are
 the only ones with sufficiently smooth \(p - 1\). The next candidate
 by smoothness, \(p = 14479\) (\(p - 1 = 2 \cdot 3 \cdot 19 \cdot 127\)),
 falls 3956 bits short of the BLS threshold. No other known Wagstaff
@@ -889,8 +898,9 @@ Verified for all 185 known such primes.
 
 
 \begin{proof}
-By Fermat: \(W_p \equiv 1 \pmod{p}\),
-so \(W_{p-2} = (W_p + 1)/4 \equiv (p+1)/2 \not\equiv 0 \pmod{p}\).\end{proof}
+By Fermat, \(2^p \equiv 2 \pmod{p}\), so
+\(4W_{p-2} = W_p + 1 = (2^p+1)/3 + 1 = (2^p+4)/3 \equiv 2 \pmod{p}\).
+Since \(p \geq 5\): \(p \nmid 2\), hence \(p \nmid W_{p-2}\).\end{proof}
 
 
 \begin{theorem}[Conditional on Conjecture~\ref{conj:R3}]\label{thm:R3-conditional}
@@ -1097,9 +1107,9 @@ In \(\mathbb{Q}(\zeta_8) = \mathbb{Q}(i, \sqrt{2})\):
 \sqrt{2} = (1 - \zeta_8)^2 \cdot \zeta_8^3 \cdot (1 + \sqrt{2}).
 \tag{$\ast$}
 \]
-Verification: \((1-\zeta_8)^2 = (1+i)(1-\sqrt{2})\),
+Indeed, \((1-\zeta_8)^2 = (1+i)(1-\sqrt{2})\),
 so \((1-\zeta_8)^2 \cdot \zeta_8^3 = 2 - \sqrt{2}\), and
-\((2 - \sqrt{2})(1+\sqrt{2}) = \sqrt{2}\). \checkmark
+\((2 - \sqrt{2})(1+\sqrt{2}) = \sqrt{2}\), confirming~\((\ast)\).
 
 Since \(r \equiv 1 \pmod{8}\), reduce \((\ast)\) modulo a prime
 \(\mathfrak{P} \mid r\) in \(\mathbb{Z}[\zeta_8]\), sending
@@ -1180,8 +1190,8 @@ exists. The data for each admissible \(d\):
 \end{tabular}
 \end{center}
 
-\noindent Complete factorizations of each \(U_{4d}\) are in the supplementary
-repository.
+\noindent Complete factorizations of each \(U_{4d}\) are in the Zenodo
+archive.
 \end{proof}
 Combined with Theorems~\ref{thm:case-A}--\ref{thm:case-4U},
 the three explicit cases and Theorem~\ref{thm:NCT-81} provide an
@@ -1663,7 +1673,7 @@ then \(W_p\) has \(t \geq 3\) prime factors, and:
 \emph{Three or more factors.}\; Since each
 \(r_j \equiv 3 \pmod{8}\):
 \(\prod r_j \equiv 3^t \pmod{8}\). Because
-\(W_p \equiv 3 \pmod{8}\) (Lemma~\ref{lem:W-mod-8}), \(t\) is odd;
+\(W_p \equiv 3 \pmod{8}\) (Lemma~\ref{lem:mod-8-exclusion}), \(t\) is odd;
 as \(W_p\) is composite, \(t \geq 3\).
 
 \emph{Part~(a)} follows from Theorem~\ref{thm:pell-exclusion}
@@ -1975,11 +1985,12 @@ using free, open-source software.
   divisor theory.
 \item \emph{Pre-known large factorizations}: the Cunningham project tables
   \cite{ref4} for cyclotomic
-  factors \(\Phi_d(2)\) with \(d \leq 1200\), and FactorDB for
-  selected larger \(d\) (specifically the factorizations of
-  \(\Phi_{2065}(2)\) and \(\Phi_{2478}(2)\) used in
-  Theorem~\ref{thm:W12391}); each retrieved factor is independently re-verified
-  for primality before use.
+  factors \(\Phi_d(2)\) with \(d \leq 1200\), and FactorDB as a
+  discovery aid for two larger terms
+  (\(\Phi_{2065}(2)\) and \(\Phi_{2478}(2)\) in
+  Theorem~\ref{thm:W12391}). Every retrieved factor is independently
+  re-verified for primality by APR-CL before use; FactorDB plays no
+  evidentiary role.
 \item \emph{Primality of cofactors} (all factors used in BLS certificates):
   the APR-CL implementation in PARI/GP 2.15+
   (\texttt{isprime(n)}), which is unconditionally deterministic and
@@ -2008,6 +2019,9 @@ The extended inert-factor survey of \S8.5 was carried out on a
 \(1.93 \times 10^{10}\) primes in \(\approx 3.98\) hours of
 wall-clock time, producing the 684{,}965{,}381 pairs \((p,r)\)
 described in \S8.5.
+We summarise four outputs: the local-pass witnesses (\S8.5
+found three), the companion split sweep, and the secondary-factor
+closures that dispose of the two remaining gap configurations.
 
 \emph{Three local-pass witnesses.} Of the 684{,}965{,}381 inert
 pairs, exactly three survive all single-factor local
@@ -2042,6 +2056,7 @@ known, and their global disposition is genuinely open --- they
 illustrate the structural gap at large~\(d\) discussed in~\S9,
 Problem~2.
 
+\emph{Companion split sweep.}
 Full factor data for each witness and a companion Conjecture~\ref{conj:R3} check on
 all \(14{,}812{,}084\) split prime divisors with
 \(r \leq 10^{11}\) (zero failures\footnote{The companion sweep
@@ -2053,7 +2068,7 @@ count is \(E = \sum 1/p \approx 0.76\) and
 \(\exp(-E) \approx 0.47\). The observation therefore adds no
 independent evidence for Conjecture~\ref{conj:R3} beyond the unconditional closures of
 Theorem~\ref{thm:NCT-81}; we report it only for
-completeness.}) are recorded in the supplementary repository.
+completeness.}) are recorded in the Zenodo archive.
 
 \emph{Secondary-factor closures (\S9, Problem 2).} The dangerous
 single-factor configurations at \(d = 57\) and \(d = 67\) are
@@ -2094,7 +2109,7 @@ above, and three phantom triples at \((d, p) = (57, 11)\),
 \((331, 17)\), and \((683, 13)\), where in each case \(W_p\) is
 prime. No other admissible \(d \leq 1000\) yields a danger triple
 among the identified primitive divisors.
-The factorisation data are in the supplementary repository.
+The factorisation data are in the Zenodo archive.
 
 \begin{remark}[Single-factor versus global sufficiency]\label{rem:single-vs-global}
 In contrast to the Lucas--Lehmer test for Mersenne numbers, where the
@@ -2153,10 +2168,10 @@ The series converges: for admissible prime \(d = q\),
 is \(O((\ln\ln d)^2/d^2)\); for composite admissible \(d\) the lcm
 \(M_d\) grows at least as fast. Numerical evaluation at
 \(D = 1000\) yields \(E \approx 0.003\), consistent with the zero
-count observed (see the supplementary scripts for details).
+count observed (see the Zenodo supplementary scripts for details).
 The closed form \(N_d = V_d^2 + 2\)
 (Proposition~\ref{prop:Nd-closed-form}) exhibits \(N_d\) as a norm
-in \(\mathbb{Z}[\sqrt{-2}]\); whether the Zsygmondy theory of
+in \(\mathbb{Z}[\sqrt{-2}]\); whether the Zsigmondy theory of
 primitive divisors of such norms can yield an asymptotic
 danger-triple exclusion for large \(d\) is an open question.
 
@@ -2172,9 +2187,8 @@ Wagstaff-specific content enters through Lemma~\ref{lem:ord-2}
 generalised Chua family \(N_b = (b^p+1)/(b+1)\): for each base
 \(b\), the Chebyshev element \(\omega_b = b + \sqrt{b^2-1}\) plays
 the role of \(\omega_3\), and the identity \(N_b + 1\) factors
-similarly. The extension requires \(D = b^2 - 1\) to be non-square
-(i.e., \(b \neq 3\) for the Remark~\ref{rem:uniqueness} base), so the Pell
-sequences are replaced by the Lucas sequences of
+similarly. The extension requires \(D = b^2 - 1\) to be non-square,
+so the Pell sequences are replaced by the Lucas sequences of
 \(\mathbb{Z}[\sqrt{D}]\).
 \end{remark}
 
@@ -2287,7 +2301,7 @@ table for odd \(a\) gives
 \begin{remark}[Historical]
 Proposition~\ref{prop:A.4} is due to Dirichlet (biquadratic
 reciprocity; see Ireland--Rosen \cite[Ch.~11]{ref11} and
-Lemmermeyer \cite[\S\S5.3, 5.7]{ref13}). The self-contained
+Lemmermeyer \cite[\S\S5.3, 5.7]{ref13}). The direct
 derivation via Lemmas~\ref{lem:A.1}--\ref{lem:A.3} is included
 for the reader's convenience.
 \end{remark}
@@ -2453,7 +2467,12 @@ collapses the higher-conductor character onto the joint cells of
 
 \section*{Supplementary material}
 
-A repository accompanies this paper, containing:
+All computational data, verification scripts, and primality
+certificates are archived on Zenodo
+(\href{https://doi.org/10.5281/zenodo.19496206}{10.5281/zenodo.19496206}),
+with a development mirror on GitHub at
+\url{https://github.com/dolonet/wagstaff-chebyshev}.
+The archive contains:
 \begin{enumerate}
 \item BLS primality certificates (JSON) for \(W_{2617}\),
 \(W_{10501}\), and \(W_{12391}\), recording every cyclotomic
@@ -2481,7 +2500,4 @@ External databases (the Cunningham project tables \cite{ref4} and
 FactorDB) were used only to \emph{locate} candidate factorizations of
 cyclotomic factors \(\Phi_d(2)\); every factor used in any proof was
 independently re-verified for primality by APR-CL before use.
-
-The archive of record is on Zenodo (\href{https://doi.org/10.5281/zenodo.19496206}{10.5281/zenodo.19496206}); a development mirror is on GitHub at
-\url{https://github.com/dolonet/wagstaff-chebyshev}.
 \end{document}
