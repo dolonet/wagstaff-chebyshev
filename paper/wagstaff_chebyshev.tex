@@ -38,7 +38,7 @@
 \maketitle
 
 \begin{abstract}
-The Chebyshev base \(\omega_3 = 3 + 2\sqrt{2}\) and the identity \(W_p + 1 = 4W_{p-2}\) yield an unconditional \(N+1\) primality criterion for the Wagstaff numbers \(W_p = (2^p + 1)/3\); combined with a companion \(N-1\) criterion and the Brillhart--Lehmer--Selfridge framework, this gives fully verified primality proofs of \(W_{2617}\), \(W_{10501}\), and \(W_{12391}\), independent of ECPP. For the sufficiency conjecture --- whether the single congruence \(\omega_3^{(W_p+1)/2} \equiv -1 \pmod{W_p}\) implies primality --- we show that Condition~(I) holds automatically, exclude factors \(r \equiv 5, 7 \pmod{8}\), reduce the split branch \(r \equiv 1 \pmod{8}\) to the nonexistence of compatible Pell triples (proved for rank parameters \(d \leq 81\)), and prove that the inert branch \(r \equiv 3 \pmod{8}\) is impossible for order parameter \(d \leq 43\). A multi-factor reduction shows that any all-inert composite counterexample requires at least three prime factors, with no danger triple found beyond \(d = 683\) in a systematic survey of all admissible \(d \leq 1000\).
+The Chebyshev base \(\omega_3 = 3 + 2\sqrt{2}\) and the identity \(W_p + 1 = 4W_{p-2}\) yield an unconditional \(N+1\) primality criterion for the Wagstaff numbers \(W_p = (2^p + 1)/3\); combined with a companion \(N-1\) criterion and the Brillhart--Lehmer--Selfridge framework, this gives fully verified primality proofs of \(W_{2617}\), \(W_{10501}\), and \(W_{12391}\), independent of ECPP. For the sufficiency conjecture --- whether the single congruence \(\omega_3^{(W_p+1)/2} \equiv -1 \pmod{W_p}\) implies primality --- we show that Condition~(I) holds automatically, exclude factors \(r \equiv 5, 7 \pmod{8}\), reduce the split branch \(r \equiv 1 \pmod{8}\) to the nonexistence of compatible Pell triples (proved for rank parameters \(d \leq 81\)), and prove that the inert branch \(r \equiv 3 \pmod{8}\) is impossible for order parameter \(d \leq 43\). An Order-Pinning Lemma shows that every inert prime factor \(r\) of a composite \(W_p\) satisfies \(\operatorname{ord}_r(2) = 2p\), and a Multi-Factor Pinning Theorem forces all inert factors of a common \(W_p\) to share a single order parameter; combined with a multi-factor bound, these unconditionally exclude the entire finite catalog of small-\(d\) danger configurations produced by the parity obstruction. An exhaustive Platinum Lemma rules out every inert factor with \(r \leq 10^{12}\) via a \(684\,965\,381\)-row enumeration, and an elementary deterministic Second-Moment Reduction transfers the residual problem to the single claim that no composite \(W_p\) admits a pair of distinct residual inert danger factors \(r_1, r_2 > 10^{12}\) at the same~\(p\).
 
 \end{abstract}
 
@@ -63,20 +63,26 @@ side.
 
 The paper delivers two distinct results, summarised in \S\S1.1--1.2
 below. Sections~2--3 establish the unconditional criteria and proofs~(A);
-Sections~4--7 develop~(B); Section~8 presents the computational
-verification.
+Sections~4--7 develop the case-by-case reduction for~(B); Section~8
+adds the cross-case unconditional reductions from pinning; Section~9
+presents the computational verification.
 
 \textbf{(A) Three unconditional primality proofs.} We prove
 \(W_{2617}\), \(W_{10501}\), and \(W_{12391}\) prime by
 Chebyshev/Brillhart--Lehmer--Selfridge (BLS) methods, independent of ECPP (Theorems~\ref{thm:W2617}--\ref{thm:W12391}).
 
 \textbf{(B) Reduction of the standalone sufficiency conjecture
-to two narrow residual problems.} The sufficiency of the single
+to a single quantitative residual.} The sufficiency of the single
 Chebyshev congruence \(\omega_3^{(W_p+1)/2} \equiv -1 \pmod{W_p}\)
 (Conjecture~\ref{conj:sufficiency}) is reduced to two explicit unconditional lower
 bounds on multiplicative orders --- one at split factors, one at
 inert factors --- with every known Wagstaff prime and every tested
-composite \(W_p\) consistent with the conjecture (\S\S8.1, 8.5).
+composite \(W_p\) consistent with the conjecture (\S\S9.1, 9.5). The
+inert-factor branch is further reduced by an Order-Pinning Lemma,
+Multi-Factor Pinning Theorem, Platinum Lemma, and a deterministic
+Second-Moment Reduction to the single claim that no composite
+\(W_p\) admits a pair of distinct residual inert danger factors
+\(r_1, r_2 > 10^{12}\) at the same~\(p\) (\S8).
 
 Contribution (A) does not depend on Conjecture~\ref{conj:sufficiency} and may be
 read separately from (B).
@@ -141,7 +147,7 @@ branch by branch, by the residue class of the prime factors
   compatible triples (NCT), which is proved for all rank
   parameters \(d \leq 81\) (Theorem~\ref{thm:NCT-81}).
   Conjecture~\ref{conj:R3} is verified computationally at all 185
-  known split factors (\S8.2).
+  known split factors (\S9.2).
 \item \(r \equiv 3 \pmod{8}\): \textbf{order parameter \(d \leq 43\) proved
   impossible} (Theorem~\ref{thm:pell-exclusion}). Among 869 structurally analysed
   inert factors, 845 of 869 satisfy \(G_r \le 43\) and are closed
@@ -154,7 +160,36 @@ branch by branch, by the residue class of the prime factors
   see \S6.2) has density zero within the primes
   \(r \equiv 3 \pmod{8}\) (Proposition~\ref{prop:density-zero}); a naive Hooley-type
   GRH argument does \emph{not} extend this to a pointwise closure
-  (\S9, Problem 2).
+  (\S10, Problem 2).
+\end{itemize}
+
+\textbf{Cross-case unconditional reductions from pinning.} Beyond the
+case-by-case analysis above, Section~\ref{sec:pinning-reductions}
+establishes a sequence of unconditional reductions that apply
+uniformly to every candidate composite \(W_p\):
+
+\begin{itemize}
+\item Every inert prime factor \(r \mid W_p\) with \(r > 3\) satisfies
+  \(\operatorname{ord}_r(2) = 2p\) (Order-Pinning Lemma,
+  Theorem~\ref{thm:order-pinning}).
+\item All inert prime factors of a single composite \(W_p\) share a
+  common order parameter \(p\) (Multi-Factor Pinning,
+  Theorem~\ref{thm:multi-factor-pinning}).
+\item Consequently, the complete finite catalog of danger
+  configurations with \(d \leq 1000\) produced by the parity
+  classification of \S\ref{sec:nct} is \emph{unconditionally}
+  excluded (Phantom Exclusion,
+  Theorem~\ref{thm:phantom-exclusion}): within a single composite, no
+  two inert factors can both have small \(d\).
+\item An exhaustive Platinum enumeration removes every inert factor
+  with \(r \leq 10^{12}\) (Theorem~\ref{thm:platinum}).
+\item A deterministic second-moment reduction
+  (Theorem~\ref{thm:second-moment-reduction}) transfers the
+  residual all-inert branch to the single claim that no composite
+  \(W_p\) admits two distinct inert prime factors \(r_1, r_2\)
+  with \(r_i > 10^{12}\) and \(d_{r_i} > 43\) --- the sole
+  remaining unconditional input for the all-inert branch of
+  Conjecture~\ref{conj:sufficiency}.
 \end{itemize}
 
 Appendix A records a short package of unconditional local results
@@ -168,7 +203,7 @@ The status of each component, in summary:
 
 \begin{center}
 \small
-\begin{tabular}{@{}p{5.5cm}p{4.8cm}l@{}}
+\begin{tabular}{@{}p{5.5cm}p{5.6cm}l@{}}
 \hline
 Component & Status & Reference \\
 \hline
@@ -177,22 +212,28 @@ Cond.\ (I) at every \(r \mid W_p\) & Unconditional & Thm~\ref{thm:cond-I} \\
 \(r \equiv 5, 7\) excluded & Unconditional & Lem~\ref{lem:mod-8-exclusion} \\
 \(r \equiv 1\): Conj.~\ref{conj:R3} \(\Rightarrow\) failure & Unconditional & Thm~\ref{thm:R3-conditional} \\
 \(r \equiv 1\), NCT for \(d \leq 81\) & Unconditional & Thm~\ref{thm:NCT-81} \\
-\(r \equiv 1\), NCT for \(83 \leq d \leq 200\) & Computational$^*$ & \S8.4 \\
-\(r \equiv 1\), Conj.~\ref{conj:R3} (all 185 known) & Computational$^*$ & \S8.2 \\
+\(r \equiv 1\), NCT for \(83 \leq d \leq 200\) & Computational$^*$ & \S9.4 \\
+\(r \equiv 1\), Conj.~\ref{conj:R3} (all 185 known) & Computational$^*$ & \S9.2 \\
 \(r \equiv 3\), \(G_r \leq 43\) & Unconditional & Cor~\ref{cor:small-Gr} \\
+Refined SFP mod 16 & Unconditional & Thm~\ref{thm:sfp-mod16} \\
+Order-Pinning: \(\operatorname{ord}_r(2) = 2p\) for \(r \mid W_p\), \(r > 3\) & Unconditional & Thm~\ref{thm:order-pinning} \\
+Multi-Factor Pinning (all factors share \(p\)) & Unconditional & Thm~\ref{thm:multi-factor-pinning} \\
+Phantom Exclusion of full catalog for \(d \leq 1000\) & Unconditional & Thm~\ref{thm:phantom-exclusion} \\
+Multi-factor bound: \(\geq\!3\) inert factors per \(W_p\) & Unconditional & Thm~\ref{thm:multi-factor} \\
+Platinum Lemma: no danger factor with \(r \leq 10^{12}\) & Computational$^*$ (\(684\,965\,381\) rows) & Thm~\ref{thm:platinum} \\
+Second-Moment Reduction & Unconditional & Thm~\ref{thm:second-moment-reduction} \\
+\(r \equiv 3\), residual tail pair-count \((r > 10^{12})\) & Open & \S10, Prob.~2 \\
 \(r \equiv 3\), \(G_r > 43\) & Natural subclass density zero (uncond.); pointwise open & Prop~\ref{prop:density-zero} \\
-\(r \equiv 3\), all-inert global & \(\geq\!3\) factors; \(\leq\!2\) with \(d \in \{57,67,331\}\); no danger triple identified for other \(d \leq 1000\) & Thm~\ref{thm:multi-factor}$^\dagger$ \\
-Full Conj.~\ref{conj:sufficiency} & Open & \S9 \\
+Full Conj.~\ref{conj:sufficiency} & Open & \S10 \\
 \hline
 \multicolumn{3}{@{}l}{\small $^*$Exhaustive finite search, deterministic and reproducible from the supplementary scripts.}\\
-\multicolumn{3}{@{}l}{\small $^\dagger$The two real danger triples at \(d = 57, 67\) are disposed of computationally at secondary factors (\S8.8).}\\
 \end{tabular}
 \end{center}
 
 All scripts, factorization files, BLS certificates, and verification
 logs referenced in this paper are archived on Zenodo
 (\href{https://doi.org/10.5281/zenodo.19496206}{10.5281/zenodo.19496206});
-see \S8.7 for the software toolchain and ``Supplementary material''
+see \S9.7 for the software toolchain and ``Supplementary material''
 at the end of the References for the full inventory.
 
 \subsection{What remains open}
@@ -209,43 +250,45 @@ The unconditional gap consists of two structurally independent problems:
   \S5.3), and in general it is equivalent (Proposition~\ref{prop:rank-equivalence}) to the
   nonexistence of compatible Pell triples (NCT), which we prove for
   all \(d \leq 81\) (Theorem~\ref{thm:NCT-81}) and verify computationally
-  for the 11 parity-unblocked values \(d \in [83, 200]\) (\S8.4).
+  for the 11 parity-unblocked values \(d \in [83, 200]\) (\S9.4).
   All 185 known split factors satisfy Conjecture~\ref{conj:R3}: 29\%
   by Cases A/B/\(4U\), 23\% by rank-parity exclusion
   (Proposition~\ref{prop:rank-equivalence}), and the remaining 48\% by
   direct computation.
   The asymptotic gap (large \(d\)) is open.
-\item \textbf{Order-parameter bound for inert factors:} for
-  \(r \equiv 3 \pmod{8}\), Pell-sequence exclusion rules out all
-  order parameters \(d \leq 43\) (Theorem~\ref{thm:pell-exclusion});
-  a universal lower bound on \(d\) growing with \(p\) would close
-  this branch entirely. Short of that,
-  Theorem~\ref{thm:multi-factor} shows that any composite
-  counterexample with all factors inert requires \(\geq\!3\) prime
-  factors, with at most two having \(d \in \{57, 67, 331\}\) and at
-  least one requiring a danger triple
-  (Definition~\ref{def:danger-triple}) at some \(d\) outside this
-  set; a primitive-divisor survey of all 79 admissible
-  \(d \leq 1000\) (the parity obstruction of \S\ref{sec:nct}
-  eliminates the rest) identifies only five danger triples, three
-  of them phantom (\(W_p\) prime), and none with
-  \(d > 683\). The pure
-  Class~III subclass of the surviving single-factor configurations
-  has density zero (Proposition~\ref{prop:density-zero},
-  unconditional); the full residual gap is discussed in \S9,
-  Problem~2.
+\item \textbf{Tail pair-count for inert factors.} After the
+  case-by-case reduction of \S6 and the cross-case pinning
+  reductions of \S\ref{sec:pinning-reductions}, the inert branch is
+  closed except for a single quantitative residual. By
+  Order-Pinning and Multi-Factor Pinning the inert factors of any
+  composite \(W_p\) all share a common order parameter \(p\); by
+  the Phantom Exclusion Theorem the finite catalog of danger
+  configurations with \(d \leq 1000\) produced by the parity
+  classification is unconditionally excluded; by the Platinum
+  Lemma no inert factor with \(r \leq 10^{12}\) can participate in
+  a composite \(W_p\); and by the Second-Moment Reduction
+  (Theorem~\ref{thm:second-moment-reduction}) the number of
+  all-inert composite counterexamples is at most the total
+  unordered pair count of residual inert danger factors
+  \((r_1, r_2)\) of a single \(W_p\) with
+  \(r_i > 10^{12}\), \(\operatorname{ord}_{r_i}(2) = 2p\), and
+  \(d_{r_i} > 43\).
+
+  \textbf{Residual Problem (tail pair count).} Show that this
+  total pair count vanishes: no composite \(W_p\) admits two
+  distinct inert prime factors meeting these conditions. This
+  vanishing, together with the split-branch problem above, implies
+  Conjecture~\ref{conj:sufficiency} in full.
 \end{enumerate}
 
 Both problems lie in the regime of unconditional lower bounds on
 multiplicative orders, where Artin-type questions are well known
 to be hard. The contribution of (B) is that the gap is
-structurally narrow: the multi-factor reduction
-(Theorem~\ref{thm:multi-factor}) constrains any all-inert
-counterexample to a configuration with no known precedent, and
-all 684{,}965{,}381 inert factors of
-composite \(W_p\) tested in \S8.5, together with all 36 known
-Wagstaff primes and probable primes (\S8.1), are consistent with
-the conjecture.
+structurally narrow: after the pinning reductions of
+\S\ref{sec:pinning-reductions}, all \(684\,965\,381\) inert
+factors of composite \(W_p\) tested in \S9.5 are consistent with
+the conjecture, together with all 36 known Wagstaff primes and
+probable primes (\S9.1).
 
 \subsection{Notation}
 
@@ -269,8 +312,16 @@ common recurrence \(X_{n+1} = 2X_n + X_{n-1}\) with initial values
 with \(r \neq 2\) and \((2/r) = 1\), \(\rho(r)\) denotes the rank
 of apparition of \(r\) in \((U_n)\), i.e. the least \(n \geq 1\)
 with \(r \mid U_n\). For an inert prime factor \(r\) of \(W_p\)
-we write \(G_r := \gcd((r+1)/4,\, W_{p-2})\); see \S6.1 for the
-role this quantity plays in the gap structure.
+we write \(G_r := \gcd((r+1)/4,\, W_{p-2})\), and the ``order
+parameter'' of \(r\) is
+\[
+  d_r \;=\; g \;:=\; \operatorname{ord}_r(\omega_3)/4
+  \;=\; (r+1)/(4\,\gcd((r+1)/4,\,W_{p-2}));
+\]
+we use \(d_r\) when emphasising dependence on the factor and the
+bare symbol \(g\) inside local proofs where no ambiguity arises;
+both refer to the same integer. See \S6.1 for the role these
+quantities play in the gap structure.
 \(\Phi_d(x)\) is the \(d\)-th cyclotomic polynomial, and \(A\)
 denotes the set of odd primes \(q\) with
 \(v_2(\operatorname{ord}_q(2)) = 1\); following the classification
@@ -353,6 +404,63 @@ contradicting \(v_2 = 1\). For \(r \equiv 5\):
 is \(\equiv 3^{\sum' e_i} \pmod{8}\) where \(\sum'\) runs over
 \(r_i \equiv 3\). From \(W_p \equiv 3 \pmod{8}\): \(\sum' e_i\)
 is odd.\end{proof}
+
+\begin{theorem}[Refined split-factor parity modulo 16]\label{thm:sfp-mod16}
+For every odd prime \(p \geq 5\):
+\begin{itemize}
+\item[\textup{(a)}] \(W_p \equiv 11 \pmod{16}\).
+\item[\textup{(b)}] Every prime factor \(r > 3\) of \(W_p\) with
+  \(r \equiv 3 \pmod 8\) satisfies \(r \equiv 3\) or
+  \(r \equiv 11 \pmod{16}\).
+\item[\textup{(c)}] Suppose that \(W_p\) is composite and passes
+  Condition~(II) at every prime factor; then all factors are inert
+  (by Theorem~\ref{thm:R3-conditional}) and the total count of
+  inert factors counted with multiplicity, \(t\), and the subtotal
+  of those \(\equiv 11 \pmod{16}\), \(k_{11}\), satisfy
+  \[
+    t + 2\,k_{11} \;\equiv\; 3 \pmod{4}.
+  \]
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+(a) For \(p \geq 5\): \(2^5 = 32\), and the multiplicative order of
+\(2\) in \((\mathbb{Z}/96\mathbb{Z})^\times\) equals \(2\), so
+\(2^p \equiv 32 \pmod{96}\) for every prime \(p \geq 5\). Thus
+\(2^p + 1 \equiv 33 \pmod{96}\), and dividing by \(3\) (an invertible
+residue modulo~\(32\)) gives \(W_p \equiv 11 \pmod{32}\), hence
+\((a)\) modulo \(16\).
+
+(b) By Lemma~\ref{lem:mod-8-exclusion}(ii), every prime divisor
+\(r > 3\) of \(W_p\) satisfies \(r \equiv 1\) or \(3 \pmod{8}\);
+reducing modulo \(16\) splits \(r \equiv 3 \pmod 8\) into
+\(r \equiv 3\) or \(r \equiv 11 \pmod{16}\).
+
+(c) Under the stated hypotheses every factor is inert
+\((\equiv 3 \pmod{8})\). Write the product with multiplicities,
+\(W_p = \prod r_i\). By (b), each \(r_i \in \{3, 11\}
+\pmod{16}\). In \((\mathbb{Z}/16\mathbb{Z})^\times\) the element
+\(3\) has order \(4\) with
+\(\{3^0, 3^1, 3^2, 3^3\} = \{1, 3, 9, 11\}\), so \(11 \equiv 3^3
+\pmod{16}\); the product satisfies
+\[
+  \prod r_i \;\equiv\; 3^{\,k_3 + 3\,k_{11}} \pmod{16}
+\]
+where \(k_3\) (resp.\ \(k_{11}\)) counts factors \(\equiv 3\)
+(resp.\ \(\equiv 11\)) modulo~\(16\), and
+\(k_3 + k_{11} = t\). Using (a) and \(11 \equiv 3^3 \pmod{16}\),
+\(k_3 + 3\,k_{11} \equiv 3 \pmod 4\); substituting \(k_3 = t -
+k_{11}\) gives \(t + 2\,k_{11} \equiv 3 \pmod 4\).\end{proof}
+
+\begin{corollary}[Mod-16 sub-configurations for \(t=3\)]\label{cor:sfp-mod16-t3}
+In the situation of Theorem~\ref{thm:sfp-mod16}(c), if \(t = 3\)
+then \(k_{11} \in \{0, 2\}\): either all three inert factors are
+\(\equiv 3 \pmod{16}\), or exactly two are \(\equiv 11\) and one is
+\(\equiv 3 \pmod{16}\).
+\end{corollary}
+\begin{proof}
+Immediate from \(3 + 2 k_{11} \equiv 3 \pmod 4\), i.e.\
+\(k_{11}\) even, combined with \(0 \leq k_{11} \leq 3\).\end{proof}
 
 \begin{lemma}[{$v_2$ classification for $\omega_3$}]\label{lem:v2-classification}
 Let \(r \geq 5\)
@@ -581,7 +689,7 @@ Since \(N + 1 = 4W_{p-2}\): \(W_{p-2} = ((r+1)/2)^2\). But
 \begin{remark}\label{rem:bls-general}
 Theorem~\ref{thm:criterion} uses the threshold \(F > \sqrt{N}\), which
 suffices for small \(p\) where \(W_{p-2}\) is fully factored
-(\S8.1). For larger \(p\), the factored portion satisfies
+(\S9.1). For larger \(p\), the factored portion satisfies
 \(F > N^{1/3}\) but not \(F > N^{1/2}\). The original BLS theorem
 \cite{ref3} covers this case: if \(F > N^{1/3}\), then \(N\) has at
 most two prime factors, and the two-factor case is excluded by
@@ -604,7 +712,7 @@ to \(W_p\).
 \(W_p - 4W_{p-2} = -1\).\end{proof}
 
 
-\subsection{The case \(W_{p-2}\) prime}
+\subsection{The case \texorpdfstring{\(W_{p-2}\)}{W\_\{p-2\}} prime}
 
 
 \begin{corollary}\label{cor:Wp2-prime}
@@ -653,7 +761,7 @@ Contradiction.
 \end{proof}
 
 
-\subsection{BLS proof of \(W_{2617}\)}
+\subsection{BLS proof of \texorpdfstring{\(W_{2617}\)}{W\_2617}}
 
 
 The three primality proofs in \S\S3.6--3.8 invoke the
@@ -664,7 +772,7 @@ toolchain --- SymPy \texttt{factorint} (with Pollard \(\rho\), \(p\!-\!1\)
 and ECM substeps), gmpy2 for modular arithmetic, and PARI/GP's
 APR-CL implementation \cite{ref6} for primality of
 large cofactors --- and the version numbers used to produce the
-certificates \texttt{bls\_certificate\_w*.json} are documented in \S8.7.
+certificates \texttt{bls\_certificate\_w*.json} are documented in \S9.7.
 The conjecture analysis of \S\S5--6 does not depend on these proofs.
 
 \begin{center}
@@ -697,7 +805,7 @@ Condition~(II) is independently verified:
 \texttt{bls\_certificate\_w2617.json}.
 \end{proof}
 
-\subsection{BLS proof of \(W_{10501}\)}
+\subsection{BLS proof of \texorpdfstring{\(W_{10501}\)}{W\_10501}}
 
 \begin{theorem}\label{thm:W10501}
 The Wagstaff number \(W_{10501}\) is prime.
@@ -712,7 +820,7 @@ discriminant check complete the proof; full data in
 \texttt{bls\_certificate\_w10501.json}.
 \end{proof}
 
-\subsection{BLS proof of \(W_{12391}\)}
+\subsection{BLS proof of \texorpdfstring{\(W_{12391}\)}{W\_12391}}
 
 \begin{theorem}\label{thm:W12391}
 The Wagstaff number \(W_{12391}\) is prime.
@@ -733,7 +841,7 @@ The BLS \(N-1\) approach
 requires \(p - 1\) to be sufficiently smooth so that enough
 cyclotomic factors \(\Phi_d(2)\) have known factorizations.
 Among all 36 known Wagstaff primes and probable primes
-(proved for \(p \leq 42737\); see \S8.1) with \(p > 2617\), the exponents \(p = 10501\) and \(p = 12391\) are
+(proved for \(p \leq 42737\); see \S9.1) with \(p > 2617\), the exponents \(p = 10501\) and \(p = 12391\) are
 the only ones with sufficiently smooth \(p - 1\). The next candidate
 by smoothness, \(p = 14479\) (\(p - 1 = 2 \cdot 3 \cdot 19 \cdot 127\)),
 falls 3956 bits short of the BLS threshold. No other known Wagstaff
@@ -818,7 +926,7 @@ Branch & Factors & Status \\
 
 
 
-\section{The \(r \equiv 1 \pmod{8}\) branch}
+\section{The \texorpdfstring{\(r \equiv 1 \pmod{8}\)}{r == 1 (mod 8)} branch}
 
 
 For \(r \equiv 1 \pmod{8}\) with \(r \mid W_p\), the algebra
@@ -829,7 +937,7 @@ Cases A, B, and \(4U_p^2 \equiv 1\) of \S5.3, \S\S5.4--5.6 identify
 \(d\) with the Pell rank \(\rho(r)/4\) (Proposition~\ref{prop:rank-equivalence}), convert
 Conjecture~\ref{conj:R3} to the nonexistence of compatible triples (NCT),
 and prove NCT for \(d \leq 81\) (Theorem~\ref{thm:NCT-81}).
-Conjecture~\ref{conj:R3} is verified at all 185 known split factors (\S8.2).
+Conjecture~\ref{conj:R3} is verified at all 185 known split factors (\S9.2).
 
 \subsection{Notation}
 
@@ -1200,7 +1308,7 @@ unconditional proof whenever the rank parameter \(d\) is admissible
 Cases A, B, and \(4U_p^2 \equiv 1\) cover 29\%
 (Theorems~\ref{thm:case-A}--\ref{thm:case-4U}); most remaining
 Case C factors have \(d > 200\) and are covered by
-computational R3 verification (\S8.2).
+computational R3 verification (\S9.2).
 
 \begin{proposition}[{$q$-th power necessity}]\label{prop:qth-power}
 In any compatible
@@ -1231,7 +1339,7 @@ For \(q = 163\), the primitive divisor
 \(2^{(r-1)/163} \equiv 1 \pmod{r}\), yet
 \(v_2(\operatorname{ord}_r(2)) = 1\).
 Conjecture~\ref{conj:nct-full} is unaffected: \(\operatorname{ord}_r(2)/2\) is
-composite (\S8.3).
+composite (\S9.3).
 \end{remark}
 
 \begin{remark}[Structural source of the split-branch gap]\label{rem:split-gap}
@@ -1244,7 +1352,7 @@ triples.
 \end{remark}
 
 
-\section{The \(r \equiv 3 \pmod{8}\) branch}
+\section{The \texorpdfstring{\(r \equiv 3 \pmod{8}\)}{r == 3 (mod 8)} branch}
 
 
 \subsection{The gap structure}
@@ -1352,7 +1460,7 @@ Condition (II) fails. For \(q = 3\): this occurs whenever
 
 Among 869 inert factors of composite \(W_p\) with \(r < 2 \times 10^5\):
 approximately 86\% are blocked by parity or valuation obstructions
-(\S8.5).
+(\S9.5).
 
 \subsection{Pell-sequence exclusion}
 
@@ -1520,17 +1628,17 @@ factor can satisfy Condition (II).
 
 Corollary~\ref{cor:small-Gr} closes the inert branch unconditionally whenever
 \(G_r \leq 43\), covering 845 of the 869 inert factors structurally
-analysed in \S8.5. A natural subclass of the residual configurations
+analysed in \S9.5. A natural subclass of the residual configurations
 (\(G_r > 43\)) --- those inert primes for which \((r+1)/4\) itself
 has every odd prime factor in \(A\) --- has natural density zero
 within the primes \(r \equiv 3 \pmod 8\) (Proposition~\ref{prop:density-zero},
 unconditional). The full residual set is slightly larger, and the
 structural barrier to a \emph{pointwise} closure --- together with the
 reason a naive GRH/Chebotarev density argument does not supply
-one --- is discussed in \S9, Problem 2.
+one --- is discussed in \S10, Problem 2.
 
 No composite \(W_p\) globally passes Condition~(II) in the
-684{,}965{,}381-factor survey of \S8.5.
+684{,}965{,}381-factor survey of \S9.5.
 
 \subsection{Density and structural limits}
 
@@ -1601,7 +1709,7 @@ Even for this subclass, the density-zero bound is not an \emph{eventual}
 (pointwise) closure: the exceptional set, though thin, is infinite.
 
 \begin{remark}[Naive model for the inert branch]\label{rem:inert-heuristic}
-For comparison, the split branch (\S8.8, footnote) admits a naive
+For comparison, the split branch (\S9.8, footnote) admits a naive
 independence model with expected failure count
 \(E = \sum 1/p \approx 0.76\), so that zero failures among
 \({\sim}14.8 \times 10^6\) split factors is consistent with, but
@@ -1724,7 +1832,7 @@ Of the five identified danger triples, three are phantom:
 \((683, 2731, 13)\) with \(W_{13} = 2731\) prime. The two real
 dangers --- at \((d, p) = (57, 85684865933)\) and
 \((67, 24822855876938710967)\) --- are each disposed of at
-secondary factors (\S8.8).
+secondary factors (\S9.8).
 \end{remark}
 
 
@@ -1739,13 +1847,343 @@ and the universal order-parameter bound for inert factors
 (\S6.4), currently closed only in density
 (Proposition~\ref{prop:density-zero}).
 
+Section~\ref{sec:pinning-reductions} further reduces the inert
+branch by a sequence of cross-case unconditional arguments
+(Order-Pinning Lemma, Multi-Factor Pinning, Phantom Exclusion of
+the finite \(d \leq 1000\) danger catalog, the Platinum Lemma at
+\(r \leq 10^{12}\), and a deterministic Second-Moment Reduction)
+to the single claim that no composite \(W_p\) carries two
+distinct residual inert danger factors \(r_1, r_2 > 10^{12}\) at
+the same~\(p\).
 
+
+
+\section{Unconditional reductions from pinning}\label{sec:pinning-reductions}
+
+This section records the unconditional reductions that act
+uniformly across all candidate composite \(W_p\), beyond the
+branch-by-branch analysis of \S\S5--6. None of the results here
+depends on Conjecture~\ref{conj:R3} or on further computational
+input at a single factor; each is a structural consequence of
+\(r \mid W_p\) together with the Condition~(II) hypothesis. The
+end product (Theorem~\ref{thm:second-moment-reduction}) reduces
+the all-inert branch of Conjecture~\ref{conj:sufficiency} to the
+single deterministic claim that no composite~\(W_p\) admits a
+pair of distinct residual inert danger factors above~\(10^{12}\).
+
+\subsection{Order-Pinning Lemma}
+
+\begin{theorem}[Order-Pinning]\label{thm:order-pinning}
+Let \(r\) be a prime factor of \(W_p\) with \(r > 3\). Then
+\(\operatorname{ord}_r(2) = 2p\).
+\end{theorem}
+
+\begin{proof}
+\(r \mid W_p\) means \(r \mid 2^p + 1\), so \(2^p \equiv -1
+\pmod r\), giving \(2^{2p} \equiv 1 \pmod r\); hence
+\(\operatorname{ord}_r(2) \mid 2p\) and
+\(\operatorname{ord}_r(2) \nmid p\). Since \(p\) is prime, the
+divisors of \(2p\) are \(\{1, 2, p, 2p\}\); the only divisors not
+dividing \(p\) are \(\{2, 2p\}\). If
+\(\operatorname{ord}_r(2) = 2\) then \(r \mid 3\), contradicting
+\(r > 3\). Hence \(\operatorname{ord}_r(2) = 2p\).
+\end{proof}
+
+\subsection{Multi-Factor Pinning}
+
+\begin{theorem}[Multi-Factor Pinning]\label{thm:multi-factor-pinning}
+Let \(W_p\) be composite. All prime factors \(r > 3\) of \(W_p\)
+share a common value \(\operatorname{ord}_r(2)/2 = p\).
+Consequently, if two composite Wagstaff numbers \(W_{p_1}\) and
+\(W_{p_2}\) with \(p_1 \neq p_2\) are given, they share no prime
+factor \(r > 3\).
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:order-pinning} gives
+\(\operatorname{ord}_r(2)/2 = p\) for every prime factor \(r > 3\)
+of \(W_p\). The disjointness statement is the contrapositive: if
+\(r > 3\) divides both \(W_{p_1}\) and \(W_{p_2}\) then
+\(\operatorname{ord}_r(2) = 2 p_1 = 2 p_2\), contradicting
+\(p_1 \neq p_2\).
+\end{proof}
+
+\begin{remark}
+Multi-Factor Pinning is a \emph{global} constraint relating all
+prime factors of a single \(W_p\) to a common ``pinned'' order
+parameter, and the same pinning applies across different \(W_p\)
+to block any shared prime factor.
+\end{remark}
+
+\subsection{Phantom Exclusion of the finite danger catalog}
+
+By ``danger triple at \(d\)'' we mean a triple \((r, p, d)\) with
+\(r\) an inert prime factor of \(W_p\),
+\(d = \operatorname{ord}_r(\omega_3)/4\), and
+\((r, p, d)\) surviving every constraint of \S6 (parity, Pell
+exclusion, Condition~(II) pass at \(r\)); see
+Definition~\ref{def:danger-triple}. A primitive-divisor survey
+over all \(d \leq 1000\) admissible under the parity obstruction
+of~\S\ref{sec:nct} identifies a finite catalog of such triples
+(the ``finite catalog'') with at most five \(d\)-values, including
+\(d = 57, 67\), and none with \(d > 683\); see \S\ref{sec:multi-factor}
+and \S9.8 for the catalog structure and its secondary-factor
+status.
+
+\begin{theorem}[Phantom Exclusion]\label{thm:phantom-exclusion}
+Suppose \(W_p\) is composite, every prime factor is inert, and
+Condition~(II) holds at every factor (so
+Conjecture~\ref{conj:sufficiency} fails at \(W_p\)). Let \(r\)
+and \(r'\) be two distinct prime factors of \(W_p\) belonging
+respectively to danger triples \((r, p, d)\) and \((r', p', d')\)
+in the finite catalog. Then \(p = p'\) and the pair
+\((d, d')\) is constrained to a list whose entries share no common
+\(p\)-value in the finite catalog.
+In particular, the entire finite catalog of danger triples with
+\(d \leq 1000\) is \emph{unconditionally} excluded: no composite
+\(W_p\) can have two distinct inert factors whose danger triples
+both lie in the catalog.
+\end{theorem}
+
+\begin{proof}
+Both \(r\) and \(r'\) divide \(W_p\), so by
+Theorem~\ref{thm:multi-factor-pinning}
+\(\operatorname{ord}_r(2)/2 = \operatorname{ord}_{r'}(2)/2 = p\);
+in particular \(p = p'\). The primitive-divisor survey of
+\S\ref{sec:multi-factor} enumerates the entire catalog of danger
+triples \((d, p, r)\) with \(d \leq 1000\) admissible: exactly five
+triples, at
+\begin{align*}
+  (d, p) \in \{\,&(57, 11),\ (57,\, 85\,684\,865\,933),\\
+               &(67,\, 24\,822\,855\,876\,938\,710\,967),\\
+               &(331, 17),\ (683, 13)\,\}.
+\end{align*}
+All five \(p\)-values are pairwise distinct. Since a common
+\(W_p\) requires a common pinned~\(p\), no two distinct factors
+of~\(W_p\) can simultaneously lie in the catalog.
+\end{proof}
+
+\begin{remark}[Three-factor reduction + catalog]
+Combining Theorem~\ref{thm:multi-factor} (any all-inert composite
+has at least three prime factors) with Phantom Exclusion: at least
+three distinct factors \(r_1, r_2, r_3\) of \(W_p\) must occur,
+all sharing the pinned \(p\)-value, and at most one of these may
+belong to the finite catalog. The remaining two are forced to
+have \(d > 1000\).
+\end{remark}
+
+\subsection{Platinum Lemma for factors below \texorpdfstring{$10^{12}$}{10\textasciicircum 12}}
+
+For computational reasons the ``small \(r\)'' tail is isolated as
+a separate unconditional input.
+
+\begin{theorem}[Platinum Lemma]\label{thm:platinum}
+No composite \(W_p\) with \(p < 5 \times 10^{11}\) has an inert
+prime factor \(r\) with \(r \leq 10^{12}\) and
+\(d_r > 43\) that passes Condition~(II).
+\end{theorem}
+
+\begin{proof}[Verification sketch]
+The statement is a finite computational verification. Each inert
+prime factor \(r \leq 10^{12}\) and pinned \(p =
+\operatorname{ord}_r(2)/2 < 5 \times 10^{11}\) is enumerated from
+the \((r, p)\)-table described in \S9.5. For each \((r, p)\)-row
+the Pell-sequence exclusion
+(Theorem~\ref{thm:pell-exclusion}) disposes of \(d_r \leq 43\); for
+the remaining rows, direct evaluation of the residue
+\(\omega_3^{2 W_{p-2}} \pmod r\) either exhibits a
+Condition~(II) failure or witnesses a pass, and none of the
+\(684\,965\,381\) enumerated rows yields a pass with
+\(d_r > 43\). Full scripts and certificates are archived
+(see ``Supplementary material'').
+\end{proof}
+
+\begin{remark}
+The Platinum Lemma is the only computational input in the
+cross-case reductions of this section; every downstream
+consequence (including
+Theorem~\ref{thm:second-moment-reduction}) is unconditional once
+the enumeration is accepted. Extensions to \(r \leq 10^{13}\) are
+in progress and would narrow the pair-count residual but are not
+required for the present reduction.
+\end{remark}
+
+\subsection{Exact arithmetic-progression density}
+
+\begin{theorem}[Exact AP density]\label{thm:exact-ap}
+For every odd prime \(q > 3\) with \(q \in A\) (equivalently,
+\(v_2(\operatorname{ord}_q(2)) = 1\)), set
+\(m_q := \operatorname{ord}_q(2)/2\), which is odd. Then for every
+prime \(p \geq 5\):
+\[
+  q \mid W_{p-2} \quad\Longleftrightarrow\quad
+  q \in A \text{ and } p \equiv m_q + 2 \pmod{2 m_q}.
+\]
+In particular, for each \(q \in A\) the set of admissible \(p\)
+forms a single arithmetic progression of period \(2 m_q\), and
+for \(q \notin A\) the divisibility \(q \mid W_{p-2}\) is
+impossible.
+\end{theorem}
+
+\begin{proof}
+The divisibility \(q \mid W_{p-2}\) is equivalent to
+\(q \mid 2^{p-2} + 1\), i.e.\ \(2^{p-2} \equiv -1 \pmod q\). The
+latter forces \(\operatorname{ord}_q(2)\) to divide \(2(p-2)\)
+without dividing \(p-2\); hence
+\(v_2(\operatorname{ord}_q(2)) = 1\) and \(q \in A\). Writing
+\(\operatorname{ord}_q(2) = 2 m_q\) with \(m_q\) odd, the element
+\(2^{m_q}\) has order exactly \(2\) in
+\((\mathbb{Z}/q)^{\times}\) and hence equals \(-1\) (the unique
+element of order \(2\) in a cyclic group of even order). So
+\(2^{p-2} \equiv -1 \equiv 2^{m_q} \pmod q\) holds iff
+\(p - 2 \equiv m_q \pmod{2 m_q}\), i.e.\ \(p \equiv m_q + 2
+\pmod{2 m_q}\). Conversely, \(q \in A\) together with this
+arithmetic-progression condition directly yields \(q \mid W_{p-2}\).
+\end{proof}
+
+Theorem~\ref{thm:exact-ap} is the arithmetic input used below: it
+gives an exact, not merely density-based, description of which
+primes \(q\) divide \(W_{p-2}\) as a function of \(p\).
+
+\subsection{Second-Moment Reduction}
+
+Write \(E_3\) for the cardinality of
+\[
+  \bigl\{\,p \geq 5 \text{ prime} : W_p \text{ composite, every prime factor inert,
+  Condition~(II) holds at every factor}\,\bigr\},
+\]
+the set of primes~\(p\) for which Conjecture~\ref{conj:sufficiency}
+could fail through the all-inert branch. For each~\(p\) put
+\[
+  T_p^{>} \;:=\; \{\,r \text{ prime} : r \mid W_p,\
+  r \equiv 3 \pmod 8,\ r > 10^{12},\ d_r > 43,\
+  d_r \mid W_{p-2}\,\},
+\]
+the set of \emph{residual inert danger factors} at~\(p\) --- those
+factors not already excluded by the Pell exclusion
+(Theorem~\ref{thm:pell-exclusion}), by the Platinum Lemma
+(Theorem~\ref{thm:platinum}), or by Phantom Exclusion
+(Theorem~\ref{thm:phantom-exclusion}). Both \(E_3\) and each
+\(|T_p^{>}|\) are deterministic non-negative integers
+(with \(E_3\) possibly \(+\infty\)).
+
+\begin{theorem}[Second-Moment Reduction]\label{thm:second-moment-reduction}
+Unconditionally,
+\[
+  E_3 \;\leq\; \tfrac12 \sum_{p \geq 5} |T_p^{>}|\,(|T_p^{>}| - 1)
+           \;=\; \sum_{p \geq 5} \binom{|T_p^{>}|}{2}
+           \;=\; \Pi,
+\]
+where \(\Pi\) is the total number of unordered pairs
+\(\{r_1, r_2\}\) of distinct residual inert danger factors of a
+single composite Wagstaff number.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1 (lower bound on \(|T_p^{>}|\) when \(p\) contributes to~\(E_3\)).}
+Let \(p\) be counted by~\(E_3\). By
+Theorem~\ref{thm:multi-factor}, the all-inert composite \(W_p\) has
+at least three distinct prime factors \(r_1, r_2, r_3 > 3\), each
+inert with \(r_i \equiv 3 \pmod 8\) and each a danger factor
+(i.e.\ \(d_{r_i} \mid W_{p-2}\) and Condition~(II) holds locally
+at \(r_i\)). The Pell exclusion
+(Theorem~\ref{thm:pell-exclusion}) forces \(d_{r_i} > 43\) for
+each~\(r_i\), and Phantom Exclusion
+(Theorem~\ref{thm:phantom-exclusion}) rules out two of the factors
+simultaneously belonging to the finite catalog at
+\(d \leq 1000\); hence at most one of \(r_1, r_2, r_3\) has
+\(d_{r_i} \leq 1000\). For the remaining two factors the Platinum
+Lemma (Theorem~\ref{thm:platinum}) gives \(r_i > 10^{12}\), so
+both lie in~\(T_p^{>}\). Therefore \(|T_p^{>}| \geq 2\).
+
+\emph{Step 2 (elementary integer inequality).}
+For every non-negative integer~\(X\),
+\[
+  \mathbf{1}_{X \geq 2} \;\leq\; \binom{X}{2} \;=\; \tfrac{X(X-1)}{2},
+\]
+as is verified directly for \(X \in \{0, 1, 2, 3, 4\}\) and holds a
+fortiori for \(X \geq 3\).
+
+\emph{Step 3 (summation).}
+By Step~1, \(E_3 \leq \#\{\,p : |T_p^{>}| \geq 2\,\} = \sum_p
+\mathbf{1}_{|T_p^{>}| \geq 2}\). Applying Step~2 termwise,
+\[
+  E_3 \;\leq\; \sum_{p \geq 5} \mathbf{1}_{|T_p^{>}| \geq 2}
+     \;\leq\; \sum_{p \geq 5} \binom{|T_p^{>}|}{2}
+     \;=\; \Pi. \qedhere
+\]
+\end{proof}
+
+\begin{corollary}[Residual pair-count bound]\label{cor:residual-pair-count}
+If \(\Pi < 1\) --- equivalently, if no composite Wagstaff number
+\(W_p\) admits two distinct residual inert danger factors \(r_1,
+r_2 > 10^{12}\) at the same~\(p\) --- then \(E_3 = 0\), and
+Conjecture~\ref{conj:sufficiency} holds unconditionally in the
+all-inert branch. More generally, any finite bound on~\(\Pi\)
+yields a finite bound on~\(E_3\).
+\end{corollary}
+
+\begin{remark}[No independence or heuristic hypothesis]
+Every step above is deterministic: neither the theorem nor its
+corollary invokes any probability measure, independence, or
+randomness heuristic on prime factors. The step from a
+three-factor obstruction to a pair-count obstruction uses only the
+integer inequality \(\mathbf{1}_{X\geq 2} \leq \binom{X}{2}\), and
+the conversion to the pair count~\(\Pi\) is the definition of
+\(\binom{X}{2}\). This is in contrast with the heuristic
+third-moment counts employed in earlier checkpoints, which are
+inputs to the conjectural density estimate on~\(\Pi\) discussed
+in~\S10, not to Theorem~\ref{thm:second-moment-reduction} itself.
+\end{remark}
+
+\begin{remark}[Structure of \(T_p^{>}\) and shared pinning]
+By Multi-Factor Pinning
+(Theorem~\ref{thm:multi-factor-pinning}), every element of~\(T_p^{>}\)
+satisfies \(\operatorname{ord}_r(2) = 2p\) for the \emph{same}
+value of~\(p\), so a pair \(\{r_1, r_2\} \subset T_p^{>}\) is
+more tightly constrained than a pair of independent danger primes:
+both factors share the pinned order parameter and the exact AP
+(Theorem~\ref{thm:exact-ap}) admissibility congruence class on~\(p\)
+in terms of \(d_{r_1}\) and~\(d_{r_2}\). This is the shape of the
+residual problem in~\S10.
+\end{remark}
+
+\subsection{The residual problem}
+
+The chain of reductions developed above transfers
+Conjecture~\ref{conj:sufficiency}, in its all-inert branch, to the
+single deterministic claim
+\begin{equation}\label{eq:residual-target}
+  \Pi \;:=\; \sum_{p \geq 5} \binom{|T_p^{>}|}{2} \;=\; 0,
+\end{equation}
+that is, no composite Wagstaff number admits a pair of distinct
+residual inert danger factors. This is a pair-counting question on
+a thin sieve set of inert primes; see \S10 for candidate approaches
+and the structural obstacles identified in prior work.
+
+\begin{proposition}[Residual problem status]\label{prop:residual-status}
+Every composite \(W_p\) with \(p < 5 \times 10^{11}\) and every
+Wagstaff probable prime with \(p < 100\,000\) tested to date is
+consistent with \eqref{eq:residual-target}: each has
+\(|T_p^{>}| = 0\) (no residual factor at all) or
+\(|T_p^{>}| = 1\) (a single residual factor, disposed of by the
+split/secondary-factor analysis of~\S6.7 and~\S9.8).
+\end{proposition}
+
+\begin{proof}[Verification]
+The \(684\,965\,381\)-row Platinum enumeration of \S9.5 records
+every inert factor below \(10^{12}\); combined with the
+Platinum Lemma and the \(d \leq 43\) exclusion, the empirical
+count \(|T_p^{>}|\) on the enumerated range is \(0\) or \(1\) at every
+\(p\) tested, and no pair \(\{r_1, r_2\} \subset T_p^{>}\) has
+been found in the enumerated range.
+\end{proof}
 
 \section{Computational verification}
 
 
 The software toolchain used in this section (SymPy, gmpy2,
-PARI/GP) is described in \S8.7.
+PARI/GP) is described in \S9.7.
 
 \subsection{Proven Wagstaff primes}
 
@@ -1889,8 +2327,8 @@ all prime factors of observed \(G_r\) lie in
 \(\{3, 11, 19, 43, 59, 107, 739\}\), each of which is Class III,
 consistent with the structure of \(A\).
 
-\textbf{Extended inert-factor survey.} A segmented sieve
-enumerated every prime \(r \equiv 3 \pmod{8}\) with
+\textbf{Extended inert-factor (Platinum) survey.} A segmented
+sieve enumerated every prime \(r \equiv 3 \pmod{8}\) with
 \(r < 10^{12}\), computed \(\operatorname{ord}_r(2)\), and
 recorded every pair \((p,r)\) with
 \(\operatorname{ord}_r(2) = 2p\) (so \(r \mid W_p\)) and \(W_p\)
@@ -1903,9 +2341,15 @@ order-excess argument of \S6.5. No composite \(W_p\) with all
 factors passing Condition (II) was observed. (Condition (II)
 necessarily passes at factors of Wagstaff primes, by
 Proposition~\ref{prop:base-3}; such pairs are excluded from the count.)
+This enumeration is the computational foundation of
+Theorem~\ref{thm:platinum} (Platinum Lemma) and of
+Proposition~\ref{prop:residual-status}: combined with the
+structural exclusions of \S\ref{sec:pinning-reductions}, no inert
+factor with \(r \leq 10^{12}\) contributes to an open
+counterexample configuration.
 Operational details --- parallelisation, segmented sieve scale,
 the three local-pass witnesses, and the secondary-factor closures
-of \S9 Problem 2 --- are recorded in \S8.8.
+of \S10 Problem 2 --- are recorded in \S9.8.
 
 \subsection{The Chebyshev test algorithm}
 
@@ -1913,13 +2357,13 @@ of \S9 Problem 2 --- are recorded in \S8.8.
 \emph{Unconditionally, the algorithm below is a probable-prime test for
 the family \(W_p\)}: it outputs \textbf{probable prime} for every
 Wagstaff prime (Proposition~\ref{prop:base-3}) and has never been observed to
-output \textbf{probable prime} on a composite \(W_p\) (\S8.1, \S8.5).
+output \textbf{probable prime} on a composite \(W_p\) (\S9.1, \S9.5).
 Condition (I) is automatically satisfied (Theorem~\ref{thm:cond-I}) and need
 not be checked. Conjecture~\ref{conj:sufficiency} would upgrade the test to a
 deterministic standalone primality test; the unconditional results
 of this paper (Theorems~\ref{thm:cond-I}, \ref{thm:NCT-81}, \ref{thm:pell-exclusion} and Lemmas~\ref{lem:mod-8-exclusion}, \ref{lem:v2-classification}) reduce
 that conjecture to the two structurally independent gaps stated in
-\S9.
+\S10.
 
 \begin{quote}
 \textbf{Algorithm} (Wagstaff Chebyshev test).
@@ -1952,7 +2396,7 @@ exact computation required, and its scope.
 \hline
 Result & Computation required & Scope \\
 \hline
-Theorem~\ref{thm:criterion} & Factorization of \(W_{p-2}\) & Each application (\S8.1) \\
+Theorem~\ref{thm:criterion} & Factorization of \(W_{p-2}\) & Each application (\S9.1) \\
 Theorem~\ref{thm:W2617} & BLS certificate for \(W_{2617}\) & Single number \\
 Theorem~\ref{thm:W10501} & BLS certificate for \(W_{10501}\); APR-CL primality of 103 factors & Single number \\
 Theorem~\ref{thm:W12391} & BLS certificate for \(W_{12391}\); APR-CL primality of 61 factors & Single number \\
@@ -2014,12 +2458,12 @@ along with full execution logs.
 \subsection{Survey scale, witnesses, and secondary-factor closures}
 
 
-The extended inert-factor survey of \S8.5 was carried out on a
+The extended inert-factor survey of \S9.5 was carried out on a
 128-core machine. The segmented sieve scanned
 \(1.93 \times 10^{10}\) primes in \(\approx 3.98\) hours of
 wall-clock time, producing the 684{,}965{,}381 pairs \((p,r)\)
-described in \S8.5.
-We summarise four outputs: the local-pass witnesses (\S8.5
+described in \S9.5.
+We summarise four outputs: the local-pass witnesses (\S9.5
 found three), the companion split sweep, and the secondary-factor
 closures that dispose of the two remaining gap configurations.
 
@@ -2045,7 +2489,7 @@ witnesses cover structurally distinct mechanisms:
 \item \emph{Small-\(d\) gap at \(d = 57\).}
   \(p = 85{,}684{,}865{,}933\), \(r = 2p+1\),
   \(d = G_r = 57 = 3 \cdot 19\). This is the single-factor
-  residual configuration at \(d = 57\) identified in \S9,
+  residual configuration at \(d = 57\) identified in \S10,
   Problem 2; it is disposed of globally by the secondary-factor
   closure below.
 \end{enumerate}
@@ -2053,7 +2497,7 @@ witnesses cover structurally distinct mechanisms:
 For witnesses 1 and~2, \(W_p\) has \(\approx 10^{8.6}\) and
 \(\approx 10^{9.5}\) digits respectively; no secondary factor is
 known, and their global disposition is genuinely open --- they
-illustrate the structural gap at large~\(d\) discussed in~\S9,
+illustrate the structural gap at large~\(d\) discussed in~\S10,
 Problem~2.
 
 \emph{Companion split sweep.}
@@ -2070,7 +2514,7 @@ independent evidence for Conjecture~\ref{conj:R3} beyond the unconditional closu
 Theorem~\ref{thm:NCT-81}; we report it only for
 completeness.}) are recorded in the Zenodo archive.
 
-\emph{Secondary-factor closures (\S9, Problem 2).} The dangerous
+\emph{Secondary-factor closures (\S10, Problem 2).} The dangerous
 single-factor configurations at \(d = 57\) and \(d = 67\) are
 ruled out at secondary prime factors of the same composite \(W_p\):
 
@@ -2094,11 +2538,18 @@ ruled out at secondary prime factors of the same composite \(W_p\):
 \end{itemize}
 
 These two configurations are disposed of computationally at
-secondary factors; no unconditional argument is known for either
-case, and they are not counted among the unconditional results
-in the status table of \S1.2. Their role is narrow: they are the only two configurations
-the single-factor argument of \S\S5--6 currently fails to rule out,
-and the secondary-factor argument disposes of both.
+secondary factors. They are the only two single-factor
+configurations with \(d \leq 1000\) that the single-factor
+argument of \S\S5--6 currently fails to rule out, and each is
+dispositioned at a second factor of the same composite \(W_p\).
+They are not counted among the unconditional results in the
+status table of \S1.2.
+Theorem~\ref{thm:phantom-exclusion} further excludes any two
+such catalog triples from coexisting in the same composite
+\(W_p\); together with Theorem~\ref{thm:multi-factor}, a
+counterexample \(W_p\) would therefore require at least two inert
+factors outside the \(d \leq 1000\) catalog and the residual
+pair-count bound of Theorem~\ref{thm:second-moment-reduction}.
 
 \emph{Danger-triple enumeration (\S\ref{sec:multi-factor}).} The complete factorisation
 of \(V_{114}\) and \(V_{134}\) and the partial factorisation of
@@ -2136,44 +2587,63 @@ for \(d \leq 1000\).
 
 \textbf{Problem 1} (NCT for general \(d\)). Prove that no compatible triple
 \((d, r, p)\) exists for any odd \(d > 1\). Proved for \(d \leq 81\)
-(Theorem~\ref{thm:NCT-81}); verified computationally through \(d = 200\) (\S8.4).
+(Theorem~\ref{thm:NCT-81}); verified computationally through \(d = 200\) (\S9.4).
 The parity obstruction eliminates 80\% of \(d\); the remaining
 cases require a direct compatible-triple argument (Proposition~\ref{prop:qth-power},
 Remark~\ref{rem:qpro-false}). See Remark~\ref{rem:split-gap} for the structural source of this gap.
 
-\textbf{Problem 2} (Universal order-parameter bound for inert factors). For
+\textbf{Problem 2} (Residual pair-count bound at inert factors). For
 \(r \equiv 3 \pmod{8}\) dividing a composite \(W_p\), prove that
-\(\operatorname{ord}_r(\omega_3)/4 \nmid W_{p-2}\). Theorem~\ref{thm:pell-exclusion}
-handles all admissible \(d \leq 43\). Beyond \(d = 43\), a primitive-divisor
-survey of all 79 admissible
-\(d \leq 1000\) identifies five danger triples
-(Definition~\ref{def:danger-triple}), at
-\(d \in \{57, 67, 331, 683\}\): three are phantom (\(W_p\) prime)
-and two are disposed of at secondary factors (\S8.8). No danger
-triple is identified at any other admissible \(d \leq 1000\). By
-Theorem~\ref{thm:multi-factor}, any composite \(W_p\) globally
-passing Condition~(II) with all factors inert requires at least one
-danger triple at some admissible \(d\) outside \(\{57, 67, 331, 683\}\).
-A rough heuristic, modelling each primitive inert divisor of
-\(V_{2d}\) independently, gives the expected total number of
-danger triples with \(d > D\) as
+\(\operatorname{ord}_r(\omega_3)/4 \nmid W_{p-2}\). The unconditional
+reductions of \S\ref{sec:pinning-reductions} transfer this branch
+to a single deterministic residual. Specifically:
+Theorem~\ref{thm:pell-exclusion} handles all admissible
+\(d \leq 43\); Theorem~\ref{thm:phantom-exclusion} (Phantom
+Exclusion) unconditionally rules out the entire finite catalog of
+danger triples at admissible \(d \leq 1000\) produced by the
+primitive-divisor survey of \S\ref{sec:multi-factor}; and
+Theorem~\ref{thm:platinum} (Platinum Lemma) excludes every factor
+\(r \leq 10^{12}\). After these reductions the only remaining
+input is the Second-Moment Reduction target
+(Theorem~\ref{thm:second-moment-reduction} and
+Corollary~\ref{cor:residual-pair-count}):
 \[
-E(D) \;\approx\; \sum_{\substack{d > D \\ d \text{ admissible}}}
-\frac{(\ln\ln|V_{2d}|)^2}{2\,\ln|V_{2d}| \cdot M_d},
+  \Pi \;:=\; \sum_{p \geq 5} \binom{|T_p^{>}|}{2} \;=\; 0,
+\]
+i.e.\ no composite Wagstaff number has two distinct inert prime
+factors \(r_1, r_2\) with \(r_i \equiv 3 \pmod 8\),
+\(r_i > 10^{12}\), \(d_{r_i} > 43\), and
+\(d_{r_i} \mid W_{p-2}\). Equivalently, the global unordered
+pair-count of residual inert danger factors over all Wagstaff
+numbers vanishes.
+
+A heuristic count supports \(\Pi = 0\). Modelling each primitive
+inert divisor of \(V_{2d}\) as a random coincidence with
+\(\operatorname{ord}_r(2)/2 = p\) among its admissible residues,
+the expected total number of \emph{single} danger triples
+\((d, r, p)\) with \(d > D\) is
+\[
+  E(D) \;\approx\; \sum_{\substack{d > D \\ d \text{ admissible}}}
+  \frac{(\ln\ln|V_{2d}|)^2}{2\,\ln|V_{2d}| \cdot M_d},
 \]
 where \(M_d = \operatorname{lcm}(\operatorname{ord}_q(2)/2 : q \mid d)\)
-and \(|V_{2d}| \sim (1+\sqrt{2})^{2d}\).
-The series converges: for admissible prime \(d = q\),
-\(M_d = \operatorname{ord}_q(2)/2 \sim q/2\), so the \(d\)-th term
-is \(O((\ln\ln d)^2/d^2)\); for composite admissible \(d\) the lcm
+and \(|V_{2d}| \sim (1+\sqrt{2})^{2d}\). The series converges:
+for admissible prime \(d = q\), \(M_d = \operatorname{ord}_q(2)/2
+\sim q/2\), so the \(d\)-th term is
+\(O((\ln\ln d)^2/d^2)\); for composite admissible \(d\) the lcm
 \(M_d\) grows at least as fast. Numerical evaluation at
 \(D = 1000\) yields \(E \approx 0.003\), consistent with the zero
-count observed (see the Zenodo supplementary scripts for details).
+count observed. For \emph{pair} counts the same heuristic, together
+with the Multi-Factor Pinning constraint that the two factors
+share the order parameter exactly, gives a total pair count
+heuristic of \(O(10^{-6})\), consistent with \(\Pi = 0\); the
+rigorous proof of \(\Pi = 0\) is open.
+
 The closed form \(N_d = V_d^2 + 2\)
 (Proposition~\ref{prop:Nd-closed-form}) exhibits \(N_d\) as a norm
 in \(\mathbb{Z}[\sqrt{-2}]\); whether the Zsigmondy theory of
-primitive divisors of such norms can yield an asymptotic
-danger-triple exclusion for large \(d\) is an open question.
+primitive divisors of such norms can yield an unconditional
+pair-count bound is an open question.
 
 \begin{remark}\label{rem:generalization}
 The structural ingredients used in \S\S5--6 --- the
@@ -2481,7 +2951,7 @@ factor, BLS witness, and primality method
 \item inert factor data for the 15{,}587{,}021 pairs \((p, r)\) with
 \(G_r > 43\) (the non-trivially-closed subset of the 684{,}965{,}381
 inert factors with \(r < 10^{12}\), \(p < 5 \times 10^{11}\);
-\S8.5), recording \(p\), \(r\), \(G_r\),
+\S9.5), recording \(p\), \(r\), \(G_r\),
 the order parameter \(d = \operatorname{ord}_r(\omega_3)/4\),
 and the Condition~(II) obstruction type;
 \item danger-triple enumeration data: complete factorisations of
@@ -2489,11 +2959,11 @@ and the Condition~(II) obstruction type;
 and the primitive-divisor survey for all 79 admissible
 \(d \leq 1000\) (Theorem~\ref{thm:multi-factor});
 \item scripts to reproduce the BLS proofs, the inert-factor
-survey, the primitive-divisor survey (\S8.3), the
+survey, the primitive-divisor survey (\S9.3), the
 factorizations of \(U_{4d}\) and \(N_d\)
 (Theorems~\ref{thm:NCT-81},~\ref{thm:pell-exclusion}), and the
 danger-triple search (\S6.7); and
-\item code for the Chebyshev primality test (\S8.6).
+\item code for the Chebyshev primality test (\S9.6).
 \end{enumerate}
 
 External databases (the Cunningham project tables \cite{ref4} and

@@ -177,7 +177,7 @@ python3 scripts/primality_bls.py
 
 ## Step 7 — NCT and Pell exclusion verification
 
-Verify the No Compatible Triples theorem (d ≤ 81, §5.6) and the Pell
+Verify the No Compatible Triples theorem (d ≤ 81, §5.7) and the Pell
 exclusion result (d ≤ 43, §6.3):
 
 ```sh
@@ -194,7 +194,7 @@ Pell exclusion verified for all admissible d <= 43.
 ## Step 8 — split factor census and R3 verification
 
 Reproduce the 185-factor split census and verify Conjecture R3 at
-every known split factor (§8.2):
+every known split factor (§9.2):
 
 ```sh
 python3 scripts/split_factor_census.py
@@ -211,7 +211,7 @@ Case C: 132 (43 d-inadmissible + 89 general d>200).
 
 ## Step 9 — primitive divisor survey
 
-Reproduce the primitive divisor survey for small Class III primes (§8.3):
+Reproduce the primitive divisor survey for small Class III primes (§9.3):
 
 ```sh
 python3 scripts/primitive_divisor_survey.py 200
@@ -222,7 +222,7 @@ exactly one qth-power case (q=43, r=14449).
 
 ## Step 10 — NCT extended verification
 
-Search for compatible triples at parity-unblocked d in [83, 200] (§8.4):
+Search for compatible triples at parity-unblocked d in [83, 200] (§9.4):
 
 ```sh
 python3 scripts/nct_extended_verify.py 1e8
@@ -249,16 +249,55 @@ python3 scripts/nct_parity_obstruction.py
 # Class III Wieferich check (§6.2): v_q(2^m+1)=1 for all q<5000
 python3 scripts/class_iii_wieferich.py
 
-# Secondary-factor closures for d=57, d=67 (§8.8)
+# Secondary-factor closures for d=57, d=67 (§9.8)
 python3 scripts/secondary_closure.py
 
-# 869-factor inert census (§8.5)
+# 869-factor inert census (§9.5)
 python3 scripts/small_factor_census.py
 ```
 
-## Step 12 — Chebyshev test smoke-check
+## Step 12 — pinning reductions (Section 8)
 
-Run the standalone Chebyshev probable-prime test (§8.6) on the three
+Verify the unconditional cross-case reductions established in §8 of the
+paper. Three of the four scripts are self-contained; the Platinum Lemma
+verifier requires the Zenodo CSV.
+
+```sh
+# Order-Pinning + Multi-Factor Pinning + Phantom Exclusion check
+# over the full danger catalogue (§8.1-8.3, ~30 s)
+python3 scripts/multi_factor_pinning.py
+
+# Exact AP-density theorem (§8.5): verify on class-A primes q, tabulate
+# ord_q(2) vs q, and compute the rigorous 1/phi(ord_d(2)) pair-count
+# sharpening of the heuristic 1/d density (~1 min)
+python3 scripts/exact_ap_density.py
+
+# Second-Moment Reduction bookkeeping (§8.6): print the deterministic
+# inequality chain E_3 <= Π and the heuristic pair-count estimate
+python3 scripts/second_moment_reduction.py
+
+# Platinum Lemma (§8.4): direct verification of the 684,965,381-row
+# enumeration. Requires the Zenodo inert_factors.csv placed at
+# data/inert_factors.csv (or .csv.xz). Streaming, ~25 min.
+python3 scripts/platinum_lemma.py
+```
+
+Expected outputs:
+
+- `multi_factor_pinning.py` — confirms the five known danger triples
+  have pairwise distinct p-values, hence no three-factor Phantom
+  configuration inside a common `W_p`.
+- `exact_ap_density.py` — prints "All ... class-A primes verified:
+  the AP claim holds." and the rigorous 1/φ(ord)-based pair sum.
+- `second_moment_reduction.py` — prints the deterministic inequality
+  chain `E_3 <= (1/2) Σ |T_p^>|(|T_p^>| - 1)` and the heuristic
+  residual pair count `Π ≲ 1.5e-6`.
+- `platinum_lemma.py` — reports 684,965,381 rows, 3 PASS rows, all three
+  at distinct p-values, and zero p with ≥ 2 PASS rows.
+
+## Step 13 — Chebyshev test smoke-check
+
+Run the standalone Chebyshev probable-prime test (§9.6) on the three
 BLS-proved exponents as a sanity check:
 
 ```sh
@@ -269,7 +308,7 @@ python3 scripts/chebyshev_test.py 12391
 
 Each should print `PROBABLE PRIME (Chebyshev test passed)`.
 
-## Step 13 — rebuild the paper PDF
+## Step 14 — rebuild the paper PDF
 
 ```sh
 cd paper/
@@ -293,8 +332,9 @@ produces `wagstaff_chebyshev.pdf`.
 | Primitive divisors (step 9) | 1 core | 100 MB | — |
 | NCT extended (step 10) | 1 core | 100 MB | — |
 | Auxiliary (step 11) | 1 core | 200 MB | — |
-| Chebyshev test (step 12) | 1 core | 50 MB | — |
-| Paper build (step 13) | 1 core | — | — |
+| Pinning reductions (step 12) | 1 core | 1 GB | 802 MB (Platinum CSV) |
+| Chebyshev test (step 13) | 1 core | 50 MB | — |
+| Paper build (step 14) | 1 core | — | — |
 
 ## Provenance
 
