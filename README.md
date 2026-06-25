@@ -1,125 +1,99 @@
-# Chebyshev primality criteria for Wagstaff numbers
+# Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Pell Primitive Pair Conjecture
 
-This repository contains the LaTeX source, reproducibility scripts, and
-data pointers for the paper **"Chebyshev primality criteria for
-Wagstaff numbers"** by Alexey Dolotov.
+LaTeX source, reproducibility scripts, and certified data for the paper
+**"Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Pell
+Primitive Pair Conjecture"** by Alexey Dolotov (v3.6).
 
 ## Abstract
 
-The Chebyshev base `omega_3 = 3 + 2*sqrt(2)` and the identity
-`W_p + 1 = 4*W_{p-2}` yield an unconditional `N+1` primality criterion
-for the Wagstaff numbers `W_p = (2^p + 1)/3`; combined with a companion
-`N-1` criterion and the Brillhart-Lehmer-Selfridge framework, this gives
-fully verified primality proofs of `W_2617`, `W_10501`, and `W_12391`,
-independent of ECPP. For the sufficiency conjecture -- whether the
-single congruence `omega_3^{(W_p+1)/2} = -1 (mod W_p)` implies
-primality -- we show that Condition~(I) holds automatically, exclude
-factors `r = 5, 7 (mod 8)`, reduce the split branch `r = 1 (mod 8)`
-to the nonexistence of compatible Pell triples (proved for rank
-parameters `d <= 81`), and prove that the inert branch `r = 3 (mod 8)`
-is impossible for order parameter `d <= 43`. An Order-Pinning Lemma
-shows that every inert prime factor `r` of a composite `W_p` satisfies
-`ord_r(2) = 2p`, and a Multi-Factor Pinning Theorem forces all inert
-factors of a common `W_p` to share a single order parameter; combined
-with a multi-factor bound, these unconditionally exclude the entire
-finite catalog of small-`d` danger configurations produced by the
-parity obstruction. An exhaustive Platinum Lemma rules out every inert
-factor with `r <= 10^12` via a 684,965,381-row enumeration, and an
-elementary deterministic Second-Moment Reduction transfers the
-residual problem to the single claim that no composite `W_p` admits a
-pair of distinct residual inert danger factors `r_1, r_2 > 10^12` at
-the same `p`.
+For `W_p = (2^p + 1)/3` and `omega_3 = 3 + 2*sqrt(2)`, the congruence
+`omega_3^{(W_p+1)/2} = -1 (mod W_p)` (Condition II) holds for every prime
+`W_p`; whether it implies primality is the open **Wagstaff Chebyshev
+sufficiency conjecture** — equivalently the open "only if" direction of the
+**Vrba–Reix** Wagstaff primality test (`S_{i+1} = S_i^2 - 2`; open since 2008,
+standing 500-euro reward). This paper reduces the conjecture to a quantitative
+residual: the **Pell Primitive Pair Conjecture (PPPC)**, a general-`d`
+nonexistence-of-compatible-triples (NCT) statement on the split branch, and a
+mild Wieferich–Wagstaff exclusion `W = 0` (unconditional for all factors below
+`2^64`). On the way it proves, unconditionally: NCT for every odd `d <= 200`
+and at fifteen further parity-unblocked values in `(200, 400]`; the
+Order-Pinning, Multi-Factor Pinning, and Second-Moment reductions; a Pair
+Separation Theorem; quartic residuosity of 2 at primitive Pell divisors; and an
+exact-AP characterization. The inert branch collapses, via these reductions and
+one computational input (the **Platinum Lemma**, a 684,965,381-row enumeration),
+to PPPC. The reduction is conditional, not an unconditional proof.
+
+This is the companion to the Brillhart–Lehmer–Selfridge primality-proofs paper
+(see *Cite this work*).
 
 ## Layout
 
 ```
 .
-├── paper/                         LaTeX source of the paper
-│   ├── wagstaff_chebyshev.tex
-│   └── Makefile                   pdflatex targets
-├── scripts/                       Reproducibility scripts (27 Python scripts)
-│   ├── README.md                  script -> paper section map
-│   │
-│   │  Survey pipeline (§9.5)
-│   ├── survey.py                  inert-factor survey (128 cores, ~4 h)
-│   ├── rerun_segments.py          re-run explicit survey segments
-│   ├── build_clean.py             canonicalise the raw survey CSV
-│   ├── audit.py                   CSV integrity audit
-│   ├── verify_sample.py           independent verifier for a CSV slice
-│   │
-│   │  BLS primality proofs (§3.6-3.8)
-│   ├── bls_n_minus_1_w2617.py     BLS proof for W_2617
-│   ├── bls_n_minus_1_w10501.py    BLS proof for W_10501
-│   ├── bls_n_minus_1_w12391.py    BLS proof for W_12391
-│   ├── bls_ceiling.py             BLS N+1 ceiling analysis
-│   ├── primality_bls.py           BLS N-1 proof driver (generic)
-│   ├── wagstaff_verify_all.py     verify Theorem 3.2 for all known W_p
-│   ├── chebyshev_test.py          standalone Chebyshev primality test
-│   │
-│   │  Split factor analysis (§5, §9.2)
-│   ├── split_factor_census.py     185-factor census and case breakdown
-│   ├── r3_split_sweep.py          extended R3 sweep at r <= 10^11
-│   │
-│   │  NCT and Pell exclusion (§5-6, §9.3-9.4)
-│   ├── nct_verify.py              NCT (d<=81) and Pell exclusion (d<=43)
-│   ├── nct_parity_obstruction.py  parity obstruction analysis
-│   ├── nct_extended_verify.py     NCT search for d in [83, 200]
-│   ├── primitive_divisor_survey.py primitive divisor survey (§9.3)
-│   │
-│   │  Inert factor analysis (§6-7, §9.5, §9.8)
-│   ├── small_factor_census.py     869-factor census (r < 2x10^5)
-│   ├── class_iii_wieferich.py     Class III Wieferich check (§6.2)
-│   ├── secondary_closure.py       d=57, d=67 closure (§9.8)
-│   ├── danger_triple_survey.py    danger-triple survey for admissible d (§6.7)
-│   │
-│   │  Unconditional reductions from pinning (§8)
-│   ├── multi_factor_pinning.py    Order-Pinning + Multi-Factor Pinning + Phantom Exclusion (§8.1-8.3)
-│   ├── platinum_lemma.py          Platinum Lemma direct verification (§8.4)
-│   ├── exact_ap_density.py        Exact AP density (§8.5) and rigorous pair-count sharpening
-│   └── second_moment_reduction.py Deterministic Second-Moment Reduction bookkeeping (§8.6)
-│
-├── data/                          Sample data, hashes, and BLS certificates
-│   ├── README.md                  data dictionary + schema
-│   ├── sample_1000.csv            first 1000 rows of the clean CSV
-│   ├── SHA256SUMS                 hashes of full and sample CSVs
-│   ├── bls_certificate_w2617.json
-│   ├── bls_certificate_w10501.json
-│   ├── bls_certificate_w12391.json
-│   └── danger_triple_data.json    V_{114}, V_{134}, V_{662} factorisations + 5 danger triples
-├── reproducibility.md             end-to-end reproduction walkthrough
-├── LICENSE                        MIT
-├── CITATION.cff                   machine-readable citation
-└── README.md                      this file
+├── paper/
+│   ├── wagstaff_chebyshev_reduction_v3.6.tex   LaTeX source (62 pp)
+│   ├── wagstaff_chebyshev_reduction_v3.6.pdf
+│   └── Makefile                                pdflatex targets
+├── scripts/                                    reproducibility scripts
+│   ├── README.md                               script -> paper section map
+│   │   NCT fixed-d certificates (cor:nct-fixed-d-certificate):
+│   │     cp351/cp353/cp356/cp358_nct_certificate*.py  per-d closures
+│   │     cp356_aprcl_recert.py, cp358_aprcl_range.py  APR-CL re-cert
+│   │     cp365_nct_certificate_bundle.py        consolidated static artifact
+│   │   Inert/cross-case (Platinum, Second-Moment, pinning, exact-AP):
+│   │     platinum_lemma.py, second_moment_reduction.py,
+│   │     multi_factor_pinning.py, exact_ap_density.py, nct_*.py
+│   │   Corner / falsification censuses:
+│   │     cp354_diag_corner_gcd.py, cp358_corner_sweep_d1000.py,
+│   │     cp358_falsification_prewindow.py
+│   │   Vrba–Reix equivalence:  cp361_vrba_reix_check.py
+│   │   Independent verification (preliminaries + inert foundations):
+│   │     cp362_verify_preliminaries.py, cp363_verify_inert_foundations.py
+│   │   Survey pipeline:  survey.py, build_clean.py, audit.py, verify_sample.py
+├── data/
+│   ├── nct_certificates.json   static fixed-d certificates: pinned Psi_{4d}
+│   │                           factorizations + APR-CL + dispositions for all
+│   │                           24 closures in (100,400] (FactorDB-independent)
+│   ├── danger_triple_data.json V_{114}, V_{134}, V_{662} factorisations
+│   ├── sample_1000.csv         first 1000 rows of the survey CSV
+│   ├── SHA256SUMS              hashes
+│   └── README.md               data dictionary
+├── reproducibility.md          end-to-end reproduction walkthrough
+├── CITATION.cff   .zenodo.json   LICENSE   README.md
 ```
 
 ## Cite this work
 
-If you use the survey data or the computational scripts, please cite:
+- **Paper (arXiv):** *pending submission — arXiv ID will be inserted here*
+- **This bundle (Zenodo):** *DOI minted on release*
+- **Inert-factor survey CSV (Zenodo):**
+  [10.5281/zenodo.19496206](https://doi.org/10.5281/zenodo.19496206)
+  (802 MB, 15,587,021 rows — the Platinum enumeration data)
+- **Companion BLS primality-proofs paper (Zenodo):**
+  [10.5281/zenodo.19645478](https://doi.org/10.5281/zenodo.19645478)
 
-- **Paper (arXiv):** *pending submission -- arXiv ID will be inserted here*
-- **Survey CSV (Zenodo):** [10.5281/zenodo.19496206](https://doi.org/10.5281/zenodo.19496206)
+A machine-readable citation is in `CITATION.cff`.
 
-A machine-readable citation is provided in `CITATION.cff`.
+## Reproduce the central claims
 
-## Reproduce the central computational claims in 4 steps
+**NCT closures (no FactorDB needed).** `data/nct_certificates.json` pins, for
+every fixed-`d` closure in `(100, 400]`, the complete factorization of the Pell
+primitive part `Psi_{4d}` with each factor APR-CL-certified and its certificate
+disposition. Re-generate / re-verify it with
+`python3 scripts/cp365_nct_certificate_bundle.py` (PARI/GP `gp` required for
+APR-CL; the embedded local factorizations are checked by exact product
+identity).
 
-1. **Download the full CSV** from Zenodo (802 MB, 15 587 021 rows).
-2. **Verify integrity:** `shasum -a 256 -c data/SHA256SUMS` (expected
-   hash is pinned in `data/README.md`).
-3. **Run the audit:** `python3 scripts/audit.py inert_factors.csv
-   segment_stats.jsonl`. Expect `Bad segments: 0` and
-   `Total duplicates: 0`.
-4. **Spot-check a slice:** `python3 scripts/verify_sample.py
-   data/sample_1000.csv`. Expect `Passed: 1000 / Failed: 0`.
+**Vrba–Reix equivalence.** `python3 scripts/cp361_vrba_reix_check.py` confirms
+the recurrence test matches Condition (II) and tracks primality of `W_p`.
 
-For the full reproduction procedure, including re-running the survey
-and the four pinning-reduction verifications (§8.1-8.6),
-see `reproducibility.md`.
+**Survey CSV (Platinum enumeration).** Download the 802 MB CSV from Zenodo
+(`10.5281/zenodo.19496206`), verify `shasum -a 256 -c data/SHA256SUMS`, audit
+with `python3 scripts/audit.py`, spot-check with
+`python3 scripts/verify_sample.py data/sample_1000.csv`.
 
-## Contact
-
-Issues and questions: please open a GitHub issue on this repository.
+See `reproducibility.md` for the full procedure.
 
 ## License
 
-MIT. See `LICENSE`.
+MIT (code) / CC-BY-4.0 (paper, data). See `LICENSE`.

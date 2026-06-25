@@ -1,0 +1,1479 @@
+{
+  "description": "Static NCT fixed-d certificates for Paper 02 v3.6, (100,400]. Each Psi_{4d} factorization pinned + APR-CL certified; split factors excluded by the cor:nct-fixed-d-certificate steps.",
+  "generated_by": "scripts/cp365_nct_certificate_bundle.py",
+  "certificates": [
+    {
+      "d": 107,
+      "psi_4d_digits": 82,
+      "factors": [
+        {
+          "r": "161522909729",
+          "r_digits": 12,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "1262880768427",
+          "r_digits": 13,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "17449564219651",
+          "r_digits": 14,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "2906272939091099",
+          "r_digits": 16,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "132168496320829356461361353683",
+          "r_digits": 30,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 121,
+      "psi_4d_digits": 85,
+      "factors": [
+        {
+          "r": "1451",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "568699",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "1197595081",
+          "r_digits": 10,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "1614230507",
+          "r_digits": 10,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "135855589627",
+          "r_digits": 12,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "7499151961531",
+          "r_digits": 13,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "249507118668323",
+          "r_digits": 15,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "4005463110187137017",
+          "r_digits": 19,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 129,
+      "psi_4d_digits": 65,
+      "factors": [
+        {
+          "r": "75390435818587404514891047039001",
+          "r_digits": 32,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "276431598001487177038457370080041",
+          "r_digits": 33,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 131,
+      "psi_4d_digits": 100,
+      "factors": [
+        {
+          "r": "523",
+          "r_digits": 3,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "1049",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "p_r": 131,
+          "disposition": "split; condition (v) fails -> excluded"
+        },
+        {
+          "r": "67073",
+          "r_digits": 5,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "135193",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "1235593",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "6948763",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "3525458899",
+          "r_digits": 10,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "319560279309632944107942971",
+          "r_digits": 27,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "67103907069340766277660216218294177",
+          "r_digits": 35,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "embedded (local ECM/GNFS, cp353/cp358)",
+      "product_identity": "OK"
+    },
+    {
+      "d": 139,
+      "psi_4d_digits": 106,
+      "factors": [
+        {
+          "r": "6568027",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "574593323881",
+          "r_digits": 12,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "197671787019026728856728443573405844788899",
+          "r_digits": 42,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "5764333243492029733503944458218529327657872457",
+          "r_digits": 46,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 163,
+      "psi_4d_digits": 125,
+      "factors": [
+        {
+          "r": "1124699",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "1096864817",
+          "r_digits": 10,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "13182839507",
+          "r_digits": 11,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "12036824328615957881",
+          "r_digits": 20,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "221024872680238792171",
+          "r_digits": 21,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "65609788974347359786729",
+          "r_digits": 23,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "3577684812700647698297361563656018739",
+          "r_digits": 37,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "embedded (local ECM/GNFS, cp353/cp358)",
+      "product_identity": "OK"
+    },
+    {
+      "d": 171,
+      "psi_4d_digits": 83,
+      "factors": [
+        {
+          "r": "8209",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "10259",
+          "r_digits": 5,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "1186057",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "82658931465203",
+          "r_digits": 14,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "300531150542299499",
+          "r_digits": 18,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "19269878832774783314803453706733003299",
+          "r_digits": 38,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 177,
+      "psi_4d_digits": 89,
+      "factors": [
+        {
+          "r": "6362089",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "21015437931105774861319763619250473457",
+          "r_digits": 38,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "490240983802792962966192466615950084458511337",
+          "r_digits": 45,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 179,
+      "psi_4d_digits": 137,
+      "factors": [
+        {
+          "r": "1433",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "4297",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "3627971",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "28260363913",
+          "r_digits": 11,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "58136103167853442603",
+          "r_digits": 20,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "98733110510495882688859990311113569",
+          "r_digits": 35,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "4970296102561833027001182370298510775841518525241649807641",
+          "r_digits": 58,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "embedded (local ECM/GNFS, cp353/cp358)",
+      "product_identity": "OK"
+    },
+    {
+      "d": 201,
+      "psi_4d_digits": 102,
+      "factors": [
+        {
+          "r": "1609",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "3217",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "9352310233967104259",
+          "r_digits": 19,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "21699544365673767147184319507",
+          "r_digits": 29,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "110660621758899005602763183260750580549686717489",
+          "r_digits": 48,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 209,
+      "psi_4d_digits": 138,
+      "factors": [
+        {
+          "r": "6689",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "300961",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "15950881",
+          "r_digits": 8,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "66140087321969",
+          "r_digits": 14,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "73679323019017",
+          "r_digits": 14,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "8327920171492547",
+          "r_digits": 16,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "7100628074971435274651542171",
+          "r_digits": 28,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "70072368874834942173030675889542770903821857383129",
+          "r_digits": 50,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 211,
+      "psi_4d_digits": 161,
+      "factors": [
+        {
+          "r": "146857",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "338779913",
+          "r_digits": 9,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "52213127964665809",
+          "r_digits": 17,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "307892103084433531",
+          "r_digits": 18,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "515423294391027356040566667977041",
+          "r_digits": 33,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "137414750523933072622414103126689921861439469587248885682924164026532698941843299",
+          "r_digits": 81,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "embedded (local ECM/GNFS, cp353/cp358)",
+      "product_identity": "OK"
+    },
+    {
+      "d": 243,
+      "psi_4d_digits": 125,
+      "factors": [
+        {
+          "r": "3",
+          "r_digits": 1,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "971",
+          "r_digits": 3,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "15114601",
+          "r_digits": 8,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "2068037891",
+          "r_digits": 10,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "935133871378249",
+          "r_digits": 15,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "18150486096554548669359703025539417",
+          "r_digits": 35,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "6764946053640872456577330274123135728144973423704739859",
+          "r_digits": 55,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "embedded (local ECM/GNFS, cp353/cp358)",
+      "product_identity": "OK"
+    },
+    {
+      "d": 249,
+      "psi_4d_digits": 126,
+      "factors": [
+        {
+          "r": "46811",
+          "r_digits": 5,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "737041",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "844609",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "21344347594401539",
+          "r_digits": 17,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "14794087946032584000716005806266851249584060947",
+          "r_digits": 47,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "39732623342395434934606522137715150100921266043",
+          "r_digits": 47,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 251,
+      "psi_4d_digits": 192,
+      "factors": [
+        {
+          "r": "55219",
+          "r_digits": 5,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "85426864883233",
+          "r_digits": 14,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "10771701310297871150323",
+          "r_digits": 23,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "76433698366849071357648731",
+          "r_digits": 26,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "2339990757943547675383175875981469106592782518340859",
+          "r_digits": 52,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "26108171987415359559576214483021503363077778467554596456175214293451940449",
+          "r_digits": 74,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 281,
+      "psi_4d_digits": 215,
+      "factors": [
+        {
+          "r": "1123",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "3371",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "522538609",
+          "r_digits": 9,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "8510607936478434168952808411",
+          "r_digits": 28,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "8948149791035369173118178409960993939906872874316154735976587477680269550857",
+          "r_digits": 76,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "145825403326674591991521905796445812310475023219063552584713724062126334047183539096423120816139",
+          "r_digits": 96,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 297,
+      "psi_4d_digits": 138,
+      "factors": [
+        {
+          "r": "693793",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "1088209",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "20397961",
+          "r_digits": 8,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "89378531394769",
+          "r_digits": 14,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "11755130781449493520334259706572868670126617",
+          "r_digits": 44,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "38927548800523418736053139421692755345171945223545418381251041",
+          "r_digits": 62,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 307,
+      "psi_4d_digits": 235,
+      "factors": [
+        {
+          "r": "164322896473794697",
+          "r_digits": 18,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "551217518218706018696254009722473800578970859",
+          "r_digits": 45,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "8462098051452205847780330043770007343456962077458567073",
+          "r_digits": 55,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "2299431099776708700430294228026048684285797335551271090923988887308741456979875925523864175393108924850688673035727339",
+          "r_digits": 118,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 321,
+      "psi_4d_digits": 163,
+      "factors": [
+        {
+          "r": "1283",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "38237712330361",
+          "r_digits": 14,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "2569431377233343692241006260194082547",
+          "r_digits": 37,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "829491094770128677509698903018814679382737",
+          "r_digits": 42,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "19503478483909499624283422487811217333305036097185707759873460804513",
+          "r_digits": 68,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 347,
+      "psi_4d_digits": 265,
+      "factors": [
+        {
+          "r": "6890033",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "84793659816491",
+          "r_digits": 14,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "262460968219874513",
+          "r_digits": 18,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "598948192162644617",
+          "r_digits": 18,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "64453602423873516977",
+          "r_digits": 20,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "76796916955183866368819",
+          "r_digits": 23,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "236587236199190889435809",
+          "r_digits": 24,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "4272695409138154004886251",
+          "r_digits": 25,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "23964678226288902655434473",
+          "r_digits": 26,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "659187988168007869943929147",
+          "r_digits": 27,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "1016882078430168623214571789020201148256138559568518556417486797161",
+          "r_digits": 67,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 361,
+      "psi_4d_digits": 262,
+      "factors": [
+        {
+          "r": "30323",
+          "r_digits": 5,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "111187",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "188049233",
+          "r_digits": 9,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "163475408947",
+          "r_digits": 12,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "283825246181387",
+          "r_digits": 15,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "23458787686502993273",
+          "r_digits": 20,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "10181347253519285862225053514616180718327521641833",
+          "r_digits": 50,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "2078361579747243095550706473433647239638559665617473",
+          "r_digits": 52,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "450957537535665046492691443121380587096297432339087391861591642503631771546808093712788596166703929",
+          "r_digits": 99,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 363,
+      "psi_4d_digits": 169,
+      "factors": [
+        {
+          "r": "11",
+          "r_digits": 2,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "2352241",
+          "r_digits": 7,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "69796187",
+          "r_digits": 8,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "25691954375979011",
+          "r_digits": 17,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "178659946675133033768857",
+          "r_digits": 24,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "460935198389026844033117792002971203",
+          "r_digits": 36,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "690448252635787211462588854754611369108904661165314966552834606373306146042953",
+          "r_digits": 78,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "embedded (local ECM/GNFS, cp353/cp358)",
+      "product_identity": "OK"
+    },
+    {
+      "d": 387,
+      "psi_4d_digits": 193,
+      "factors": [
+        {
+          "r": "357587",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "23189041",
+          "r_digits": 8,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "1225916929",
+          "r_digits": 10,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "748690657847998667",
+          "r_digits": 18,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "131029510796746608899294407729",
+          "r_digits": 30,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "857098616973990869086324782294310298126961457821051295357849",
+          "r_digits": 60,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "9707974078746710769253415215741509122429264257018946808878907001",
+          "r_digits": 64,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    },
+    {
+      "d": 393,
+      "psi_4d_digits": 200,
+      "factors": [
+        {
+          "r": "1571",
+          "r_digits": 4,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "12577",
+          "r_digits": 5,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "259379",
+          "r_digits": 6,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "34598147",
+          "r_digits": 8,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "115757363",
+          "r_digits": 9,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "7358949722897449",
+          "r_digits": 16,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; ord_r(2) odd -> excluded"
+        },
+        {
+          "r": "39424643145419483953081",
+          "r_digits": 23,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "51495729072500020719779",
+          "r_digits": 23,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        },
+        {
+          "r": "993398695408799487203213473",
+          "r_digits": 27,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 1,
+          "disposition": "split; half-order composite -> excluded"
+        },
+        {
+          "r": "37340252634387534309955241107442224338941690791388831285143115233519115756853547259",
+          "r_digits": 83,
+          "bpsw_prime": true,
+          "aprcl_prime": true,
+          "mod8": 3,
+          "disposition": "not split (r != 1 mod 8) -> irrelevant"
+        }
+      ],
+      "status": "CLOSED",
+      "note": "",
+      "source": "FactorDB-FF",
+      "product_identity": "OK"
+    }
+  ]
+}

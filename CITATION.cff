@@ -1,26 +1,44 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite the paper."
-title: "Chebyshev primality criteria for Wagstaff numbers"
+title: "Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Pell Primitive Pair Conjecture"
 authors:
   - family-names: "Dolotov"
     given-names: "Alexey"
-version: "7.11"
-date-released: "2026-04-11"
+    email: "science@dolotov.com"
+version: "3.6"
+date-released: "2026-06-25"
 license: MIT
 repository-code: "https://github.com/dolonet/wagstaff-chebyshev"
+keywords:
+  - Wagstaff numbers
+  - Chebyshev polynomials
+  - Pell sequences
+  - primitive divisors
+  - Lucas sequences
+  - multiplicative orders
+  - Vrba-Reix
+  - primality testing
 abstract: >
-  Computational survey code and data for the paper "Chebyshev primality
-  criteria for Wagstaff numbers". The paper proves that every known
-  Wagstaff prime satisfies an explicit Chebyshev-style Condition (II),
-  conjectures the converse for composite Wagstaff numbers, and proves
-  that conjecture unconditionally in ~98% of cases over a computational
-  survey of 684,965,381 inert prime factors (r < 10^12, p < 5*10^11).
+  Reproducibility bundle for the paper "Reduction of the Wagstaff Chebyshev
+  sufficiency conjecture to the Pell Primitive Pair Conjecture" by Alexey
+  Dolotov. For W_p = (2^p + 1)/3 and omega_3 = 3 + 2*sqrt(2), the congruence
+  omega_3^{(W_p+1)/2} = -1 (mod W_p) (Condition II) holds for every prime W_p;
+  whether it implies primality is the open Wagstaff Chebyshev sufficiency
+  conjecture, equivalently the open "only if" direction of the Vrba-Reix
+  Wagstaff primality test. The paper reduces the conjecture to the Pell
+  Primitive Pair Conjecture together with a general-d nonexistence-of-
+  compatible-triples (NCT) statement and a mild Wieferich-Wagstaff exclusion,
+  and proves NCT unconditionally for every odd d <= 200 and at fifteen further
+  parity-unblocked values in (200, 400]. This bundle contains the LaTeX source,
+  the reproducibility scripts, and static NCT fixed-d certificates (pinned
+  Psi_{4d} factorizations, APR-CL certified).
 preferred-citation:
   type: article
-  title: "Chebyshev primality criteria for Wagstaff numbers"
+  title: "Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Pell Primitive Pair Conjecture"
   authors:
     - family-names: "Dolotov"
       given-names: "Alexey"
+      email: "science@dolotov.com"
   year: 2026
-  journal: "arXiv preprint"
-  notes: "arXiv ID will be added once the preprint is assigned"
+  journal: "arXiv preprint (Math. Comp. submission)"
+  notes: "arXiv ID added on submission"
