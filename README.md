@@ -4,14 +4,31 @@ LaTeX source, reproducibility scripts, and certified data for the paper
 **"Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Pell
 Primitive Pair Conjecture"** by Alexey Dolotov (v3.6).
 
+## Erratum (2026-07-15)
+
+The v3.6 abstract and introduction call the conjecture "equivalently the open
+'only if' direction of the Vrba–Reix Wagstaff primality test". **This is
+incorrect as stated.** The literal Vrba–Reix prize iteration (`S_0 = 1/4
+(mod 2^p+1)`, `S_{i+1} = S_i^2 - 2`) is a Lucas-type iteration in
+`Q(sqrt(-7))` — its base is `theta = (1+3*sqrt(-7))/8 = (pibar/pi)^2` with
+`2 = pi*pibar` — while Condition (II) lives in `Z[sqrt(2)]`. The two return
+conditions decouple at the level of individual prime factors **in both
+directions**, so the two sufficiency statements are logically incomparable:
+proving either would not formally settle the other. They agree empirically at
+every tested exponent. The corrected framing ("the Chua-form counterpart of
+the Vrba–Reix test") appears in the v3.7 revision, and a companion note works
+out the exact relation. The mathematical content of the paper — the reduction
+of Condition-(II) sufficiency to PPPC + NCT-general + `W = 0` — is unaffected.
+
 ## Abstract
 
 For `W_p = (2^p + 1)/3` and `omega_3 = 3 + 2*sqrt(2)`, the congruence
 `omega_3^{(W_p+1)/2} = -1 (mod W_p)` (Condition II) holds for every prime
 `W_p`; whether it implies primality is the open **Wagstaff Chebyshev
-sufficiency conjecture** — equivalently the open "only if" direction of the
-**Vrba–Reix** Wagstaff primality test (`S_{i+1} = S_i^2 - 2`; open since 2008,
-standing 500-euro reward). This paper reduces the conjecture to a quantitative
+sufficiency conjecture** — the Chua-form counterpart of the **Vrba–Reix**
+Wagstaff primality test (`S_{i+1} = S_i^2 - 2`; open since 2008, standing
+500-euro reward; see the Erratum above on the exact relation). This paper
+reduces the conjecture to a quantitative
 residual: the **Pell Primitive Pair Conjecture (PPPC)**, a general-`d`
 nonexistence-of-compatible-triples (NCT) statement on the split branch, and a
 mild Wieferich–Wagstaff exclusion `W = 0` (unconditional for all factors below
@@ -46,7 +63,7 @@ This is the companion to the Brillhart–Lehmer–Selfridge primality-proofs pap
 │   │   Corner / falsification censuses:
 │   │     cp354_diag_corner_gcd.py, cp358_corner_sweep_d1000.py,
 │   │     cp358_falsification_prewindow.py
-│   │   Vrba–Reix equivalence:  cp361_vrba_reix_check.py
+│   │   Vrba–Reix global agreement:  cp361_vrba_reix_check.py
 │   │   Independent verification (preliminaries + inert foundations):
 │   │     cp362_verify_preliminaries.py, cp363_verify_inert_foundations.py
 │   │   Survey pipeline:  survey.py, build_clean.py, audit.py, verify_sample.py
@@ -84,8 +101,11 @@ disposition. Re-generate / re-verify it with
 APR-CL; the embedded local factorizations are checked by exact product
 identity).
 
-**Vrba–Reix equivalence.** `python3 scripts/cp361_vrba_reix_check.py` confirms
-the recurrence test matches Condition (II) and tracks primality of `W_p`.
+**Vrba–Reix global agreement.** `python3 scripts/cp361_vrba_reix_check.py`
+checks that, at every tested exponent, the `S^2-2` return tests and
+Condition (II) give the same global verdict and track primality of `W_p`.
+This is empirical agreement of global outcomes, **not** equivalence of the
+tests — the per-factor conditions differ (see the Erratum above).
 
 **Survey CSV (Platinum enumeration).** Download the 802 MB CSV from Zenodo
 (`10.5281/zenodo.19496206`), verify `shasum -a 256 -c data/SHA256SUMS`, audit
