@@ -1,17 +1,18 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite the paper."
-title: "Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Pell Primitive Pair Conjecture"
+title: "Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Single-Pass Conjecture"
 authors:
   - family-names: "Dolotov"
     given-names: "Alexey"
     email: "science@dolotov.com"
-version: "3.6"
-date-released: "2026-06-25"
+version: "4.0"
+date-released: "2026-07-16"
 license: MIT
 repository-code: "https://github.com/dolonet/wagstaff-chebyshev"
 keywords:
   - Wagstaff numbers
   - Chebyshev polynomials
+  - Single-Pass Conjecture
   - Pell sequences
   - primitive divisors
   - Lucas sequences
@@ -20,21 +21,26 @@ keywords:
   - primality testing
 abstract: >
   Reproducibility bundle for the paper "Reduction of the Wagstaff Chebyshev
-  sufficiency conjecture to the Pell Primitive Pair Conjecture" by Alexey
-  Dolotov. For W_p = (2^p + 1)/3 and omega_3 = 3 + 2*sqrt(2), the congruence
-  omega_3^{(W_p+1)/2} = -1 (mod W_p) (Condition II) holds for every prime W_p;
-  whether it implies primality is the open Wagstaff Chebyshev sufficiency
-  conjecture, equivalently the open "only if" direction of the Vrba-Reix
-  Wagstaff primality test. The paper reduces the conjecture to the Pell
-  Primitive Pair Conjecture together with a general-d nonexistence-of-
-  compatible-triples (NCT) statement and a mild Wieferich-Wagstaff exclusion,
-  and proves NCT unconditionally for every odd d <= 200 and at fifteen further
-  parity-unblocked values in (200, 400]. This bundle contains the LaTeX source,
-  the reproducibility scripts, and static NCT fixed-d certificates (pinned
-  Psi_{4d} factorizations, APR-CL certified).
+  sufficiency conjecture to the Single-Pass Conjecture" by Alexey Dolotov.
+  For W_p = (2^p + 1)/3 and omega_3 = 3 + 2*sqrt(2), the congruence
+  omega_3^{(W_p+1)/2} = -1 (mod W_p) (Condition II) holds for every prime
+  W_p; whether it implies primality is the open Wagstaff Chebyshev
+  sufficiency conjecture, the Chua-form counterpart of the Vrba-Reix Wagstaff
+  primality test. Writing P_p for the set of primes r with ord_r(2) = 2p at
+  which Condition (II) holds locally, the Single-Pass Conjecture (SPC)
+  asserts |P_p| <= 1 for every prime p >= 5; the paper proves that SPC
+  implies the sufficiency conjecture unconditionally, with zero computational
+  inputs, and that the working chain PPPC + MPC^> + X1 (with the Platinum
+  enumeration and the witness discharges as stated computational inputs)
+  also suffices and is implied by SPC. Proved unconditionally along the way:
+  NCT for every odd d <= 400 (28 fixed-d certificates in (100,400]) and a
+  complete danger-triple census through d = 400. This bundle contains the
+  LaTeX source (v4.0, with v3.8 archived), the reproducibility scripts, the
+  static NCT fixed-d certificates and the danger-census artifact (pinned
+  factorizations, APR-CL certified).
 preferred-citation:
   type: article
-  title: "Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Pell Primitive Pair Conjecture"
+  title: "Reduction of the Wagstaff Chebyshev sufficiency conjecture to the Single-Pass Conjecture"
   authors:
     - family-names: "Dolotov"
       given-names: "Alexey"

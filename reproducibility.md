@@ -1,4 +1,4 @@
-# Reproducibility walkthrough (v3.6)
+# Reproducibility walkthrough (v4.0)
 
 Every step required to reproduce the paper's computational claims, from
 scratch. The BLS primality proofs are in the companion paper (Zenodo
@@ -19,9 +19,10 @@ pip install sympy
 
 ## Step 1 — NCT fixed-d certificates (no FactorDB, no network)
 
-The central unconditional claim — NCT closed for every odd `d <= 200` and at
-fifteen further parity-unblocked values in `(200, 400]` — is verifiable from
-the shipped static artifact `data/nct_certificates.json`. For each closed `d`
+The central unconditional split-branch claim — NCT closed for **every odd
+`d <= 400`** (the `d <= 99` theorem plus 28 fixed-`d` closures in
+`(100, 400]`) — is verifiable from the shipped static artifact
+`data/nct_certificates.json`. For each closed `d`
 it pins the complete factorization of the Pell primitive part `Psi_{4d}` and,
 per prime factor, its APR-CL primality and the certificate disposition (mod-8
 class; for split `r = 1 mod 8`: `ord_r(2)` parity → half-order primality →
@@ -34,13 +35,41 @@ Re-generate and re-verify it:
 python3 scripts/cp365_nct_certificate_bundle.py
 ```
 
-Expected: `DONE: 24/24 CLOSED`. The locally-factored values
-`d in {131,163,179,211,243,363}` carry embedded factorizations checked by exact
-product identity `prod(factors) == Psi_{4d}`; the rest are pulled once from the
-public factor tables and pinned into the JSON. Every factor is APR-CL-certified
-(154 factors total, all prime). Individual per-d certificates are reproduced by
-`scripts/cp351/cp353/cp356/cp358_nct_certificate*.py` and the APR-CL re-cert by
-`scripts/cp356_aprcl_recert.py`, `scripts/cp358_aprcl_range.py`.
+Expected: `DONE: 28/28 CLOSED`. The locally-factored values (e.g.
+`d in {131,163,179,211,227,243,283,331,363,379}`) carry embedded
+factorizations checked by exact product identity
+`prod(factors) == Psi_{4d}`; the rest are pulled once from the public factor
+tables and pinned into the JSON. Every factor is APR-CL-certified
+(182 factors total, all prime). Individual per-d certificates are reproduced
+by `scripts/cp350/cp351/cp353/cp356/cp358/cp367/cp372/cp375/cp376_nct_certificate*.py`,
+an independent end-to-end re-check by `scripts/cp352_verify_nct_recompute.py`,
+and the APR-CL re-cert by `scripts/cp356_aprcl_recert.py`,
+`scripts/cp358_aprcl_range.py`.
+
+## Step 1b — danger census through d = 400 (static artifact)
+
+The complete danger-triple census for admissible `43 < d <= 400`
+(Proposition `danger-census-400` / Corollary `inert-floor-400`) is shipped as
+`data/cp412_danger_census.json`: 34 rungs, complete `V_{2d}` factorizations,
+340 (rung, prime) tests, 226 distinct primes, exactly two real triples (both
+at exponents closed by secondary factors) plus two phantoms at prime `W_p`.
+The generating and adversarial-recheck drivers
+(`scripts/cp412_danger_census_d400.py`, `scripts/cp412b_t1_recheck.py`,
+`scripts/cp412b_t1_aprcl_sweep.py`) are pinned provenance — they were run in
+the research tree and read its layout; the JSON itself is self-contained
+(every factorization carries an exact product identity, and each listed prime
+re-checks with `gp`'s `isprime(., 2)`).
+
+## Step 1c — witness discharges (self-contained)
+
+```sh
+python3 scripts/cp352_verify_discharges_recompute.py
+```
+
+Re-verifies end-to-end, with no network and by direct congruence evaluation
+(bypassing the order descent), that the two discharged witness exponents
+carry an explicit prime factor failing Condition (II), and that the three
+Platinum witnesses are genuine local passes.
 
 ## Step 2 — Vrba–Reix equivalence
 
@@ -100,23 +129,33 @@ slice).
 ```sh
 python3 scripts/multi_factor_pinning.py        # Order/Multi-Factor Pinning, phantom exclusion
 python3 scripts/exact_ap_density.py            # exact-AP characterization + pair-count
-python3 scripts/second_moment_reduction.py     # E_3 <= Pi + W bookkeeping
 python3 scripts/cp354_diag_corner_gcd.py       # diagonal corner census (d <= 124)
 python3 scripts/cp358_corner_sweep_d1000.py    # corner sweep d <= 1000, p <= 1e8
 python3 scripts/cp358_falsification_prewindow.py  # falsification pre-window scan
+python3 scripts/cp395_pppc_heuristic_constants.py # M1-M3 heuristic constants (heuristic only)
+python3 scripts/cp410_twin_ladder.py           # self-supporting exponent ladder
+python3 scripts/second_moment_reduction.py     # historical: pre-v4.0 counting bookkeeping
 ```
+
+(`second_moment_reduction.py` verifies the `E_3 <= Pi + W` bookkeeping of
+pre-v4.0 versions; the v4.0 chain routes through the branch decomposition,
+and the script is kept as a cross-check on the counting remark.)
 
 ## Step 6 — rebuild the paper PDF
 
 ```sh
-cd paper/ && make        # pdflatex x3 -> wagstaff_chebyshev_reduction_v3.6.pdf
+cd paper/ && make        # pdflatex x3 -> wagstaff_chebyshev_reduction_v4.0.pdf
 ```
+
+(The last pre-restructure version, v3.8, is archived in `paper/archive/` and
+builds the same way.)
 
 ## Expected hardware
 
 | Step | CPU | Notes |
 |---|---|---|
-| NCT certificates (1) | 1 core + gp | minutes (APR-CL on 154 factors) |
+| NCT certificates (1) | 1 core + gp | minutes (APR-CL on 182 factors) |
+| Census artifact check / discharges (1b, 1c) | 1 core (+ gp for APR-CL) | seconds–minutes |
 | Vrba–Reix / verification (2,3) | 1 core | seconds–minutes |
 | CSV audit / sample (4) | 1 core, ~16 MB | ~30 s / minutes |
 | Platinum direct (4) | 1 core | ~25 min, needs 802 MB CSV |

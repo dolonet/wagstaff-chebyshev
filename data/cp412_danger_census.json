@@ -1,0 +1,4752 @@
+{
+ "generated_by": "scripts/cp412_danger_census_d400.py",
+ "generated_at": "2026-07-16 09:26:29",
+ "range": "43 < d <= 400",
+ "admissible_rungs": [
+  57,
+  59,
+  67,
+  81,
+  83,
+  99,
+  107,
+  121,
+  129,
+  131,
+  139,
+  163,
+  171,
+  177,
+  179,
+  201,
+  209,
+  211,
+  227,
+  243,
+  249,
+  251,
+  281,
+  283,
+  297,
+  307,
+  321,
+  331,
+  347,
+  361,
+  363,
+  379,
+  387,
+  393
+ ],
+ "rungs": [
+  {
+   "d": 57,
+   "V2d_digits": 44,
+   "source": "FactorDB (cp412 cache) V_114; local (sympy/trial) V_38; local (sympy/trial) V_6",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "227",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 19 (ord_r(omega3) = 4*19)",
+      "verdict": "attributed to rung 19; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "379",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 19 (ord_r(omega3) = 4*19)",
+      "verdict": "attributed to rung 19; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "683",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*57)",
+      "T4_p": "pass (p = 11, k = 31)",
+      "T5_condv": "pass (d | W_(p-2))",
+      "verdict": "PHANTOM danger triple (r = W_p, W_p prime)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "19457",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=8",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "34961",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1562713",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*57",
+      "verdict": "excluded: split, odd part of ord composite (odd part 65113 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "20426977",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "171369731867",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*57)",
+      "T4_p": "pass (p = 85684865933, k = 1)",
+      "T5_condv": "pass (d | W_(p-2))",
+      "verdict": "REAL danger triple (discharged-witness)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 11
+  },
+  {
+   "d": 59,
+   "V2d_digits": 46,
+   "source": "FactorDB (cp412 cache) V_118",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "88499",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*59)",
+      "T4_p": "pass (p = 44249, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "18218257",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "496160696018531",
+     "digits": 15,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*59)",
+      "T4_p": "fail (odd part 248080348009265 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "306416447870523097",
+     "digits": 18,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 6
+  },
+  {
+   "d": 67,
+   "V2d_digits": 52,
+   "source": "cp398_factordb_raw.json V_134",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "28409",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*67",
+      "verdict": "excluded: split, odd part of ord composite (odd part 3551 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "210113",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*67",
+      "verdict": "excluded: split, odd part of ord composite (odd part 3283 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "377582251",
+     "digits": 9,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*67)",
+      "T4_p": "fail (odd part 12586075 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "972449700881",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*67",
+      "verdict": "excluded: split, odd part of ord composite (odd part 12155621261 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "148937135261632265803",
+     "digits": 21,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*67)",
+      "T4_p": "pass (p = 24822855876938710967, k = 3)",
+      "T5_condv": "pass (d | W_(p-2))",
+      "verdict": "REAL danger triple (secondary-closed)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 7
+  },
+  {
+   "d": 81,
+   "V2d_digits": 63,
+   "source": "FactorDB (cp412 cache) V_162; local (sympy/trial) V_18; local (sympy/trial) V_54; local (sympy/trial) V_6",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "73",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "107",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 27 (ord_r(omega3) = 4*27)",
+      "verdict": "attributed to rung 27; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "179",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 9 (ord_r(omega3) = 4*9)",
+      "verdict": "attributed to rung 9; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "2267",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*81)",
+      "T4_p": "fail (odd part 1133 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "5507",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*81)",
+      "T4_p": "pass (p = 2753, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "72577",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=5",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "2585953",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "72401041",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "2848988377",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*81",
+      "verdict": "excluded: split, odd part of ord composite (odd part 356123547 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "28304186491764899",
+     "digits": 17,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*81)",
+      "T4_p": "fail (odd part 14152093245882449 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 13
+  },
+  {
+   "d": 83,
+   "V2d_digits": 64,
+   "source": "cp398_factordb_raw.json V_166",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "331",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*83)",
+      "T4_p": "fail (odd part 15 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "144173987",
+     "digits": 9,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*83)",
+      "T4_p": "fail (odd part 72086993 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1884644147",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*83)",
+      "T4_p": "fail (odd part 85665643 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "873276921077442611179",
+     "digits": 21,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*83)",
+      "T4_p": "fail (odd part 436638460538721305589 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "7370827889154320981521",
+     "digits": 22,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 7
+  },
+  {
+   "d": 99,
+   "V2d_digits": 76,
+   "source": "FactorDB (cp412 cache) V_198; local (sympy/trial) V_18; local (sympy/trial) V_22; local (sympy/trial) V_6; local (sympy/trial) V_66",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 2,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "43",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "73",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "89",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "131",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "179",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 9 (ord_r(omega3) = 4*9)",
+      "verdict": "attributed to rung 9; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1187",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "11483",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "16633",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "74051",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "83704945401782657191801",
+     "digits": 23,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "102409961134092245152201",
+     "digits": 24,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*99",
+      "verdict": "excluded: split, odd part of ord composite (odd part 12801245141761530644025 composite (fully factored descent))"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 14
+  },
+  {
+   "d": 107,
+   "V2d_digits": 82,
+   "source": "cp398 V_214 (cross); nct_certificates.json Psi_428",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "161522909729",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1262880768427",
+     "digits": 13,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*107)",
+      "T4_p": "fail (odd part 631440384213 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "17449564219651",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*107)",
+      "T4_p": "fail (odd part 8724782109825 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "2906272939091099",
+     "digits": 16,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*107)",
+      "T4_p": "fail (odd part 1453136469545549 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "132168496320829356461361353683",
+     "digits": 30,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*107)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 21-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 7
+  },
+  {
+   "d": 121,
+   "V2d_digits": 93,
+   "source": "local (sympy/trial) V_22; nct_certificates.json Psi_484",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "43",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "89",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1451",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*121)",
+      "T4_p": "fail (odd part 725 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "11483",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "568699",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*121)",
+      "T4_p": "fail (odd part 94783 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1197595081",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*121",
+      "verdict": "excluded: split, odd part of ord composite (odd part 9979959 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1614230507",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*121)",
+      "T4_p": "fail (odd part 807115253 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "135855589627",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*121)",
+      "T4_p": "fail (odd part 7547532757 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "7499151961531",
+     "digits": 13,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*121)",
+      "T4_p": "fail (odd part 749915196153 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "249507118668323",
+     "digits": 15,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*121)",
+      "T4_p": "fail (odd part 124753559334161 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "4005463110187137017",
+     "digits": 19,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*121",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 15-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 13
+  },
+  {
+   "d": 129,
+   "V2d_digits": 99,
+   "source": "cp398 V_258 (cross); local (sympy/trial) V_6; local (sympy/trial) V_86; nct_certificates.json Psi_516",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1033",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*43",
+      "verdict": "excluded: split, alpha-rung 43 < 129 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "14449",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "469764750691",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 43 (ord_r(omega3) = 4*43)",
+      "verdict": "attributed to rung 43; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "19712383976963",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 43 (ord_r(omega3) = 4*43)",
+      "verdict": "attributed to rung 43; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "75390435818587404514891047039001",
+     "digits": 32,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "276431598001487177038457370080041",
+     "digits": 33,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*129",
+      "verdict": "excluded: split, odd part of ord composite (odd part 6910789950037179425961434252001 composite (fully factored descent))"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 9
+  },
+  {
+   "d": 131,
+   "V2d_digits": 101,
+   "source": "nct_certificates.json Psi_524",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "523",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*131)",
+      "T4_p": "fail (odd part 261 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1049",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*131",
+      "split_p": "131",
+      "split_condv": "fails",
+      "verdict": "excluded: split survivor fails condition (v)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "67073",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=5",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "135193",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1235593",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "6948763",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*131)",
+      "T4_p": "fail (odd part 3474381 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "3525458899",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*131)",
+      "T4_p": "fail (odd part 587576483 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "319560279309632944107942971",
+     "digits": 27,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*131)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 25-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "67103907069340766277660216218294177",
+     "digits": 35,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 11
+  },
+  {
+   "d": 139,
+   "V2d_digits": 107,
+   "source": "cp398 V_278 (cross); nct_certificates.json Psi_556",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "6568027",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*139)",
+      "T4_p": "fail (odd part 3284013 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "574593323881",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "197671787019026728856728443573405844788899",
+     "digits": 42,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*139)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 35-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "5764333243492029733503944458218529327657872457",
+     "digits": 46,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*139",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 41-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 6
+  },
+  {
+   "d": 163,
+   "V2d_digits": 125,
+   "source": "cp398 V_326 (cross); nct_certificates.json Psi_652",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "1124699",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*163)",
+      "T4_p": "pass (p = 562349, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1096864817",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*163",
+      "verdict": "excluded: split, odd part of ord composite (odd part 68554051 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "13182839507",
+     "digits": 11,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*163)",
+      "T4_p": "fail (odd part 6591419753 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "12036824328615957881",
+     "digits": 20,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*163",
+      "verdict": "excluded: split, odd part of ord composite (odd part 9230693503539845 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "221024872680238792171",
+     "digits": 21,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*163)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 14-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "65609788974347359786729",
+     "digits": 23,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "3577684812700647698297361563656018739",
+     "digits": 37,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*163)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 35-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 9
+  },
+  {
+   "d": 171,
+   "V2d_digits": 131,
+   "source": "FactorDB (cp412 cache) V_114; local (sympy/trial) V_18; local (sympy/trial) V_38; local (sympy/trial) V_6; nct_certificates.json Psi_684",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "73",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "179",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 9 (ord_r(omega3) = 4*9)",
+      "verdict": "attributed to rung 9; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "227",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 19 (ord_r(omega3) = 4*19)",
+      "verdict": "attributed to rung 19; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "379",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 19 (ord_r(omega3) = 4*19)",
+      "verdict": "attributed to rung 19; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "683",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 57 (ord_r(omega3) = 4*57)",
+      "verdict": "attributed to rung 57; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "8209",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "10259",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*171)",
+      "T4_p": "fail (odd part 5129 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "19457",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=8",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "34961",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1186057",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1562713",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*57",
+      "verdict": "excluded: split, alpha-rung 57 < 171 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "20426977",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "171369731867",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 57 (ord_r(omega3) = 4*57)",
+      "verdict": "attributed to rung 57; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "82658931465203",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*171)",
+      "T4_p": "pass (p = 41329465732601, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "300531150542299499",
+     "digits": 18,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*171)",
+      "T4_p": "fail (odd part 150265575271149749 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "19269878832774783314803453706733003299",
+     "digits": 38,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*171)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 31-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 19
+  },
+  {
+   "d": 177,
+   "V2d_digits": 136,
+   "source": "FactorDB (cp412 cache) V_118; cp398 V_354 (cross); local (sympy/trial) V_6; nct_certificates.json Psi_708",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "88499",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 59 (ord_r(omega3) = 4*59)",
+      "verdict": "attributed to rung 59; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "6362089",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*177",
+      "verdict": "excluded: split, odd part of ord composite (odd part 265087 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "18218257",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "496160696018531",
+     "digits": 15,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 59 (ord_r(omega3) = 4*59)",
+      "verdict": "attributed to rung 59; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "306416447870523097",
+     "digits": 18,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "21015437931105774861319763619250473457",
+     "digits": 38,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "490240983802792962966192466615950084458511337",
+     "digits": 45,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*177",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 33-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 10
+  },
+  {
+   "d": 179,
+   "V2d_digits": 138,
+   "source": "cp398 V_358 (cross); nct_certificates.json Psi_716",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "1433",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "4297",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "3627971",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*179)",
+      "T4_p": "fail (odd part 1813985 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "28260363913",
+     "digits": 11,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "58136103167853442603",
+     "digits": 20,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*179)",
+      "T4_p": "fail (odd part 9689350527975573767 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "98733110510495882688859990311113569",
+     "digits": 35,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "4970296102561833027001182370298510775841518525241649807641",
+     "digits": 58,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 9
+  },
+  {
+   "d": 201,
+   "V2d_digits": 154,
+   "source": "cp398 V_402 (cross); cp398_factordb_raw.json V_134; local (sympy/trial) V_6; nct_certificates.json Psi_804",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1609",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "3217",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "28409",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*67",
+      "verdict": "excluded: split, alpha-rung 67 < 201 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "210113",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*67",
+      "verdict": "excluded: split, alpha-rung 67 < 201 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "377582251",
+     "digits": 9,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 67 (ord_r(omega3) = 4*67)",
+      "verdict": "attributed to rung 67; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "972449700881",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*67",
+      "verdict": "excluded: split, alpha-rung 67 < 201 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "9352310233967104259",
+     "digits": 19,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*201)",
+      "T4_p": "fail (odd part 4676155116983552129 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "148937135261632265803",
+     "digits": 21,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 67 (ord_r(omega3) = 4*67)",
+      "verdict": "attributed to rung 67; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "21699544365673767147184319507",
+     "digits": 29,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*201)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 26-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "110660621758899005602763183260750580549686717489",
+     "digits": 48,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 13
+  },
+  {
+   "d": 209,
+   "V2d_digits": 161,
+   "source": "local (sympy/trial) V_22; local (sympy/trial) V_38; nct_certificates.json Psi_836",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "43",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "89",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "227",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 19 (ord_r(omega3) = 4*19)",
+      "verdict": "attributed to rung 19; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "379",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 19 (ord_r(omega3) = 4*19)",
+      "verdict": "attributed to rung 19; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "6689",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "11483",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "19457",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=8",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "34961",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "300961",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "15950881",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*209",
+      "verdict": "excluded: split, odd part of ord composite (odd part 99693 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "66140087321969",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*209",
+      "verdict": "excluded: split, odd part of ord composite (odd part 4133755457623 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "73679323019017",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "8327920171492547",
+     "digits": 16,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*209)",
+      "T4_p": "fail (odd part 4163960085746273 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "7100628074971435274651542171",
+     "digits": 28,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*209)",
+      "T4_p": "fail (odd part 3550314037485717637325771085 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "70072368874834942173030675889542770903821857383129",
+     "digits": 50,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 17
+  },
+  {
+   "d": 211,
+   "V2d_digits": 162,
+   "source": "nct_certificates.json Psi_844",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "146857",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*211",
+      "verdict": "excluded: split, odd part of ord composite (odd part 6119 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "338779913",
+     "digits": 9,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "52213127964665809",
+     "digits": 17,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "307892103084433531",
+     "digits": 18,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*211)",
+      "T4_p": "fail (odd part 3947334654928635 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "515423294391027356040566667977041",
+     "digits": 33,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*211",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 26-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "137414750523933072622414103126689921861439469587248885682924164026532698941843299",
+     "digits": 81,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*211)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 69-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 8
+  },
+  {
+   "d": 227,
+   "V2d_digits": 174,
+   "source": "cp398 V_454 (cross); nct_certificates.json Psi_908",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "907",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*227)",
+      "T4_p": "fail (odd part 453 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "57203",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*227)",
+      "T4_p": "fail (odd part 28601 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "5580569",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "16552486912925363",
+     "digits": 17,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*227)",
+      "T4_p": "fail (odd part 8276243456462681 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "103897484432089424574671548054573458540642269367990262779403",
+     "digits": 60,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*227)",
+      "T4_p": "fail (odd part 51948742216044712287335774027286729270321134683995131389701 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "201760911884372460299372338734188130826364691502781503178121274772114731708580885801",
+     "digits": 84,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 8
+  },
+  {
+   "d": 243,
+   "V2d_digits": 187,
+   "source": "FactorDB (cp412 cache) V_162; local (sympy/trial) V_18; local (sympy/trial) V_54; local (sympy/trial) V_6; nct_certificates.json Psi_972",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "73",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "107",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 27 (ord_r(omega3) = 4*27)",
+      "verdict": "attributed to rung 27; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "179",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 9 (ord_r(omega3) = 4*9)",
+      "verdict": "attributed to rung 9; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "971",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*243)",
+      "T4_p": "pass (p = 97, k = 5)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "2267",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 81 (ord_r(omega3) = 4*81)",
+      "verdict": "attributed to rung 81; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "5507",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 81 (ord_r(omega3) = 4*81)",
+      "verdict": "attributed to rung 81; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "72577",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=5",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "2585953",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "15114601",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "72401041",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "2068037891",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*243)",
+      "T4_p": "fail (odd part 1034018945 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "2848988377",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*81",
+      "verdict": "excluded: split, alpha-rung 81 < 243 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "935133871378249",
+     "digits": 15,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "28304186491764899",
+     "digits": 17,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 81 (ord_r(omega3) = 4*81)",
+      "verdict": "attributed to rung 81; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "18150486096554548669359703025539417",
+     "digits": 35,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "6764946053640872456577330274123135728144973423704739859",
+     "digits": 55,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*243)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 49-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 19
+  },
+  {
+   "d": 249,
+   "V2d_digits": 191,
+   "source": "cp398 V_498 (cross); cp398_factordb_raw.json V_166; local (sympy/trial) V_6; nct_certificates.json Psi_996",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "331",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 83 (ord_r(omega3) = 4*83)",
+      "verdict": "attributed to rung 83; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "46811",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*249)",
+      "T4_p": "fail (odd part 23405 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "737041",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "844609",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=4",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "144173987",
+     "digits": 9,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 83 (ord_r(omega3) = 4*83)",
+      "verdict": "attributed to rung 83; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1884644147",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 83 (ord_r(omega3) = 4*83)",
+      "verdict": "attributed to rung 83; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "21344347594401539",
+     "digits": 17,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*249)",
+      "T4_p": "fail (odd part 10672173797200769 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "873276921077442611179",
+     "digits": 21,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 83 (ord_r(omega3) = 4*83)",
+      "verdict": "attributed to rung 83; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "7370827889154320981521",
+     "digits": 22,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "14794087946032584000716005806266851249584060947",
+     "digits": 47,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*249)",
+      "T4_p": "fail (odd part 7397043973016292000358002903133425624792030473 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "39732623342395434934606522137715150100921266043",
+     "digits": 47,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*249)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 44-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 14
+  },
+  {
+   "d": 251,
+   "V2d_digits": 193,
+   "source": "nct_certificates.json Psi_1004",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "55219",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*251)",
+      "T4_p": "fail (odd part 27609 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "85426864883233",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "10771701310297871150323",
+     "digits": 23,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*251)",
+      "T4_p": "fail (odd part 5385850655148935575161 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "76433698366849071357648731",
+     "digits": 26,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*251)",
+      "T4_p": "fail (odd part 38216849183424535678824365 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "2339990757943547675383175875981469106592782518340859",
+     "digits": 52,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*251)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 35-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "26108171987415359559576214483021503363077778467554596456175214293451940449",
+     "digits": 74,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 8
+  },
+  {
+   "d": 281,
+   "V2d_digits": 216,
+   "source": "nct_certificates.json Psi_1124",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "1123",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*281)",
+      "T4_p": "fail (odd part 561 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "3371",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*281)",
+      "T4_p": "fail (odd part 1685 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "522538609",
+     "digits": 9,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "8510607936478434168952808411",
+     "digits": 28,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*281)",
+      "T4_p": "fail (odd part 4255303968239217084476404205 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "8948149791035369173118178409960993939906872874316154735976587477680269550857",
+     "digits": 76,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*281",
+      "verdict": "excluded: split, odd part of ord composite (odd part 1118518723879421146639772301245124242488359109289519341997073434710033693857 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "145825403326674591991521905796445812310475023219063552584713724062126334047183539096423120816139",
+     "digits": 96,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*281)",
+      "T4_p": "fail (odd part 72912701663337295995760952898222906155237511609531776292356862031063167023591769548211560408069 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 8
+  },
+  {
+   "d": 283,
+   "V2d_digits": 217,
+   "source": "cp398 V_566 (cross); nct_certificates.json Psi_1132",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "6793",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*283",
+      "verdict": "excluded: split, odd part of ord composite (odd part 849 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "12451",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*283)",
+      "T4_p": "fail (odd part 2075 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "11489975459",
+     "digits": 11,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*283)",
+      "T4_p": "fail (odd part 5744987729 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "21850712277340062427",
+     "digits": 20,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*283)",
+      "T4_p": "fail (odd part 3641785379556677071 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "806304582166957550068693465373407792418260097",
+     "digits": 45,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "49679742606807434161308646677418138917837852718337698366097",
+     "digits": 59,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "877319209569244846810168253907948677873416655650083562956858621782177415571",
+     "digits": 75,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*283)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 68-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 9
+  },
+  {
+   "d": 297,
+   "V2d_digits": 228,
+   "source": "FactorDB (cp412 cache) V_198; local (sympy/trial) V_18; local (sympy/trial) V_22; local (sympy/trial) V_54; local (sympy/trial) V_6; local (sympy/trial) V_66; nct_certificates.json Psi_1188",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 2,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "43",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "73",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "89",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "107",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 27 (ord_r(omega3) = 4*27)",
+      "verdict": "attributed to rung 27; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "131",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "179",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 9 (ord_r(omega3) = 4*9)",
+      "verdict": "attributed to rung 9; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1187",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "11483",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "16633",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "72577",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=5",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "74051",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "693793",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*297",
+      "verdict": "excluded: split, odd part of ord composite (odd part 21681 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1088209",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "2585953",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "20397961",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "89378531394769",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*297",
+      "verdict": "excluded: split, odd part of ord composite (odd part 5586158212173 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "83704945401782657191801",
+     "digits": 23,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "102409961134092245152201",
+     "digits": 24,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*99",
+      "verdict": "excluded: split, alpha-rung 99 < 297 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "11755130781449493520334259706572868670126617",
+     "digits": 44,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*297",
+      "verdict": "excluded: split, odd part of ord composite (odd part 1469391347681186690041782463321608583765827 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "38927548800523418736053139421692755345171945223545418381251041",
+     "digits": 62,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 23
+  },
+  {
+   "d": 307,
+   "V2d_digits": 236,
+   "source": "nct_certificates.json Psi_1228",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "164322896473794697",
+     "digits": 18,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "551217518218706018696254009722473800578970859",
+     "digits": 45,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*307)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 39-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "8462098051452205847780330043770007343456962077458567073",
+     "digits": 55,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "2299431099776708700430294228026048684285797335551271090923988887308741456979875925523864175393108924850688673035727339",
+     "digits": 118,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*307)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 110-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 6
+  },
+  {
+   "d": 321,
+   "V2d_digits": 246,
+   "source": "cp398 V_214 (cross); local (sympy/trial) V_6; nct_certificates.json Psi_1284; nct_certificates.json Psi_428",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1283",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*321)",
+      "T4_p": "pass (p = 641, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "161522909729",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1262880768427",
+     "digits": 13,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 107 (ord_r(omega3) = 4*107)",
+      "verdict": "attributed to rung 107; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "17449564219651",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 107 (ord_r(omega3) = 4*107)",
+      "verdict": "attributed to rung 107; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "38237712330361",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*321",
+      "verdict": "excluded: split, odd part of ord composite (odd part 4779714041295 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "2906272939091099",
+     "digits": 16,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 107 (ord_r(omega3) = 4*107)",
+      "verdict": "attributed to rung 107; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "132168496320829356461361353683",
+     "digits": 30,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 107 (ord_r(omega3) = 4*107)",
+      "verdict": "attributed to rung 107; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "2569431377233343692241006260194082547",
+     "digits": 37,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*321)",
+      "T4_p": "fail (odd part 1284715688616671846120503130097041273 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "829491094770128677509698903018814679382737",
+     "digits": 42,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "19503478483909499624283422487811217333305036097185707759873460804513",
+     "digits": 68,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 13
+  },
+  {
+   "d": 331,
+   "V2d_digits": 254,
+   "source": "nct_certificates.json Psi_1324",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "6619",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*331)",
+      "T4_p": "fail (odd part 3309 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "43691",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*331)",
+      "T4_p": "pass (p = 17, k = 1285)",
+      "T5_condv": "pass (d | W_(p-2))",
+      "verdict": "PHANTOM danger triple (r = W_p, W_p prime)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "4510867",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*331)",
+      "T4_p": "fail (odd part 2255433 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "224936385721",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1732445993139049817801",
+     "digits": 22,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "5264282380581441760369",
+     "digits": 22,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "104620710651125217917754500294169403",
+     "digits": 36,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*331)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 28-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "19496626790588131600768193365585307203602374799879171175562014606473433",
+     "digits": 71,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*331",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 59-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "762557006971255766502991992708120614676358835210615414018541037281740581273457",
+     "digits": 78,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 11
+  },
+  {
+   "d": 347,
+   "V2d_digits": 266,
+   "source": "nct_certificates.json Psi_1388",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "6890033",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "84793659816491",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*347)",
+      "T4_p": "fail (odd part 42396829908245 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "262460968219874513",
+     "digits": 18,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "598948192162644617",
+     "digits": 18,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*347",
+      "verdict": "excluded: split, odd part of ord composite (odd part 74868524020330577 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "64453602423873516977",
+     "digits": 20,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "76796916955183866368819",
+     "digits": 23,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*347)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 22-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "236587236199190889435809",
+     "digits": 24,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "4272695409138154004886251",
+     "digits": 25,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*347)",
+      "T4_p": "fail (odd part 2136347704569077002443125 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "23964678226288902655434473",
+     "digits": 26,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*347",
+      "verdict": "excluded: split, odd part of ord composite (odd part 2995584778286112831929309 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "659187988168007869943929147",
+     "digits": 27,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*347)",
+      "T4_p": "fail (odd part 329593994084003934971964573 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1016882078430168623214571789020201148256138559568518556417486797161",
+     "digits": 67,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 13
+  },
+  {
+   "d": 361,
+   "V2d_digits": 277,
+   "source": "local (sympy/trial) V_38; nct_certificates.json Psi_1444",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "227",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 19 (ord_r(omega3) = 4*19)",
+      "verdict": "attributed to rung 19; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "379",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 19 (ord_r(omega3) = 4*19)",
+      "verdict": "attributed to rung 19; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "19457",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=8",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "30323",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*361)",
+      "T4_p": "pass (p = 15161, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "34961",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "111187",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*361)",
+      "T4_p": "fail (odd part 18531 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "188049233",
+     "digits": 9,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "163475408947",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*361)",
+      "T4_p": "fail (odd part 81737704473 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "283825246181387",
+     "digits": 15,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*361)",
+      "T4_p": "fail (odd part 141912623090693 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "23458787686502993273",
+     "digits": 20,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "10181347253519285862225053514616180718327521641833",
+     "digits": 50,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*361",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 41-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "2078361579747243095550706473433647239638559665617473",
+     "digits": 52,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "450957537535665046492691443121380587096297432339087391861591642503631771546808093712788596166703929",
+     "digits": 99,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*361",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 88-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 15
+  },
+  {
+   "d": 363,
+   "V2d_digits": 278,
+   "source": "local (sympy/trial) V_22; local (sympy/trial) V_6; local (sympy/trial) V_66; nct_certificates.json Psi_1452; nct_certificates.json Psi_484",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 3,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "43",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "89",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "131",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1187",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1451",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 121 (ord_r(omega3) = 4*121)",
+      "verdict": "attributed to rung 121; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "11483",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 11 (ord_r(omega3) = 4*11)",
+      "verdict": "attributed to rung 11; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "16633",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "74051",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 33 (ord_r(omega3) = 4*33)",
+      "verdict": "attributed to rung 33; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "568699",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 121 (ord_r(omega3) = 4*121)",
+      "verdict": "attributed to rung 121; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "2352241",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "69796187",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*363)",
+      "T4_p": "fail (odd part 34898093 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1197595081",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*121",
+      "verdict": "excluded: split, alpha-rung 121 < 363 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1614230507",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 121 (ord_r(omega3) = 4*121)",
+      "verdict": "attributed to rung 121; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "135855589627",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 121 (ord_r(omega3) = 4*121)",
+      "verdict": "attributed to rung 121; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "7499151961531",
+     "digits": 13,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 121 (ord_r(omega3) = 4*121)",
+      "verdict": "attributed to rung 121; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "249507118668323",
+     "digits": 15,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 121 (ord_r(omega3) = 4*121)",
+      "verdict": "attributed to rung 121; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "25691954375979011",
+     "digits": 17,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*363)",
+      "T4_p": "fail (odd part 2569195437597901 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "4005463110187137017",
+     "digits": 19,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*121",
+      "verdict": "excluded: split, alpha-rung 121 < 363 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "178659946675133033768857",
+     "digits": 24,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*363",
+      "verdict": "excluded: split, odd part of ord composite (odd part 22332493334391629221107 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "460935198389026844033117792002971203",
+     "digits": 36,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*363)",
+      "T4_p": "fail (odd part 230467599194513422016558896001485601 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "690448252635787211462588854754611369108904661165314966552834606373306146042953",
+     "digits": 78,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*363",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 74-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 24
+  },
+  {
+   "d": 379,
+   "V2d_digits": 291,
+   "source": "nct_certificates.json Psi_1516",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "4547",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*379)",
+      "T4_p": "pass (p = 2273, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "351030947611",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*379)",
+      "T4_p": "fail (odd part 175515473805 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "55408612133213734588648530107",
+     "digits": 29,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*379)",
+      "T4_p": "pass (p = 27704306066606867294324265053, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "783398649198311086301698856177",
+     "digits": 30,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "547727124112532774042307292211984248239243330440030687686315134398603465411",
+     "digits": 75,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*379)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 68-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "611819812080262238556029279191272259222584574755509428287193285422780631900357459059587512290065179360322811461486058125545862408366246029937",
+     "digits": 141,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 8
+  },
+  {
+   "d": 387,
+   "V2d_digits": 297,
+   "source": "cp398 V_258 (cross); local (sympy/trial) V_18; local (sympy/trial) V_6; local (sympy/trial) V_86; nct_certificates.json Psi_1548; nct_certificates.json Psi_516",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "73",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "179",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 9 (ord_r(omega3) = 4*9)",
+      "verdict": "attributed to rung 9; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1033",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*43",
+      "verdict": "excluded: split, alpha-rung 43 < 387 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "14449",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "357587",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*387)",
+      "T4_p": "pass (p = 178793, k = 1)",
+      "T5_condv": "fail (d does not divide W_(p-2))",
+      "verdict": "excluded at T5"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "23189041",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1225916929",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=5",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "469764750691",
+     "digits": 12,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 43 (ord_r(omega3) = 4*43)",
+      "verdict": "attributed to rung 43; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "19712383976963",
+     "digits": 14,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 43 (ord_r(omega3) = 4*43)",
+      "verdict": "attributed to rung 43; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "748690657847998667",
+     "digits": 18,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*387)",
+      "T4_p": "fail (odd part 374345328923999333 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "131029510796746608899294407729",
+     "digits": 30,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*387",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 18-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "75390435818587404514891047039001",
+     "digits": 32,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "276431598001487177038457370080041",
+     "digits": 33,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*129",
+      "verdict": "excluded: split, alpha-rung 129 < 387 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "857098616973990869086324782294310298126961457821051295357849",
+     "digits": 60,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*387",
+      "verdict": "excluded: split, odd part of ord composite (odd part has a known prime factor and a factor of the 54-digit unfactored block -> composite)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "9707974078746710769253415215741509122429264257018946808878907001",
+     "digits": 64,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    }
+   ],
+   "distinct_primes": 18
+  },
+  {
+   "d": 393,
+   "V2d_digits": 301,
+   "source": "local (sympy/trial) V_6; nct_certificates.json Psi_1572; nct_certificates.json Psi_524",
+   "note": "",
+   "status": "COMPLETE",
+   "primes": [
+    {
+     "r": "11",
+     "digits": 2,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 3 (ord_r(omega3) = 4*3)",
+      "verdict": "attributed to rung 3; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "523",
+     "digits": 3,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 131 (ord_r(omega3) = 4*131)",
+      "verdict": "attributed to rung 131; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1049",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*131",
+      "verdict": "excluded: split, alpha-rung 131 < 393 (non-primitive here)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "1571",
+     "digits": 4,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*393)",
+      "T4_p": "fail (odd part 785 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "12577",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=2",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "67073",
+     "digits": 5,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=5",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "135193",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "259379",
+     "digits": 6,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*393)",
+      "T4_p": "fail (odd part 129689 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "1235593",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "6948763",
+     "digits": 7,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 131 (ord_r(omega3) = 4*131)",
+      "verdict": "attributed to rung 131; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "34598147",
+     "digits": 8,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*393)",
+      "T4_p": "fail (odd part 17299073 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "115757363",
+     "digits": 9,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*393)",
+      "T4_p": "fail (odd part 57878681 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "3525458899",
+     "digits": 10,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 131 (ord_r(omega3) = 4*131)",
+      "verdict": "attributed to rung 131; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "7358949722897449",
+     "digits": 16,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=0",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "39424643145419483953081",
+     "digits": 23,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=1",
+      "split_alpha_rung": "ord_r(alpha)=8*393",
+      "verdict": "excluded: split, odd part of ord composite (odd part 985616078635487098827 composite (fully factored descent))"
+     },
+     "side": "split"
+    },
+    {
+     "r": "51495729072500020719779",
+     "digits": 23,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*393)",
+      "T4_p": "fail (odd part 25747864536250010359889 composite (fully factored descent))",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "319560279309632944107942971",
+     "digits": 27,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "fail: true rung 131 (ord_r(omega3) = 4*131)",
+      "verdict": "attributed to rung 131; deduplicated"
+     },
+     "side": "inert"
+    },
+    {
+     "r": "993398695408799487203213473",
+     "digits": 27,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "67103907069340766277660216218294177",
+     "digits": 35,
+     "mult": 1,
+     "mod8": 1,
+     "tests": {
+      "split_v2ord2": "v2(ord_r(2))=3",
+      "verdict": "excluded: split with v2(ord_r(2)) != 1 (no prime half-order)"
+     },
+     "side": "split"
+    },
+    {
+     "r": "37340252634387534309955241107442224338941690791388831285143115233519115756853547259",
+     "digits": 83,
+     "mult": 1,
+     "mod8": 3,
+     "tests": {
+      "T1_mod8": "pass (r == 3 mod 8)",
+      "T2_v2ord2": "pass (v2 = 1)",
+      "T3_primitive": "pass (ord_r(omega3) = 4*393)",
+      "T4_p": "fail (odd part has a known prime factor and a factor of the 68-digit unfactored block -> composite)",
+      "verdict": "excluded at T4 (odd part of ord_r(2) composite)"
+     },
+     "side": "inert"
+    }
+   ],
+   "distinct_primes": 22
+  }
+ ],
+ "summary": {
+  "rungs_complete": 34,
+  "rungs_incomplete": [],
+  "primes_tested": 340,
+  "real_triples": [
+   {
+    "d": 57,
+    "r": "171369731867",
+    "p": "85684865933",
+    "k": "1",
+    "above_platinum_cutoff": false,
+    "discharge_status": "discharged-witness"
+   },
+   {
+    "d": 67,
+    "r": "148937135261632265803",
+    "p": "24822855876938710967",
+    "k": "3",
+    "above_platinum_cutoff": true,
+    "discharge_status": "secondary-closed"
+   }
+  ],
+  "phantoms": [
+   {
+    "d": 57,
+    "r": "683",
+    "p": "11"
+   },
+   {
+    "d": 331,
+    "r": "43691",
+    "p": "17"
+   }
+  ],
+  "unresolved": [],
+  "diagonal_survivor_v_checks": [
+   {
+    "d": 57,
+    "r": "683",
+    "p": "11",
+    "v_holds": true
+   },
+   {
+    "d": 57,
+    "r": "171369731867",
+    "p": "85684865933",
+    "v_holds": true
+   },
+   {
+    "d": 59,
+    "r": "88499",
+    "p": "44249",
+    "v_holds": false
+   },
+   {
+    "d": 67,
+    "r": "148937135261632265803",
+    "p": "24822855876938710967",
+    "v_holds": true
+   },
+   {
+    "d": 81,
+    "r": "5507",
+    "p": "2753",
+    "v_holds": false
+   }
+  ],
+  "split_crosscheck_pass": true,
+  "corner_consistency_pass": true,
+  "aprcl": {
+   "683": true,
+   "43691": true,
+   "85684865933": true,
+   "171369731867": true,
+   "24822855876938710967": true,
+   "148937135261632265803": true
+  },
+  "dedup_notes": [
+   "d=171: r=683 is non-primitive here; true rung 57 (in census)",
+   "d=171: r=171369731867 is non-primitive here; true rung 57 (in census)",
+   "d=177: r=88499 is non-primitive here; true rung 59 (in census)",
+   "d=177: r=496160696018531 is non-primitive here; true rung 59 (in census)",
+   "d=201: r=377582251 is non-primitive here; true rung 67 (in census)",
+   "d=201: r=148937135261632265803 is non-primitive here; true rung 67 (in census)",
+   "d=243: r=2267 is non-primitive here; true rung 81 (in census)",
+   "d=243: r=5507 is non-primitive here; true rung 81 (in census)",
+   "d=243: r=28304186491764899 is non-primitive here; true rung 81 (in census)",
+   "d=249: r=331 is non-primitive here; true rung 83 (in census)",
+   "d=249: r=144173987 is non-primitive here; true rung 83 (in census)",
+   "d=249: r=1884644147 is non-primitive here; true rung 83 (in census)",
+   "d=249: r=873276921077442611179 is non-primitive here; true rung 83 (in census)",
+   "d=321: r=1262880768427 is non-primitive here; true rung 107 (in census)",
+   "d=321: r=17449564219651 is non-primitive here; true rung 107 (in census)",
+   "d=321: r=2906272939091099 is non-primitive here; true rung 107 (in census)",
+   "d=321: r=132168496320829356461361353683 is non-primitive here; true rung 107 (in census)",
+   "d=363: r=1451 is non-primitive here; true rung 121 (in census)",
+   "d=363: r=568699 is non-primitive here; true rung 121 (in census)",
+   "d=363: r=1614230507 is non-primitive here; true rung 121 (in census)",
+   "d=363: r=135855589627 is non-primitive here; true rung 121 (in census)",
+   "d=363: r=7499151961531 is non-primitive here; true rung 121 (in census)",
+   "d=363: r=249507118668323 is non-primitive here; true rung 121 (in census)",
+   "d=393: r=523 is non-primitive here; true rung 131 (in census)",
+   "d=393: r=6948763 is non-primitive here; true rung 131 (in census)",
+   "d=393: r=3525458899 is non-primitive here; true rung 131 (in census)",
+   "d=393: r=319560279309632944107942971 is non-primitive here; true rung 131 (in census)"
+  ]
+ }
+}

@@ -1,7 +1,8 @@
 """cp365: build a STATIC, FactorDB-independent NCT-certificate data artifact
-for the Zenodo/v3.6 reproducibility bundle. For every fixed-d closure in
-(100, 400] (the 9 values of (100,200] + the 15 of (200,400]) it pins the
-complete factorization of Psi_{4d} and records, per prime factor, its
+for the Zenodo/v3.7 reproducibility bundle. For every fixed-d closure in
+(100, 400] (the 9 values of (100,200] + all 19 of (200,400]; 28 total since
+cp377) it pins the complete factorization of Psi_{4d} and records, per prime
+factor, its
 digit-count, BPSW + APR-CL (PARI isprime flag 2) primality, mod-8 class, and
 the certificate disposition (for split r = 1 mod 8: ord_r(2) parity ->
 half-order primality -> condition (v) d | W_{p-2}). NCT closed at d iff no
@@ -24,17 +25,46 @@ import urllib.request
 
 import sympy
 
-OUT = ("/home/alexey/claude/primes/papers/02_wagstaff_chebyshev_reduction/"
-       "zenodo_v3.6/data/nct_certificates.json")
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                   "..", "data", "nct_certificates.json")
 GP_TIMEOUT = 1800
 
 CLOSED = [107, 121, 129, 131, 139, 163, 171, 177, 179,          # (100,200]
-          201, 209, 211, 243, 249, 251, 281, 297,               # (200,300]
-          307, 321, 347, 361, 363, 387, 393]                    # (300,400]
+          201, 209, 211, 227, 243, 249, 251, 281, 283, 297,     # (200,300]
+          307, 321, 331, 347, 361, 363, 379, 387, 393]          # (300,400]
 
-# Locally-factored Psi_{4d} (not FF on FactorDB; from cp353/cp358 ECM/GNFS).
+# Locally-factored Psi_{4d} (not FF on FactorDB; from cp353/cp358 ECM/GNFS,
+# and cp366-cp377 half-split + ECM + GNFS for d = 227/283/331/379).
 # Verified at runtime by the exact product identity prod(factors) == Psi_{4d}.
 FACTORIZATIONS = {
+    227: [907,
+          57203,
+          5580569,
+          16552486912925363,
+          103897484432089424574671548054573458540642269367990262779403,
+          201760911884372460299372338734188130826364691502781503178121274772114731708580885801],
+    283: [6793,
+          12451,
+          11489975459,
+          21850712277340062427,
+          806304582166957550068693465373407792418260097,
+          49679742606807434161308646677418138917837852718337698366097,
+          877319209569244846810168253907948677873416655650083562956858621782177415571],
+    331: [6619,
+          43691,
+          4510867,
+          224936385721,
+          1732445993139049817801,
+          5264282380581441760369,
+          104620710651125217917754500294169403,
+          19496626790588131600768193365585307203602374799879171175562014606473433,
+          762557006971255766502991992708120614676358835210615414018541037281740581273457],
+    379: [4547,
+          351030947611,
+          55408612133213734588648530107,
+          783398649198311086301698856177,
+          547727124112532774042307292211984248239243330440030687686315134398603465411,
+          611819812080262238556029279191272259222584574755509428287193285422780631900357459059587512290065179360322811461486058125545862408366246029937],
     131: [523, 1049, 67073, 135193, 1235593, 6948763, 3525458899,
           319560279309632944107942971,
           67103907069340766277660216218294177],
@@ -137,6 +167,21 @@ def order2(r, rm1_factors):
     return o
 
 
+def v2_ord2(r):
+    """v2(ord_r(2)), factorization-free (repeated squaring; cp372 method).
+    Lets the certificate dispose of v2 != 1 split factors without factoring
+    r - 1 — essential for the P71-P141 split factors of d = 283/331/379."""
+    e2 = ((r - 1) & -(r - 1)).bit_length() - 1
+    t = pow(2, (r - 1) >> e2, r)
+    if t == 1:
+        return 0
+    for j in range(1, e2 + 1):
+        t = t * t % r
+        if t == 1:
+            return j
+    raise AssertionError("2^(r-1) != 1 mod r -- r not prime?")
+
+
 def aprcl(r):
     """PARI isprime(r, 2) == APR-CL primality proof; True/False/None(no gp)."""
     try:
@@ -172,15 +217,22 @@ def certify(d):
         if r % 8 != 1:
             fr["disposition"] = "not split (r != 1 mod 8) -> irrelevant"
         else:
-            rm1 = factor_full(r - 1)
-            if rm1 is None:
-                fr["disposition"] = "STALLED (r-1 factorization incomplete)"
-                survivors.append(("stalled", r))
+            # factorization-free order-parity first (cp372 method): only the
+            # v2 == 1 case needs the exact order, hence an r-1 factorization.
+            v2 = v2_ord2(r)
+            fr["v2_ord2"] = v2
+            if v2 == 0:
+                fr["disposition"] = "split; ord_r(2) odd -> excluded"
+            elif v2 >= 2:
+                fr["disposition"] = ("split; v2(ord_r(2)) >= 2 -> half-order "
+                                     "even -> composite -> excluded")
             else:
-                o = order2(r, rm1)
-                if o % 2:
-                    fr["disposition"] = "split; ord_r(2) odd -> excluded"
+                rm1 = factor_full(r - 1)
+                if rm1 is None:
+                    fr["disposition"] = "STALLED (r-1 factorization incomplete)"
+                    survivors.append(("stalled", r))
                 else:
+                    o = order2(r, rm1)
                     p_r = o // 2
                     if not sympy.isprime(p_r):
                         fr["disposition"] = "split; half-order composite -> excluded"
@@ -199,9 +251,10 @@ def certify(d):
 
 def main():
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
-    bundle = {"description": "Static NCT fixed-d certificates for Paper 02 v3.6, "
-              "(100,400]. Each Psi_{4d} factorization pinned + APR-CL certified; "
-              "split factors excluded by the cor:nct-fixed-d-certificate steps.",
+    bundle = {"description": "Static NCT fixed-d certificates for Paper 02 (v3.7), "
+              "(100,400] complete. Each Psi_{4d} factorization pinned + APR-CL "
+              "certified; split factors excluded by the "
+              "cor:nct-fixed-d-certificate steps.",
               "generated_by": "scripts/cp365_nct_certificate_bundle.py",
               "certificates": []}
     for d in CLOSED:

@@ -1,5 +1,5 @@
-TEX = wagstaff_chebyshev_reduction_v3.6.tex
-PDF = wagstaff_chebyshev_reduction_v3.6.pdf
+TEX = wagstaff_chebyshev_reduction_v4.0.tex
+PDF = wagstaff_chebyshev_reduction_v4.0.pdf
 
 .PHONY: all clean
 
