@@ -18,8 +18,8 @@ conditions decouple at the level of individual prime factors **in both
 directions**, so the two sufficiency statements are logically incomparable:
 proving either would not formally settle the other. They agree empirically at
 every tested exponent. The corrected framing ("the Chua-form counterpart of
-the Vrba–Reix test") appears from v3.7 onwards, and a companion note works
-out the exact relation. The mathematical content of the reduction is
+the Vrba–Reix test") appears from v3.7 onwards, and a companion note (in
+preparation) works out the exact relation. The mathematical content of the reduction is
 unaffected.
 
 ## Abstract (v4.0)
@@ -43,8 +43,11 @@ prime factors, and under a global pass both would lie in `P_p`).
 
 Double passes decompose by residues mod 8: the inert pair (above the Platinum
 cutoff this is the **Pell Primitive Pair Conjecture, PPPC**), the mixed pair
-(**MPC**), and the split pair (subsumed by general-`d` NCT). The working
-chain proves the sufficiency conjecture from `PPPC + MPC^> + X1`, taking two
+(**MPC**), and the split pair (subsumed by general-`d` **NCT**, the
+nonexistence-of-compatible-triples conjecture). The working
+chain proves the sufficiency conjecture from `PPPC + MPC^> + X1` (`MPC^>` is
+MPC restricted above the survey cutoff; `X1` is a single-exponent statement
+at `p = 10,916,765,939`), taking two
 stated computational inputs (the **Platinum Lemma** — a 684,965,381-row
 enumeration of all inert factors `r <= 10^12` — and the witness discharges);
 that conjunction is in turn implied by SPC. Proved unconditionally along the
@@ -117,20 +120,23 @@ paper (see *Cite this work*).
 │   ├── cp412_danger_census.json   complete danger-triple census 43 < d <= 400
 │   │                              (34 rungs, 340 tests, 226 APR-CL primes)
 │   ├── danger_triple_data.json    V_{114}, V_{134}, V_{662} factorizations
-│   ├── sample_1000.csv            first 1000 rows of the survey CSV
+│   ├── sample_1000.csv            first 1000 rows of the clean survey CSV
 │   ├── SHA256SUMS                 hashes
 │   └── README.md                  data dictionary
 ├── reproducibility.md             end-to-end reproduction walkthrough
-├── CITATION.cff   .zenodo.json   LICENSE   README.md
+└── CITATION.cff   .zenodo.json   LICENSE   README.md
 ```
 
 ## Cite this work
 
 - **Paper (arXiv):** *pending submission — arXiv ID will be inserted here*
-- **This bundle (Zenodo):** *DOI minted on release*
+- **This bundle (Zenodo):** *pending — deposited from the author's account
+  after each release; DOI will be inserted here*
 - **Inert-factor survey CSV (Zenodo):**
   [10.5281/zenodo.19496206](https://doi.org/10.5281/zenodo.19496206)
-  (802 MB, 15,587,021 rows — the Platinum enumeration data)
+  (802 MB, 15,587,021 rows — the `G_r/4 > 43` slice of the 684,965,381-factor
+  Platinum enumeration, the only factors at which a local pass is possible;
+  see `reproducibility.md`, Step 4)
 - **Companion BLS primality-proofs paper (Zenodo):**
   [10.5281/zenodo.19645478](https://doi.org/10.5281/zenodo.19645478)
 
@@ -139,11 +145,14 @@ A machine-readable citation is in `CITATION.cff`.
 ## Reproduce the central claims
 
 **NCT closures (no FactorDB needed).** `data/nct_certificates.json` pins, for
-every fixed-`d` closure in `(100, 400]` (28 values — with the `d <= 99`
-theorem this closes NCT for every odd `d <= 400`), the complete factorization
+every fixed-`d` closure in `(100, 400]` (28 values — exactly the admissible
+odd `d` there; with the `d <= 99` theorem this closes NCT for every odd
+`d <= 400`), the complete factorization
 of the Pell primitive part `Psi_{4d}` with each factor APR-CL-certified and
-its certificate disposition. Re-generate / re-verify with
-`python3 scripts/cp365_nct_certificate_bundle.py` (PARI/GP `gp` required;
+its certificate disposition; product identities and primality re-check
+offline. Re-generate from scratch with
+`python3 scripts/cp365_nct_certificate_bundle.py` (PARI/GP `gp` required,
+FactorDB for the non-embedded values; overwrites the JSON in place;
 expected: `DONE: 28/28 CLOSED`; 182 factors).
 
 **Danger census `d <= 400`.** `data/cp412_danger_census.json` pins the
@@ -167,7 +176,8 @@ This is empirical agreement of global outcomes, **not** equivalence of the
 tests — the per-factor conditions differ (see the Erratum above).
 
 **Survey CSV (Platinum enumeration).** Download the 802 MB CSV from Zenodo
-(`10.5281/zenodo.19496206`), verify `shasum -a 256 -c data/SHA256SUMS`, audit
+(`10.5281/zenodo.19496206`), place it at `data/inert_factors.csv`, verify
+`(cd data && shasum -a 256 -c SHA256SUMS)`, audit
 with `python3 scripts/audit.py`, spot-check with
 `python3 scripts/verify_sample.py data/sample_1000.csv`.
 

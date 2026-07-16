@@ -7,7 +7,9 @@ authors:
     email: "science@dolotov.com"
 version: "4.0"
 date-released: "2026-07-16"
-license: MIT
+license:
+  - MIT
+  - CC-BY-4.0
 repository-code: "https://github.com/dolonet/wagstaff-chebyshev"
 keywords:
   - Wagstaff numbers
@@ -46,5 +48,5 @@ preferred-citation:
       given-names: "Alexey"
       email: "science@dolotov.com"
   year: 2026
-  journal: "arXiv preprint (Math. Comp. submission)"
-  notes: "arXiv ID added on submission"
+  journal: "arXiv preprint"
+  notes: "arXiv ID added on submission; journal submission to follow"

@@ -11,4 +11,4 @@ $(PDF): $(TEX)
 	pdflatex -interaction=nonstopmode $(TEX)
 
 clean:
-	rm -f *.aux *.log *.out *.toc *.bbl *.blg *.fls *.fdb_latexmk $(PDF)
+	rm -f *.aux *.log *.out *.toc *.bbl *.blg *.fls *.fdb_latexmk

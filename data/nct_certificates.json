@@ -1,6 +1,6 @@
 {
-  "description": "Static NCT fixed-d certificates for Paper 02 (v3.7), (100,400] complete: 28 closures. Each Psi_{4d} factorization pinned + APR-CL certified; split factors excluded by the cor:nct-fixed-d-certificate steps.",
-  "generated_by": "scripts/cp393_nct_certificate_bundle_v2.py",
+  "description": "Static NCT fixed-d certificates for Paper 02 (shipped with the v4.0 bundle), (100,400] complete: 28 closures. Each Psi_{4d} factorization pinned + APR-CL certified; split factors excluded by the cor:nct-fixed-d-certificate steps.",
+  "generated_by": "cp393_nct_certificate_bundle_v2.py (research tree; successor of the shipped scripts/cp365_nct_certificate_bundle.py, which re-generates this artifact)",
   "certificates": [
     {
       "d": 107,
