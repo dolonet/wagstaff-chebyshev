@@ -130,8 +130,8 @@ slice).
 python3 scripts/multi_factor_pinning.py        # Order/Multi-Factor Pinning, phantom exclusion
 python3 scripts/exact_ap_density.py            # exact-AP characterization + pair-count
 python3 scripts/cp354_diag_corner_gcd.py       # diagonal corner census (d <= 124)
-python3 scripts/cp358_corner_sweep_d1000.py    # corner sweep d <= 1000, p <= 1e8
-python3 scripts/cp358_falsification_prewindow.py  # falsification pre-window scan
+python3 scripts/cp358_corner_sweep_d1000.py    # corner sweep d <= 1000, p <= 1e8 (long: hours)
+python3 scripts/cp358_falsification_prewindow.py  # falsification pre-window scan (long: hours)
 python3 scripts/cp395_pppc_heuristic_constants.py # M1-M3 heuristic constants (heuristic only)
 python3 scripts/cp410_twin_ladder.py           # self-supporting exponent ladder
 python3 scripts/second_moment_reduction.py     # historical: pre-v4.0 counting bookkeeping
@@ -160,7 +160,7 @@ builds the same way.)
 | CSV audit / sample (4) | 1 core, ~16 MB | ~30 s / minutes |
 | Platinum direct (4) | 1 core | ~25 min, needs 802 MB CSV |
 | Full survey re-run (4) | 128 cores, 64 GB | ~4 h, 840 MB out |
-| Reductions / censuses (5) | 1 core | seconds–minutes |
+| Reductions / censuses (5) | 1 core | seconds–minutes (corner sweep and pre-window scan: hours) |
 | Paper build (6) | 1 core | seconds |
 
 ## Provenance

@@ -86,7 +86,7 @@ paper (see *Cite this work*).
 ```
 .
 ├── paper/
-│   ├── wagstaff_chebyshev_reduction_v4.0.tex   LaTeX source (67 pp)
+│   ├── wagstaff_chebyshev_reduction_v4.0.tex   LaTeX source (68 pp)
 │   ├── wagstaff_chebyshev_reduction_v4.0.pdf
 │   ├── archive/                                v3.8 (last pre-SPC version)
 │   └── Makefile                                pdflatex targets

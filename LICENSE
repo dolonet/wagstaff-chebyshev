@@ -1,3 +1,11 @@
+Licensing of this repository
+----------------------------
+
+- Code (`scripts/`, `paper/Makefile`): MIT License, below.
+- Paper sources and PDFs (`paper/`) and data artifacts (`data/`):
+  Creative Commons Attribution 4.0 International (CC BY 4.0),
+  https://creativecommons.org/licenses/by/4.0/
+
 MIT License
 
 Copyright (c) 2026 Alexey Dolotov

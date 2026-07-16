@@ -73,6 +73,23 @@ in-place from this directory.
 | `cp362_verify_preliminaries.py` | re-derives mod-8/16, ord2, Condition (I), order √2 |
 | `cp363_verify_inert_foundations.py` | re-derives LTE, Pell-exclusion, parity; reproduces 845/869 census |
 
+## Earlier-cut / general verification scripts
+
+Kept from earlier bundle cuts; still runnable and still true, but not cited
+by name in v4.0. Docstrings of these scripts may reference section/theorem
+numbers of pre-v3.0 drafts — the mapping to current statements is by name in
+this README.
+
+| Script | What it does |
+|---|---|
+| `chebyshev_test.py` | reference implementation of the Condition-(II) test itself |
+| `class_iii_wieferich.py` | no Class III prime `q < 5000` is Wieferich-at-(−1) |
+| `danger_triple_survey.py` | earlier danger-triple survey (source of `data/danger_triple_data.json`; superseded on `d <= 400` by the census) |
+| `r3_split_sweep.py` | extended R3 sweep at `r <= 10^11` (`chi_r(alpha)` statistics) |
+| `secondary_closure.py` | standalone secondary-factor closures for the `d = 57` and `d = 67` triples |
+| `split_factor_census.py` | census of known split Wagstaff factors and case classification |
+| `wagstaff_verify_all.py` | verifier from the companion BLS paper (all certified Wagstaff primes `5 <= p <= 1709`) |
+
 ## Survey pipeline (the Platinum enumeration data)
 
 | Script | What it does | Runtime |

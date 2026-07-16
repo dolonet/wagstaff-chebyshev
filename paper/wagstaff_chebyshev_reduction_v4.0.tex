@@ -1,5 +1,21 @@
 % Reduction of the Wagstaff Chebyshev sufficiency conjecture to the
 % Single-Pass Conjecture.
+% v4.0 addendum 2 (2026-07-16, cp415): pre-release inspection fixes.
+%   cor:ladder: the three formerly PRP-gated rungs 83341/117241/127033
+%   are in fact certified -- W_83339/W_117239/W_127031 carry ECPP proofs
+%   (2014, 2022, 2023; t5k top-20 Wagstaff) -- so the ladder has eleven
+%   rungs and is complete (every other certified Wagstaff exponent q has
+%   q+2 composite). rem:shape-inputs ledger completed: danger-census
+%   bullet added (used in (a5)/(b1)/(b5)); the fully-algebraic item list
+%   corrected ((0) modulo the Wieferich clause, (b1) modulo the census
+%   floor, (a3) modulo the 3200p instantiation). sec:empirical
+%   selection-bias note recounted: 184,938 = exponents carrying >= 2
+%   candidates (one recorded pair each; 369,876 tested members), now
+%   consistent with the distribution table. thm:quartic rank-order
+%   paragraph: the two-component reading of the s-coefficient argument
+%   made explicit. thm:caseA order parenthetical corrected.
+%   rem:pell-wss-global: surplus lem:v2-class citation dropped (the CRT
+%   argument is self-contained).
 % v4.0 addendum (2026-07-16, cp414): healing pass restoring the v3.8
 %   content whose loss was a real compromise, in strengthened v4.0 form:
 %   new subsection sec:variants in the reduction section --
@@ -949,9 +965,9 @@ Suppose $W_p$ is composite and let $r < W_p$ be a prime factor; Condition~(II) r
 \begin{corollary}[The certified ladder]\label{cor:ladder}
 Condition~(II) is an unconditional primality test for $W_p$ at every prime $p$ such that $p - 2$ is also prime and $W_{p-2}$ carries a primality certificate: presently
 \[
-  p \;\in\; \{\,5,\ 7,\ 13,\ 19,\ 103,\ 193,\ 349,\ 3541\,\},
+  p \;\in\; \{\,5,\ 7,\ 13,\ 19,\ 103,\ 193,\ 349,\ 3541,\ 83{,}341,\ 117{,}241,\ 127{,}033\,\},
 \]
-the complete list arising from the certified Wagstaff primes. Three further rungs await only a primality certificate for the corresponding $W_{p-2}$, currently a strong probable prime: $p = 83{,}341$, $117{,}241$, $127{,}033$.
+the complete list arising from the certified Wagstaff primes: the three largest rungs rest on the ECPP certificates of $W_{83{,}339}$, $W_{117{,}239}$ and $W_{127{,}031}$ (completed in 2014, 2022 and 2023 respectively) \cite{ref:PrimePagesWagstaff}, and for every other certified Wagstaff exponent $q$ the shift $q + 2$ is composite.
 \end{corollary}
 
 \begin{remark}[BLS specialization; the ladder is self-supporting]\label{rem:ladder}
@@ -1017,7 +1033,7 @@ If $r \equiv 1 \pmod 8$, $r \mid W_p$, and $r \mid U_p$, then $\ord(\alpha) = 4p
 \begin{proof}
 Reducing Proposition~\ref{prop:alg-identity} modulo $r$: $r \mid U_p$ gives $\Phi_{2p}(\omega_3) \equiv 0 \pmod r$ (since $\Phi_{2p}(\omega_3) = U_p \cdot (1 + \sqrt 2)^{p-1}$ and $r \nmid (1 + \sqrt 2)^{p-1}$ in the split algebra, as $1 + \sqrt 2$ is a unit). So $\omega_3 \bmod r$ is a primitive $2p$-th root of unity in $\F_r^\ast$: $\ord(\omega_3) = 2 p$.
 
-Now $\omega_3 = \alpha^2$, so $\ord(\alpha) \in \{2p, 4p\}$ (the two options whose square has order $2p$). We claim $\ord(\alpha) = 4p$. Since $\ord(\omega_3) = 2p$, we have $\omega_3^p = -1$ (the unique element of order 2 in the cyclic group $\langle\omega_3\rangle$), so $\alpha^{2p} = \omega_3^p = -1$. Hence $\ord(\alpha) \nmid 2p$; combined with $\alpha^{4p} = 1$, this gives $\ord(\alpha) = 4p$ (ruling out $\ord(\alpha) = 4$ since $\alpha^4 = \omega_3^2$ and $\omega_3$ has order $2p \geq 10$).
+Now $\omega_3 = \alpha^2$, so $\alpha^{4p} = \omega_3^{2p} = 1$ and $\ord(\alpha) \mid 4p$. Since $\ord(\omega_3) = 2p$, we have $\omega_3^p = -1$ (the unique element of order 2 in the cyclic group $\langle\omega_3\rangle$), so $\alpha^{2p} = \omega_3^p = -1$, hence $\ord(\alpha) \nmid 2p$. The divisors of $4p$ not dividing $2p$ are $4$ and $4p$, and $\ord(\alpha) = 4$ is impossible since $\alpha^4 = \omega_3^2$ has order $p \geq 5$. Therefore $\ord(\alpha) = 4p$.
 \end{proof}
 
 \begin{theorem}[Case B]\label{thm:caseB}
@@ -1118,7 +1134,7 @@ Since $r \equiv 1 \pmod 8$, $r$ splits completely in $\Z[\zeta_8]$; fix a prime 
   s \;\equiv\; (1 - \omega)^2 \cdot \omega^3 \cdot \alpha \qquad\text{in } \F_r. \tag{$\ast\ast$}
 \end{equation*}
 
-Raise $(\ast\ast)$ to $(r-1)/2$. We first record, \emph{unconditionally}, that a prime $r \equiv 1 \pmod 8$ with $\rho(r) = 4 n$ (i.e. a primitive divisor of $U_{4n}$) and $n$ odd has $\ord(\alpha) = 8 n$ and $\alpha^{4n} = -1$. Indeed, in the split algebra $\alpha^m = V_m/2 + U_m s$, so $\alpha^m \in \{\pm 1\}$ forces the $s$-coefficient to vanish, $r \mid U_m$, i.e. $\rho(r) \mid m$; the converse holds when $m$ is even, the only case used below. At $m = 4 n$ the identity $V_{4n}^2 - 8 U_{4n}^2 = 4$ with $r \mid U_{4n}$ gives $V_{4n}/2 \equiv \pm 1 \pmod r$, so $\alpha^{4n} \in \{\pm 1\}$. If $\alpha^{4n} = +1$, then $e := \ord(\alpha)$ divides $4 n$; but $\alpha^e = 1$ forces $r \mid U_e$, hence $\rho(r) = 4 n \mid e$, so $e = 4 n$, whence $\alpha^{2n}$ has order $2$, $\alpha^{2n} = -1$, and $r \mid U_{2n}$ --- contradicting $\rho(r) = 4 n \nmid 2 n$. Therefore $\alpha^{4n} = -1$ and $\ord(\alpha) = 8 n$. (This is the converse direction of the rank--order correspondence; Proposition~\ref{prop:rank-equiv}(a), which assumes Condition~(II) at $r$, is not invoked here, and Theorem~\ref{thm:quartic} makes no Condition-(II) hypothesis.) Writing $r - 1 = 8 n M$ for a positive integer $M$:
+Raise $(\ast\ast)$ to $(r-1)/2$. We first record, \emph{unconditionally}, that a prime $r \equiv 1 \pmod 8$ with $\rho(r) = 4 n$ (i.e. a primitive divisor of $U_{4n}$) and $n$ odd has $\ord(\alpha) = 8 n$ and $\alpha^{4n} = -1$. Indeed, in the split algebra $\alpha^m$ has the two components $V_m/2 \pm U_m s$, so $\alpha^m \in \{\pm 1\}$ --- an identity of \emph{both} components, whose difference gives $2 U_m s = 0$ --- forces $r \mid U_m$, i.e. $\rho(r) \mid m$ (for odd $m$ the norm $\mathrm N(\alpha)^m = -1 \neq \mathrm N(\pm 1)$ already rules $\alpha^m \in \{\pm 1\}$ out); the converse holds when $m$ is even, the only case used below. At $m = 4 n$ the identity $V_{4n}^2 - 8 U_{4n}^2 = 4$ with $r \mid U_{4n}$ gives $V_{4n}/2 \equiv \pm 1 \pmod r$, so $\alpha^{4n} \in \{\pm 1\}$. If $\alpha^{4n} = +1$, then $e := \ord(\alpha)$ divides $4 n$; but $\alpha^e = 1$ forces $r \mid U_e$, hence $\rho(r) = 4 n \mid e$, so $e = 4 n$, whence $\alpha^{2n}$ has order $2$, $\alpha^{2n} = -1$, and $r \mid U_{2n}$ --- contradicting $\rho(r) = 4 n \nmid 2 n$. Therefore $\alpha^{4n} = -1$ and $\ord(\alpha) = 8 n$. (This is the converse direction of the rank--order correspondence; Proposition~\ref{prop:rank-equiv}(a), which assumes Condition~(II) at $r$, is not invoked here, and Theorem~\ref{thm:quartic} makes no Condition-(II) hypothesis.) Writing $r - 1 = 8 n M$ for a positive integer $M$:
 
 \begin{itemize}
 \item $[(1 - \omega)^2]^{(r-1)/2} \equiv 1 \pmod{\mathfrak{P}}$: $(1 - \omega)^{r-1} = 1$ by Fermat's little theorem in $\F_r$.
@@ -1574,7 +1590,7 @@ so the factor passes Condition~(II) modulo $r^2$ iff $(u, v) = (0, 0)$. The \emp
 \end{remark}
 
 \begin{remark}[Pell--Wall--Sun--Sun condition for global passers]\label{rem:pell-wss-global}
-The constraints above are local-pass statements, and Condition~(II) modulo $r^2$ does \emph{not} follow from local passes at the individual factors. If, however, $W_p$ moreover passes Condition~(II) \emph{globally} --- the only case Conjecture~\ref{conj:suff} needs --- then the congruence holds modulo $r^2$ for any repeated factor $r$, and the analysis of Remark~\ref{rem:wieferich} applies: the repeated factor additionally satisfies the Pell--Wall--Sun--Sun-type condition $\ord_{r^2}(\omega_3) = \ord_r(\omega_3)$, a second Wieferich-type event on top of the base-$2$ one. The Wieferich and super-Wieferich conclusions of Corollary~\ref{cor:multiplicity-wieferich} themselves require no global hypothesis. For \emph{squarefree} $W_p$ the situation is rigid in the opposite direction: by the Chinese Remainder isomorphism $\Z[\sqrt 2]/(W_p) \cong \prod_i \Z[\sqrt 2]/(r_i)$, the global Condition~(II) is \emph{exactly} the conjunction of the local passes --- the same element $\omega_3^{2 W_{p-2}}$ must equal $-1$ in every component, and Lemma~\ref{lem:v2-class} makes the $(-1)$-landing condition automatic and simultaneous at every inert factor --- so a global pass adds nothing beyond the conjunction of local passes, and the local/global gap is confined to repeated factors.
+The constraints above are local-pass statements, and Condition~(II) modulo $r^2$ does \emph{not} follow from local passes at the individual factors. If, however, $W_p$ moreover passes Condition~(II) \emph{globally} --- the only case Conjecture~\ref{conj:suff} needs --- then the congruence holds modulo $r^2$ for any repeated factor $r$, and the analysis of Remark~\ref{rem:wieferich} applies: the repeated factor additionally satisfies the Pell--Wall--Sun--Sun-type condition $\ord_{r^2}(\omega_3) = \ord_r(\omega_3)$, a second Wieferich-type event on top of the base-$2$ one. The Wieferich and super-Wieferich conclusions of Corollary~\ref{cor:multiplicity-wieferich} themselves require no global hypothesis. For \emph{squarefree} $W_p$ the situation is rigid in the opposite direction: by the Chinese Remainder isomorphism $\Z[\sqrt 2]/(W_p) \cong \prod_i \Z[\sqrt 2]/(r_i)$, the global Condition~(II) is \emph{exactly} the conjunction of the local passes --- under the isomorphism $-1 \bmod W_p$ is $(-1, \dots, -1)$ componentwise, so $\omega_3^{2 W_{p-2}} = -1$ holds modulo $W_p$ iff it holds in every component --- so a global pass adds nothing beyond the conjunction of local passes, and the local/global gap is confined to repeated factors.
 \end{remark}
 
 \subsection{Exact-AP characterization}
@@ -1793,7 +1809,7 @@ $|T_{p^\ast}^{\leq 500,\mathrm{pre}}|$ & count & fraction \\
 
 Sample mean $\lambda = 0.1148$, sample variance $0.1121$, ratio $\Var/\text{mean} = 0.977$ (compared to Poisson's $1.0$); $\chi^2$ against $\mathrm{Poisson}(\lambda)$ is approximately $10^4$, indicating significantly sub-Poisson behaviour. Extending to $k_{\max} = 5000$ on a 1M-prime subsample multiplies the pair fraction by $1.75 \times$ and the triple fraction by $2.5 \times$, consistent with a non-degenerate but slowly-growing tail.
 
-\textbf{Selection-bias note: condition (v) filter.} Of the $184{,}938$ candidate pairs $(r_1, r_2)$ within the $k_{\max} = 500$ window satisfying conditions (i)--(iv) of PPPC ($r_i \equiv 3 \pmod 8$, $r_i > 10^{12}$, $\ord_{r_i}(2) = 2 p^\ast$, primality), independent verification computed condition (v) --- $d_{r_i} \mid W_{p^\ast - 2}$ --- for each individual $r_i$ via $\F_{r_i^2} = \F_{r_i}[\sqrt 2]$ arithmetic: \textbf{$0$ of the $369{,}876$ tested $r_i$ satisfy (v).} The conditional density of (v) given (i)--(iv) is thus $\ll 10^{-5}$ empirically, consistent with the heuristic $E \approx 10^{-3}$ of \S\ref{sec:heuristic} and with $\Pi = 0$. In every tested case the failure is of condition (v) itself --- the order-alignment $d_{r_i} \mid W_{p^\ast - 2}$, equivalently $2^{p^\ast - 2} \equiv -1 \pmod{3 d_{r_i}}$ --- with conditions (i)--(iv) holding by construction of the candidate list. A deep-$k$ complement to this record was computed at $30{,}000$ exponents $p^\ast$ from $5 \times 10^{11}$ with the window extended two thousandfold to $k \leq 10^6$: $6{,}559$ candidates satisfy (i)--(iv), and again \emph{zero} satisfy condition (v); $623$ of these exponents carry two or more (i)--(iv) candidates, and every such pair satisfies the unconditional separation constraints of Theorem~\ref{thm:pair-separation} (script \texttt{scripts/}\allowbreak\texttt{cp358\_falsification\_prewindow.py}).
+\textbf{Selection-bias note: condition (v) filter.} At $184{,}938$ exponents of the $37$M-prime sample --- the rows $|T_{p^\ast}^{\leq 500,\mathrm{pre}}| \geq 2$ of the table above, $180{,}116 + 4{,}750 + 72$ --- the $k_{\max} = 500$ window contains at least two candidates satisfying conditions (i)--(iv) of PPPC ($r_i \equiv 3 \pmod 8$, $r_i > 10^{12}$, $\ord_{r_i}(2) = 2 p^\ast$, primality). At each such exponent a candidate pair $(r_1, r_2)$ was recorded, and independent verification computed condition (v) --- $d_{r_i} \mid W_{p^\ast - 2}$ --- for both members of every recorded pair via $\F_{r_i^2} = \F_{r_i}[\sqrt 2]$ arithmetic: \textbf{$0$ of the $369{,}876$ tested $r_i$ satisfy (v).} The conditional density of (v) given (i)--(iv) is thus $\ll 10^{-5}$ empirically, consistent with the heuristic $E \approx 10^{-3}$ of \S\ref{sec:heuristic} and with $\Pi = 0$. In every tested case the failure is of condition (v) itself --- the order-alignment $d_{r_i} \mid W_{p^\ast - 2}$, equivalently $2^{p^\ast - 2} \equiv -1 \pmod{3 d_{r_i}}$ --- with conditions (i)--(iv) holding by construction of the candidate list. A deep-$k$ complement to this record was computed at $30{,}000$ exponents $p^\ast$ from $5 \times 10^{11}$ with the window extended two thousandfold to $k \leq 10^6$: $6{,}559$ candidates satisfy (i)--(iv), and again \emph{zero} satisfy condition (v); $623$ of these exponents carry two or more (i)--(iv) candidates, and every such pair satisfies the unconditional separation constraints of Theorem~\ref{thm:pair-separation} (script \texttt{scripts/}\allowbreak\texttt{cp358\_falsification\_prewindow.py}).
 
 \textbf{Methodological remark.} The $d$-indexed enumeration (\S\ref{sec:inert-survey} Platinum, \S\ref{sec:multi-factor} primitive-divisor survey, \S\ref{sec:nct-verify} sieve) and the $p$-indexed enumeration above probe complementary slices of the PPPC search space: $d$-indexed scans capture pairs where both factors have small order parameter, while $p$-indexed scans capture the arithmetic progression $r \equiv 1 \pmod{2 p^\ast}$ before condition (v) is applied. The $d \leq 1000$ catalog of the primitive-divisor survey covers a small fraction of the $p$-indexed pre-window at $p^\ast = 5 \times 10^{11}$ --- most of the $r$'s appearing in the $T_{p^\ast}^{\leq 500,\mathrm{pre}}$ distribution above have $d_r$ well above $1000$. Absence of pairs in the $d \leq 1000$ catalog is rigorous within scope but is not directly comparable with the $p$-indexed pre-window density; both lines of empirical evidence are needed.
 
@@ -2441,16 +2457,28 @@ second-factor search for $k \leq 10^{12}$, used in (b4).
 (Theorem~\ref{thm:nct99} and \S\ref{sec:nct-verify}): complete
 primitive-part factorizations with every prime factor APR-CL-certified,
 used in (a2).
+\item \emph{Danger census through $d = 400$}
+(Proposition~\ref{prop:danger-census-400} and
+Corollary~\ref{cor:inert-floor-400}): the complete danger-triple census
+over the $34$ admissible rungs $43 < d \leq 400$ --- complete $V_{2d}$
+factorizations, every listed prime APR-CL-certified, including the
+secondary-factor verification at the $d = 67$ triple --- used, through
+the floor $d_r > 400$, in (a5) and (b1), and in the diagonal exclusion
+of (b5).
 \item \emph{Diagonal closures} (Proposition~\ref{prop:diagonal-closures}):
 the complete APR-CL-certified factorizations of $V_{114}$, $V_{118}$,
 $V_{134}$, $V_{162}$, $V_{166}$, $V_{198}$, $V_{214}$, $V_{242}$, used
 in (b5).
 \end{itemize}
-Items (0), (b1)--(b3), (a1), (a3), (a4) and the pair-separation
-congruences of (b5) carry \emph{no} computational input at all: they are
-fully algebraic (the perfect-power exclusion rests on the published
-Nagell--Ljunggren results \cite{ref:BennettLevin,
-ref:BugeaudMignotte2002, ref:BugeaudCaoMignotte2001}).
+Items (a1), (a4), (b2), (b3) and the pair-separation congruences of
+(b5) carry \emph{no} computational input at all: they are fully
+algebraic, as is the perfect-power exclusion of item (0), which rests on
+the published Nagell--Ljunggren results \cite{ref:BennettLevin,
+ref:BugeaudMignotte2002, ref:BugeaudCaoMignotte2001}. The remaining
+items are algebraic apart from one clause each: item (0) apart from the
+Wieferich bound $r > 2^{64}$, (b1) apart from the census floor
+$d_r > 400$, and (a3) apart from the numerical instantiation
+$r_s > 3200\,p$, which inherits the NCT floor $d > 400$ of (a2).
 \end{remark}
 
 Two readings of Corollary~\ref{cor:counterexample-shape} deserve
@@ -2673,7 +2701,7 @@ This appendix keeps only the certification facts used in the paper. Full tables,
 
 \subsection{Known Wagstaff values}
 
-The current record and probable-prime status for Wagstaff numbers is maintained by PrimePages \cite{ref:PrimePagesWagstaff}; it changes over time and is not an input to any implication in this paper. The finite computations here use explicit exponent lists in the supplementary material. Three certified cases $p\in\{2617,10501,12391\}$ also have ECPP-independent certificates in the companion paper \cite{ref:A}.
+The current record and probable-prime status for Wagstaff numbers is maintained by PrimePages \cite{ref:PrimePagesWagstaff}; it changes over time and is not an input to any implication in the reduction chain (the certified ladder of Corollary~\ref{cor:ladder} cites it only for the underlying primality certificates of the $W_{p-2}$). The finite computations here use explicit exponent lists in the supplementary material. Three certified cases $p\in\{2617,10501,12391\}$ also have ECPP-independent certificates in the companion paper \cite{ref:A}.
 
 \subsection{Split-branch verification}\label{sec:R3-verify}
 
@@ -2848,7 +2876,7 @@ Integer factorization uses SymPy/gmpy2 routines, Cunningham tables \cite{ref:Cun
 
 \bibitem{ref:OEISWieferich} OEIS Foundation Inc., \emph{A001220: Wieferich primes}, \url{https://oeis.org/A001220/internal}, accessed 2026-06-05.
 
-\bibitem{ref:PrimePagesWagstaff} The PrimePages, \emph{Wagstaff primes}, \url{https://t5k.org/top20/page.php?id=67}, accessed 2026-06-05.
+\bibitem{ref:PrimePagesWagstaff} The PrimePages, \emph{Wagstaff primes}, \url{https://t5k.org/top20/page.php?id=67}, accessed 2026-07-16.
 
 \bibitem{ref:Stewart} C.~L. Stewart, \emph{On divisors of Lucas and Lehmer numbers}, Acta Math. \textbf{211} (2013), 291--314.
 
